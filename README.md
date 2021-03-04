@@ -1,46 +1,109 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![GitHub repo size](https://img.shields.io/github/repo-size/Quick-Dates/Quick-Dates-Web?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/Quick-Dates/Quick-Dates-Web?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/Quick-Dates/Quick-Dates-Web?style=for-the-badge)
+<a href="https://github.com/Quick-DatesQuick-Dates-Web/commits/master">
+<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Quick-Dates/Quick-Dates-Web?color=774DD6&style=for-the-badge">
+</a> 
+<a href="https://github.com/Quick-Dates/model-complete-readme/stargazers">
+<img alt="Stargazers" src="https://img.shields.io/github/stars/Quick-Dates/Quick-Dates-Web?style=for-the-badge&logo=github">
+</a>
 
-## Available Scripts
+<p align="center">
 
-In the project directory, you can run:
+<h1 align="center"> Quick Dates </h3>
 
-### `yarn start`
+<p align="center"><i>Gerenciamento de tarefas acadêmicas</i></p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<details>
+<summary>📖 Conteúdo</summary>
+<br />
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+* [➤ Sobre o projeto](#sobre)
+* [Funcionalidades e melhorias](#melhorias)
+* [➤ Como executar](#executar)
+* [➤ Tecnologias](#tecnologias)
+* [➤ Colaboradores](#colaboradores)
+* [➤ Contribuidores](#contribuir)
+* [➤ Licença](#licenca)
+</details>
 
-### `yarn test`
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#sobre-o-projeto)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## :pushpin: Sobre o Projeto <a name="sobre"></a>
+<div>
+<img src="" width="400px">
+</div>
 
-### `yarn build`
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#executar)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## :construction_worker: Como executar <a name="executar"></a>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Clone Repository
+$ git clone https://github.com/Quick-Dates/Quick-Dates-Web.git
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Instalar Dependencias
+$ yarn install 
+ou
+$ npm install
 
-### `yarn eject`
+# Executar Aplicação
+$ yarn start 
+ou 
+$ npm start
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](##tecnologias)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## :computer: Tecnologias <a name="tecnologias"></a>
+<ul>
+<li>Node.js</li>
+<li>Express.js</li>
+<li>Typescript</li>
+<li>React</li>
+<li>React Native</li>
+<li>Expo</li>
 
-## Learn More
+</ul>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🤝 Colaboradores <a name="colaboradores"></a>
+
+Agradecemos às seguintes pessoas que contribuíram para este projeto:
+
+<table>
+<tr>
+<td align="center">
+<a href="#">
+  <img src="https://avatars2.githubusercontent.com/u/53010824?s=460&u=40f41a9ce155fe1a214f422849ad88fd7f0b9710&v=4" width="100px;" alt="Foto do Willian Fernandes no GitHub"/><br>
+  <sub>
+    <b>Willian Fernandes</b>
+  </sub>
+</a>
+</td>
+</tr>
+</table>
+
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#contribuidores)
+
+## 😄 Seja um dos contribuidores<br> <a name="contribuir"></a>
+
+Contribuições são sempre bem-vindas!
+
+1. Fork o Projeto
+2. Criar uma Branch (git checkout -b feature/AmazingFeature)
+3. Commit suas alterações (git commit -m 'Add some AmazingFeature)
+4. Push na Branch (git push origin feature/AmazingFeature)
+5. Abra um Pull Request
+
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#licensa)
+
+## 📝 Licença <a name="licenca"></a>
+
+Esse projeto está sob licença MIT.
+
+## :man_astronaut: Mostre seu apoio 
+
+Dê uma ⭐️ se esse projeto te ajudou!
