@@ -19,7 +19,6 @@
 <summary>📖 Conteúdo</summary>
 <br />
 
-* [➤ Sobre o projeto](#sobre)
 * [Funcionalidades e melhorias](#melhorias)
 * [➤ Como executar](#executar)
 * [➤ Tecnologias](#tecnologias)
@@ -28,31 +27,18 @@
 * [➤ Licença](#licenca)
 </details>
 
-[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#sobre-o-projeto)
-
-## :pushpin: Sobre o Projeto <a name="sobre"></a>
-<div>
-<img src="" width="400px">
-</div>
-
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#executar)
 
 ## :construction_worker: Como executar <a name="executar"></a>
 
-# Clone Repository
+### Clone Repository
 $ git clone https://github.com/Quick-Dates/Quick-Dates-Web.git
 
-# Instalar Dependencias
+### Instalar Dependencias
 $ yarn install 
-ou
-$ npm install
 
-# Executar Aplicação
+### Executar Aplicação
 $ yarn start 
-ou 
-$ npm start
-
-
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](##tecnologias)
 
@@ -69,34 +55,15 @@ $ npm start
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)
 
-## 🤝 Colaboradores <a name="colaboradores"></a>
 
-Agradecemos às seguintes pessoas que contribuíram para este projeto:
-
-<table>
-<tr>
-<td align="center">
-<a href="#">
-  <img src="https://avatars2.githubusercontent.com/u/53010824?s=460&u=40f41a9ce155fe1a214f422849ad88fd7f0b9710&v=4" width="100px;" alt="Foto do Willian Fernandes no GitHub"/><br>
-  <sub>
-    <b>Willian Fernandes</b>
-  </sub>
-</a>
-</td>
-</tr>
-</table>
-
-[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#contribuidores)
-
-## 😄 Seja um dos contribuidores<br> <a name="contribuir"></a>
+## 😄 Como contruibuir<br> <a name="contribuir"></a>
 
 Contribuições são sempre bem-vindas!
 
-1. Fork o Projeto
-2. Criar uma Branch (git checkout -b feature/AmazingFeature)
-3. Commit suas alterações (git commit -m 'Add some AmazingFeature)
-4. Push na Branch (git push origin feature/AmazingFeature)
-5. Abra um Pull Request
+1. Atualize seu repositório local antes do commit (git pull)
+1. Adicione suas alterações (git add .)
+2. Commit suas alterações (git commit -m 'Add some AmazingFeature)
+3. Push na Branch (git push)
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#licensa)
 
