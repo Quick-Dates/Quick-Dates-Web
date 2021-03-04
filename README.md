@@ -42,15 +42,11 @@ $ yarn start
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](##tecnologias)
 
-## :computer: Tecnologias <a name="tecnologias"></a>
+## :computer: Tecnologias<a name="tecnologias"></a>
 <ul>
-<li>Node.js</li>
-<li>Express.js</li>
 <li>Typescript</li>
 <li>React</li>
-<li>React Native</li>
-<li>Expo</li>
-
+<li>React Big Calendar</li>
 </ul>
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)
