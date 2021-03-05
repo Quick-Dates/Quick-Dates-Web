@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import BigCalendar from '../../components/BigCalendar';
+import './styles.css';
 
 const ActivitiesList: FC = () => (
   <div>
