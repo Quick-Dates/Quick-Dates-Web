@@ -35,7 +35,7 @@
 $ git clone https://github.com/Quick-Dates/Quick-Dates-Web.git
 
 ### Instalar Dependencias
-$ yarn install 
+$ cd Quick-Dates-Web && yarn install 
 
 ### Executar Aplicação
 $ yarn start 
