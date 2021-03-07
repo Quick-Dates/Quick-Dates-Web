@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
 :root {
   --color-background-primary: #000;
 }
