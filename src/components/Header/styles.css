@@ -1,0 +1,28 @@
+.header {
+  display: flex;
+  background-color: var(--color-background-header);
+  height: 80px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.header .logo {
+  height: 100%;
+}
+
+.header .logo img {
+  width: 80%;
+}
+
+.header .menu {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header .menu a {
+  text-decoration: none;
+  color: var(--color-text-header);
+  font-size: 1.2rem;
+}

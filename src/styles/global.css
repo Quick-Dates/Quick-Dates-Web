@@ -9,5 +9,10 @@ body {
 }
 
 :root {
-  --color-background-primary: #000;
+  --color-background-primary: #fff;
+  --color-background-header: #1DC3C4;
+  --color-background-footer: #132222;
+  --color-text-header: #fff;
+  --color-text-footer: #ffffff80;
+  --color-text-visited-header: #c2c2c2;
 }
