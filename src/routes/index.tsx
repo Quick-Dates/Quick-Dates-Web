@@ -6,7 +6,7 @@ import Login from '../pages/Login';
 const Routes: FC = () => (
   <Switch>
     <Route path="/" exact component={Login} />
-    <Route path="/atividades" component={ActivitiesList} />
+    <Route path="/activities" component={ActivitiesList} />
   </Switch>
 );
 

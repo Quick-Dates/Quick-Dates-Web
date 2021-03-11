@@ -7,7 +7,7 @@ const Login: FC = () => {
   return (
     <div>
       <h1>{ mensagem }</h1>
-      <Link to="/atividades"> Entrar </Link>
+      <Link to="/activities"> Entrar </Link>
     </div>
   );
 };

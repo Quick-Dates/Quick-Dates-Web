@@ -16,18 +16,18 @@ const Header: FC<IProps> = ({ isStudent }: IProps) => (
     { isStudent
       ? (
         <div className="menu">
-          <Link to="/ajuda"> Ajuda </Link>
-          <Link to="/atividades"> Calendário  </Link>
-          <Link to="/horario"> Horário  </Link>
-          <Link to="/ementa"> Ementa  </Link>
-          <Link to="/ajustes"> Ajustes  </Link>
+          <Link to="/help"> Ajuda </Link>
+          <Link to="/activities"> Calendário  </Link>
+          <Link to="/time"> Horário  </Link>
+          <Link to="/amendment"> Ementa  </Link>
+          <Link to="/adjustment"> Ajustes  </Link>
         </div>
       )
       : (
         <div className="menu">
-          <Link to="/ajuda"> Ajuda </Link>
-          <Link to="/criar/atividades"> Agendar atividades  </Link>
-          <Link to="/informacoes"> Informações  </Link>
+          <Link to="/help"> Ajuda </Link>
+          <Link to="/create/activities"> Agendar atividades  </Link>
+          <Link to="/info"> Informações  </Link>
         </div>
       )}
 
