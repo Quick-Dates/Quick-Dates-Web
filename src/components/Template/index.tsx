@@ -12,7 +12,9 @@ interface IProps{
 const Template: FC<IProps> = ({ children, isStudent }: IProps) => (
   <div className="template">
     <Header isStudent={isStudent} />
-    {children}
+    <div className="content">
+      {children}
+    </div>
     <Footer />
   </div>
 );
