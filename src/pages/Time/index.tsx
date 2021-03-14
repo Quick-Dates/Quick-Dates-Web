@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import ClassSchedule from '../../components/ClassSchedule';
 import Template from '../../components/Template';
 import './styles.css';
 // eslint-disable-next-line import/order
@@ -10,7 +11,7 @@ const Time: FC = () => (
       <title>Quick Dates | Time</title>
     </Helmet>
     <Template isStudent>
-      <h1 className="title">Horários</h1>
+      <ClassSchedule />
     </Template>
   </div>
 );
