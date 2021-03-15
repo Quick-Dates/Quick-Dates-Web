@@ -13,6 +13,7 @@ body {
 }
 
 :root {
+  font-size: 62.5%;
   --background-primary: #fff;
   --background-header: #1DC3C4;
   --background-footer: #132222;

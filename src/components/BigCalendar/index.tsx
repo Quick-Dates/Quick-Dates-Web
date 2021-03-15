@@ -4,7 +4,10 @@ import { Calendar, momentLocalizer } from 'react-big-calendar';
 import 'moment/locale/pt-br';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 
-const BigCalendar: FC = () => {
+// css
+import './index.css';
+
+export default function BigCalendar() {
   const localizer = momentLocalizer(moment);
   return (
     <Calendar
@@ -24,6 +27,6 @@ const BigCalendar: FC = () => {
       }}
     />
   );
-};
+}
 
-export default BigCalendar;
+// export default BigCalendar;

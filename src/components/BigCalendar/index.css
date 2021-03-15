@@ -1,0 +1,20 @@
+.rbc-toolbar-label{
+  font-size: 20px;
+}
+
+.rbc-btn-group button{
+  background-color: var(--background-button-primary);
+  color: var(--background-card-secundary)
+}
+
+.rbc-btn-group button:hover{
+  background-color: var(--background-button-primary);
+}
+
+.rbc-toolbar button:active, .rbc-toolbar button.rbc-active{
+  background-color: var(--background-button-secondary); 
+}
+
+.rbc-toolbar button:active, .rbc-toolbar button.rbc-active:hover{
+  background-color: var(--background-button-primary);
+}
