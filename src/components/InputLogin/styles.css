@@ -1,0 +1,13 @@
+.input {
+  background-color: var(--background-primary);
+  width: 25rem;
+  padding: 7px 15px;
+  margin-left: 5px;
+  border-radius: 5rem;
+  outline: none;
+  border: 1px solid var(--color-button-border);
+  color: var(--color-text-card);
+  font-weight: bold;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 1.5rem;
+}
