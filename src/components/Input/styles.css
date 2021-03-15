@@ -1,0 +1,12 @@
+.input {
+  background-color: var(--background-primary);
+  width: 25rem;
+  padding: 7px 15px;
+  border-radius: 5rem;
+  outline: none;
+  border: none;
+  color: var(--color-text-card);
+  font-weight: bold;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 1.5rem;
+}
