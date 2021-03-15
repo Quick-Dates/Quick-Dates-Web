@@ -1,20 +1,51 @@
-.rbc-toolbar-label{
-  font-size: 20px;
+.rbc-calendar{/*Calendar*/
+  margin-bottom: 2rem;
+  margin-top: 3rem;
+  width: 95%;
 }
 
-.rbc-btn-group button{
-  background-color: var(--background-button-primary);
-  color: var(--background-card-secundary)
+.rbc-toolbar-label{/*Label*/
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-text-card);
 }
+
+.rbc-btn-group button{/*Buttons top*/
+  background-color: var(--background-button-primary);
+  color: var(--background-card-secundary);
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+} 
 
 .rbc-btn-group button:hover{
-  background-color: var(--background-button-primary);
+  color: var(--background-button-primary);
 }
 
-.rbc-toolbar button:active, .rbc-toolbar button.rbc-active{
+.rbc-toolbar button:active, .rbc-toolbar button.rbc-active{/*Button selecteed*/
   background-color: var(--background-button-secondary); 
 }
 
 .rbc-toolbar button:active, .rbc-toolbar button.rbc-active:hover{
   background-color: var(--background-button-primary);
+}
+
+.rbc-header{/*Header days*/
+  /* background-color: var(--color-text-visited-header); */
+  color: var(--background-button-primary);
+  border: 1px solid var(--color-text-visited-header);
+
+}
+
+span[role="columnheader"]{/*Days*/
+  font-size: 1.8rem;
+}
+
+a[role="cell"]{/*Day number*/
+  font-size: 1.6rem;
+  color: var(--background-footer);
+}
+
+.rbc-day-bg{/*Container days*/
+  border-left: 1px solid var(--color-text-visited-header);
+  border-right: 1px solid var(--color-text-visited-header);
 }
