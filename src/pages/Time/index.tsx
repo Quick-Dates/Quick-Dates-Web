@@ -10,7 +10,7 @@ const Time: FC = () => (
     <Helmet>
       <title>Quick Dates | Time</title>
     </Helmet>
-    <Template isStudent>
+    <Template isStudent title="Horário">
       <ClassSchedule />
     </Template>
   </div>
