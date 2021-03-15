@@ -19,15 +19,15 @@ const Header: FC<IProps> = ({ isStudent }: IProps) => (
           <Link to="/help"> Ajuda </Link>
           <Link to="/activities"> Calendário  </Link>
           <Link to="/time"> Horário  </Link>
-          <Link to="/amendment"> Ementa  </Link>
-          <Link to="/adjustment"> Ajustes  </Link>
+          <Link to="/"> Sair  </Link>
         </div>
       )
       : (
         <div className="menu">
           <Link to="/help"> Ajuda </Link>
           <Link to="/create/activities"> Agendar atividades  </Link>
-          <Link to="/info"> Informações  </Link>
+          <Link to="/list/activities"> Ver Atividades  </Link>
+          <Link to="/"> Sair  </Link>
         </div>
       )}
 
