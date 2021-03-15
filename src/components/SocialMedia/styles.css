@@ -1,5 +1,5 @@
 .socialMedia {
-  background-color: #eeeeee;
+  background-color: var(--background-card-secundary);
   width: 1000px;
   height: 300px;
   margin-left: auto;
@@ -11,7 +11,7 @@
 
 .linksSocialMedia{
   text-decoration: none;
-  color: #247D7E;
+  color: var(--color-text-card);
 }
 
 .socialMediaIcon{
