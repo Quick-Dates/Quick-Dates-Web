@@ -20,7 +20,7 @@ const BigCalendar: FC = () => {
         today: 'Hoje',
         month: 'Mes',
         week: 'Semana',
-        day: 'Día',
+        day: 'Dia',
       }}
     />
   );
