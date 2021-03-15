@@ -26,3 +26,6 @@
   color: var(--color-text-header);
   font-size: 2rem;
 }
+.header .menu a.visited {
+  color: var(--color-text-visited-header);
+}
