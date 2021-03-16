@@ -19,7 +19,7 @@ const Header: FC<IProps> = ({ isStudent }: IProps) => {
       { isStudent
         ? (
           <nav className="menu">
-            <Link to="/help" className={pathName === '/help' ? 'visited' : ''}> Ajuda </Link>
+            <Link to="/help/student" className={pathName === '/help' ? 'visited' : ''}> Ajuda </Link>
             <Link to="/activities" className={pathName === '/activities' ? 'visited' : ''}> Calendário  </Link>
             <Link to="/time" className={pathName === '/time' ? 'visited' : ''}> Horário  </Link>
             <Link to="/"> Sair  </Link>
@@ -27,7 +27,7 @@ const Header: FC<IProps> = ({ isStudent }: IProps) => {
         )
         : (
           <nav className="menu">
-            <Link to="/help" className={pathName === '/help' ? 'visited' : ''}> Ajuda </Link>
+            <Link to="/help/teacher" className={pathName === '/help' ? 'visited' : ''}> Ajuda </Link>
             <Link to="/create/activities" className={pathName === '/create/activities' ? 'visited' : ''}> Agendar atividades  </Link>
             <Link to="/list/activities" className={pathName === '/list/activities' ? 'visited' : ''}> Ver Atividades  </Link>
             <Link to="/"> Sair  </Link>
