@@ -46,11 +46,18 @@ const ClassSchedule: FC = () => (
           <span className="materia">Ed Física</span>
         </div>
         <div className="line">
-          <span className="materia">Portugues</span>
-          <span className="materia">Portugues</span>
-          <span className="materia">Matematica</span>
-          <span className="materia">Matematica</span>
-          <span className="materia">Filosofia</span>
+          <span className="materia">Ed Física</span>
+          <span className="materia">Inglês</span>
+          <span className="materia">Inglês</span>
+          <span className="materia">Física</span>
+          <span className="materia">Física</span>
+        </div>
+        <div className="line">
+          <span className="materia">Redes</span>
+          <span className="materia">Redes</span>
+          <span className="materia">Sistemas</span>
+          <span className="materia">Sistemas</span>
+          <span className="materia">Linguagem</span>
         </div>
         <div className="line">
           <span className="materia">Portugues</span>
@@ -60,39 +67,32 @@ const ClassSchedule: FC = () => (
           <span className="materia">Filosofia</span>
         </div>
         <div className="line">
-          <span className="materia">Portugues</span>
-          <span className="materia">Portugues</span>
-          <span className="materia">Matematica</span>
-          <span className="materia">Matematica</span>
-          <span className="materia">Filosofia</span>
+          <span className="materia">Biologia</span>
+          <span className="materia">Biologia</span>
+          <span className="materia">História</span>
+          <span className="materia">História</span>
+          <span className="materia">Português</span>
         </div>
         <div className="line">
-          <span className="materia">Portugues</span>
-          <span className="materia">Portugues</span>
-          <span className="materia">Matematica</span>
-          <span className="materia">Matematica</span>
-          <span className="materia">Filosofia</span>
+          <span className="materia">Sociologia</span>
+          <span className="materia">Sociologia</span>
+          <span className="materia">Química</span>
+          <span className="materia">Química</span>
+          <span className="materia">Ed Física</span>
         </div>
         <div className="line">
-          <span className="materia">Portugues</span>
-          <span className="materia">Portugues</span>
-          <span className="materia">Matematica</span>
-          <span className="materia">Matematica</span>
-          <span className="materia">Filosofia</span>
+          <span className="materia">Ed Física</span>
+          <span className="materia">Inglês</span>
+          <span className="materia">Inglês</span>
+          <span className="materia">Física</span>
+          <span className="materia">Física</span>
         </div>
         <div className="line">
-          <span className="materia">Portugues</span>
-          <span className="materia">Portugues</span>
-          <span className="materia">Matematica</span>
-          <span className="materia">Matematica</span>
-          <span className="materia">Filosofia</span>
-        </div>
-        <div className="line">
-          <span className="materia">Portugues</span>
-          <span className="materia">Portugues</span>
-          <span className="materia">Matematica</span>
-          <span className="materia">Matematica</span>
-          <span className="materia">Filosofia</span>
+          <span className="materia">Redes</span>
+          <span className="materia">Redes</span>
+          <span className="materia">Sistemas</span>
+          <span className="materia">Sistemas</span>
+          <span className="materia">Linguagem</span>
         </div>
       </div>
     </div>
