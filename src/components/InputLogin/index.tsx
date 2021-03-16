@@ -2,7 +2,6 @@ import React, { FC } from 'react';
 import './styles.css';
 
 interface IProps{
-  // eslint-disable-next-line react/require-default-props
   placeholder?: string
 }
 
