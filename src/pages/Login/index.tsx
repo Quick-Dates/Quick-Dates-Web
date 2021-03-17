@@ -2,14 +2,12 @@ import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
 import './styles.css';
 
-const Login: FC = () => {
+export default function Login() {
   const mensagem = 'Login git';
   return (
-    <div>
+    <div className="containerLogin">
       <h1>{ mensagem }</h1>
       <Link to="/activities"> Entrar </Link>
     </div>
   );
-};
-
-export default Login;
+}

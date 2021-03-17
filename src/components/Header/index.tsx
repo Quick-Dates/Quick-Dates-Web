@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import LogoHeader from '../../assets/logo-header.svg';
+import LogoHeaderMobile from '../../assets/logo-mobile.svg';
 import './styles.css';
 
 interface IProps{
@@ -10,11 +11,13 @@ interface IProps{
 
 const Header: FC<IProps> = ({ isStudent }: IProps) => {
   const pathName = useLocation().pathname;
+  const { innerWidth: width } = window;
   return (
 
     <header className="header">
       <div className="logo">
-        <img src={LogoHeader} alt="logo" />
+        {width <= 425 ? <img src={LogoHeaderMobile} alt="logo" /> : <img src={LogoHeader} alt="logo" />}
+
       </div>
       { isStudent
         ? (

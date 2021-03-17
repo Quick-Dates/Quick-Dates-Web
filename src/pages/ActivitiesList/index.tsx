@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import BigCalendar from '../../components/BigCalendar/index';
 import Template from '../../components/Template';
 import './styles.css';
@@ -10,7 +10,6 @@ import animation from '../../assets/calendar-animation.json';
 
 export default function ActivitiesList(): JSX.Element {
   const [isAnimation, setAnimation] = useState(true);
-
   setTimeout(() => { setAnimation(false); }, 3000);
 
   const optionsAnimation = {
@@ -19,6 +18,19 @@ export default function ActivitiesList(): JSX.Element {
     animationData: animation,
   };
 
+  const { innerWidth: width } = window;
+
+  let breadth = 0;
+  let height = 0;
+
+  if (width <= 425) {
+    breadth = 400;
+    height = 400;
+  } else {
+    breadth = 400;
+    height = 400;
+  }
+
   return (
 
     <>
@@ -26,8 +38,8 @@ export default function ActivitiesList(): JSX.Element {
         <div className="content">
           <Lottie
             options={optionsAnimation}
-            height={600}
-            width={600}
+            height={height}
+            width={breadth}
           />
         </div>
       ) : (
