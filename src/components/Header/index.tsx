@@ -19,7 +19,7 @@ const Header: FC<IProps> = ({ isStudent }: IProps) => {
       { isStudent
         ? (
           <nav className="menu">
-            <Link to="/help/student" className={pathName === '/help' ? 'visited' : ''}> Ajuda </Link>
+            <Link to="/help/student" className={pathName === '/help/student' || pathName === '/help/teacher' ? 'visited' : ''}> Ajuda </Link>
             <Link to="/activities" className={pathName === '/activities' ? 'visited' : ''}> Calendário  </Link>
             <Link to="/time" className={pathName === '/time' ? 'visited' : ''}> Horário  </Link>
             <Link to="/"> Sair  </Link>
