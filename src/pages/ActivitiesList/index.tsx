@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import React, { useState } from 'react';
 import BigCalendar from '../../components/BigCalendar/index';
 import Template from '../../components/Template';
 import './styles.css';
@@ -8,10 +8,10 @@ import './styles.css';
 import Lottie from 'react-lottie';
 import animation from '../../assets/calendar-animation.json';
 
-export default function ActivitiesList() {
+export default function ActivitiesList(): JSX.Element {
   const [isAnimation, setAnimation] = useState(true);
 
-  setTimeout(() => { setAnimation(false); }, 8000);
+  setTimeout(() => { setAnimation(false); }, 3000);
 
   const optionsAnimation = {
     loop: true,

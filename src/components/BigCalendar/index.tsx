@@ -1,5 +1,5 @@
 import moment from 'moment';
-import React, { FC } from 'react';
+import React from 'react';
 import { Calendar, momentLocalizer } from 'react-big-calendar';
 import 'moment/locale/pt-br';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
@@ -7,7 +7,7 @@ import 'react-big-calendar/lib/css/react-big-calendar.css';
 // css
 import './index.css';
 
-export default function BigCalendar() {
+export default function BigCalendar(): JSX.Element {
   const localizer = momentLocalizer(moment);
   return (
     <Calendar
