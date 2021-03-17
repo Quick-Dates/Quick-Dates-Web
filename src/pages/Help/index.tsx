@@ -27,7 +27,7 @@ const Help: FC = () => {
           </a>
           <a className="linksSocialMedia" href="https://www.whatsapp.com/?lang=pt_br">
             <img className="socialMediaIcon" src={WhatsAppIcon} alt="WhatsApp" />
-            <p className="nameSocialMedia">WhatsApp</p>
+            <p className="nameSocialMedia"> WhatsApp </p>
           </a>
         </div>
       </Template>
