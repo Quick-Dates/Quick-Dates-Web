@@ -5,7 +5,6 @@ import LogoHeaderMobile from '../../assets/logo-mobile.svg';
 import './styles.css';
 
 interface IProps{
-  // eslint-disable-next-line react/require-default-props
   isStudent?: boolean
 }
 

@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-no-target-blank */
 import React, { FC } from 'react';
 import InstagramIcon from '../../assets/instagram.svg';
 import './styles.css';

@@ -34,6 +34,10 @@
       "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
       "import/prefer-default-export": "off",
       "no-use-before-define": "off",
+      "import/order": "off",
+      "react/jsx-no-target-blank": "off",
+      "react/require-default-props": "off",
+      "@typescript-eslint/explicit-module-boundary-types": "off",
       "import/extensions": [
         "error",
         "ignorePackages",

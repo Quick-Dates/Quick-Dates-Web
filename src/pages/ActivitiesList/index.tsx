@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import BigCalendar from '../../components/BigCalendar/index';
 import Template from '../../components/Template';
 import './styles.css';
 
 // animations
-// eslint-disable-next-line import/order
 import Lottie from 'react-lottie';
 import animation from '../../assets/calendar-animation.json';
 
