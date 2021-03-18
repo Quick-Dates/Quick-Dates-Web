@@ -8,6 +8,7 @@ export default function Login() {
     <div className="containerLogin">
       <h1>{ mensagem }</h1>
       <Link to="/activities"> Entrar </Link>
+      <Link to="/scheduleActivity"> Professor </Link>
     </div>
   );
 }
