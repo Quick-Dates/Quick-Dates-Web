@@ -1,12 +1,12 @@
-import React, { FC } from 'react';
+import React from 'react';
 import './styles.css';
 
 interface IProps{
   placeholder?: string
 }
 
-const InputLogin: FC<IProps> = ({ placeholder }: IProps) => (
-  <input type="text" name="input" placeholder={placeholder} className="input" />
-);
-
-export default InputLogin;
+export default function InputLogin({ placeholder }: IProps) {
+  return (
+    <input type="text" name="input" placeholder={placeholder} className="input" />
+  );
+}

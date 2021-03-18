@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import LogoHeader from '../../assets/logo-header.svg';
 import LogoHeaderMobile from '../../assets/logo-mobile.svg';
@@ -8,7 +8,7 @@ interface IProps{
   isStudent?: boolean
 }
 
-const Header: FC<IProps> = ({ isStudent }: IProps) => {
+export default function Header({ isStudent }: IProps) {
   const pathName = useLocation().pathname;
   const { innerWidth: width } = window;
   return (
@@ -38,6 +38,4 @@ const Header: FC<IProps> = ({ isStudent }: IProps) => {
 
     </header>
   );
-};
-
-export default Header;
+}

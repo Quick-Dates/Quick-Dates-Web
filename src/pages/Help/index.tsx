@@ -11,7 +11,7 @@ interface IProps{
   user:string
 }
 
-const Help: FC = () => {
+export default function Help() {
   const { user }:IProps = useParams();
   return (
     <div>
@@ -33,6 +33,4 @@ const Help: FC = () => {
       </Template>
     </div>
   );
-};
-
-export default Help;
+}

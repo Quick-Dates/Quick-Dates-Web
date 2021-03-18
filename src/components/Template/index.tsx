@@ -11,17 +11,17 @@ interface IProps{
   title: string
 }
 
-const Template: FC<IProps> = ({ children, isStudent, title }: IProps) => (
-  <div className="template">
-    <Helmet>
-      <title>Quick Dates | {title}</title>
-    </Helmet>
-    <Header isStudent={isStudent} />
-    <div className="content">
-      {children}
+export default function Template({ children, isStudent, title }: IProps) {
+  return (
+    <div className="template">
+      <Helmet>
+        <title>Quick Dates | {title}</title>
+      </Helmet>
+      <Header isStudent={isStudent} />
+      <div className="content">
+        {children}
+      </div>
+      <Footer />
     </div>
-    <Footer />
-  </div>
-);
-
-export default Template;
+  );
+}
