@@ -1,13 +1,16 @@
 .rbc-calendar{/*Calendar*/
   margin-bottom: 2rem;
-  margin-top: 3rem;
+  /* margin-top: 3rem; */
   width: 95%;
 }
 
-.rbc-toolbar-label{/*Label*/
+span.rbc-toolbar-label{/*Label*/
   font-size: 2.5rem;
   font-weight: 700;
   color: var(--color-text-card);
+  display: flex;
+  justify-content: flex-end;
+  text-transform: capitalize;
 }
 
 .rbc-btn-group button{/*Buttons top*/
@@ -33,7 +36,10 @@
   /* background-color: var(--color-text-visited-header); */
   color: var(--background-button-primary);
   border: 1px solid var(--color-text-visited-header);
-
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 span[role="columnheader"]{/*Days*/
@@ -48,4 +54,35 @@ a[role="cell"]{/*Day number*/
 .rbc-day-bg{/*Container days*/
   border-left: 1px solid var(--color-text-visited-header);
   border-right: 1px solid var(--color-text-visited-header);
+}
+
+
+.rbc-btn-group:last-child{/*botoes*/
+  display: none;
+}
+
+.rbc-btn-group:last-child button:nth-child(4){/*botoes*/
+  display: none;
+}
+
+div.rbc-timeslot-group{
+  height: 60px;
+}
+
+/*Mobile*/
+@media(max-width: 425px){
+
+  .rbc-calendar{/*Calendar*/
+    margin-bottom: 2rem;
+    width: 98%;
+  }
+
+  span.rbc-toolbar-label{/*Label*/
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-text-card);
+    display: flex;
+    justify-content: center;
+    text-transform: capitalize;
+  }
 }

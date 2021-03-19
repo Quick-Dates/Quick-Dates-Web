@@ -9,7 +9,7 @@ import animation from '../../assets/calendar-animation.json';
 
 export default function ActivitiesList(): JSX.Element {
   const [isAnimation, setAnimation] = useState(true);
-  setTimeout(() => { setAnimation(false); }, 3000);
+  setTimeout(() => { setAnimation(false); }, 2000);// 5500
 
   const optionsAnimation = {
     loop: true,
