@@ -1,5 +1,5 @@
 /* eslint-disable no-unneeded-ternary */
-import React, { FC } from 'react';
+import React from 'react';
 import { useParams } from 'react-router-dom';
 import TelegramIcon from '../../assets/telegram-icon.svg';
 import GmailIcon from '../../assets/gmail-icon.svg';

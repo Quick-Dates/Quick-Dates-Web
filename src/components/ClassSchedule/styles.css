@@ -1,7 +1,25 @@
 .container {
   display: flex;
   flex-direction: row;
-  margin: 5rem 0rem 10rem 0rem;
+  margin: 5rem 0rem;
+}
+
+.horarios {
+  margin-top: 5.6rem;
+  flex-direction: column;
+  display: flex;
+}
+
+.horario {
+  font-size: 12pt;
+  background-color: var(--background-card-time);
+  color: var(--color-text-card);
+  padding: 1rem;
+  width: 15rem;
+  height: 3.8rem;
+  text-align: center;
+  border-radius: 1.5rem;
+  margin: 0.8rem;
 }
 
 .table {
@@ -25,8 +43,9 @@
   margin: 0.8rem;
 }
 
-.content {
+.conteudo {
   width: 100%;
+  display: flex;
   flex-direction: column;
 }
 
@@ -44,20 +63,3 @@
   text-align: center;
 }
 
-.horarios {
-  margin-top: 5.6rem;
-  flex-direction: column;
-  display: flex;
-}
-
-.horario {
-  font-size: 12pt;
-  background-color: var(--background-card-time);
-  color: var(--color-text-card);
-  padding: 1rem;
-  width: 15rem;
-  height: 3.8rem;
-  text-align: center;
-  border-radius: 1.5rem;
-  margin: 0.8rem;
-}

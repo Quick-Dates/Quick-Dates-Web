@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React from 'react';
 import './styles.css';
 
 export default function ClassSchedule() {
@@ -24,7 +24,7 @@ export default function ClassSchedule() {
           <span className="dia">Quinta</span>
           <span className="dia">Sexta</span>
         </div>
-        <div className="content">
+        <div className="conteudo">
           <div className="line">
             <span className="materia">Português</span>
             <span className="materia">Português</span>
