@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import BigCalendar from '../../components/BigCalendar/index';
 import Template from '../../components/Template';
+import Modal from '../../components/Modal';
 import './styles.css';
 
 // animations
@@ -45,6 +46,7 @@ export default function ActivitiesList(): JSX.Element {
         <Template isStudent title="Calendar">
           <div className="content">
             <BigCalendar />
+            {/* <Modal /> */}
           </div>
         </Template>
       ) }
