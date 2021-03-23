@@ -1,7 +1,8 @@
 .rbc-calendar{/*Calendar*/
   margin-bottom: 2rem;
+  margin-top: 2rem;
   /* margin-top: 3rem; */
-  width: 95%;
+  width: 100%;
 }
 
 span.rbc-toolbar-label{/*Label*/
@@ -74,15 +75,28 @@ div.rbc-timeslot-group{
 
   .rbc-calendar{/*Calendar*/
     margin-bottom: 2rem;
-    width: 98%;
+  }
+
+  .rbc-toolbar{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .rbc-btn-group button{/*Buttons top*/
+    font-size: 1.3rem;
   }
 
   span.rbc-toolbar-label{/*Label*/
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--color-text-card);
+    font-size: 2rem;
+  }
+
+  /*events*/
+  .rbc-event{
+    height: 3rem;
     display: flex;
-    justify-content: center;
-    text-transform: capitalize;
+  }
+
+  .rbc-event-content{
+    font-size: 1.5rem;
   }
 }

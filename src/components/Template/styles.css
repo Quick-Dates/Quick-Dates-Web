@@ -3,10 +3,18 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
+  width: 100%;
 }
 
 .content {
   animation: transicao 0.5s linear;
+  width: 100%;
+  height: 100vh;
+}
+@media(max-width: 425px){
+  .template{
+    display: flex;
+  }
 }
 
 @keyframes transicao {

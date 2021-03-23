@@ -1,0 +1,53 @@
+.container{
+  width: 16rem;
+  background-color: var(--background-primary);
+  box-shadow: 0 0 5px 1px black;
+  border-radius: 5px;
+  padding: 1rem;
+
+  position: relative;
+  z-index: 9;
+  top: -3rem;
+  right: 9rem;
+
+  animation: transi 0.5s linear;
+  margin: 0;
+}
+
+.container nav{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+}
+
+.container div{
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+}
+
+.container div section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container div section p{
+  margin-top: .5rem;
+  
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-text-card);
+}
+
+@keyframes transi{
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}

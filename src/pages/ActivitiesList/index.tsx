@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import BigCalendar from '../../components/BigCalendar/index';
 import Template from '../../components/Template';
-import Modal from '../../components/Modal';
+// import Modal from '../../components/Modal';
+// import MenuStudent from '../../components/MenuStudent';
 import './styles.css';
 
 // animations
@@ -24,8 +25,8 @@ export default function ActivitiesList(): JSX.Element {
   let height = 0;
 
   if (width <= 425) {
-    breadth = 400;
-    height = 400;
+    breadth = 300;
+    height = 300;
   } else {
     breadth = 400;
     height = 400;
@@ -44,12 +45,15 @@ export default function ActivitiesList(): JSX.Element {
         </div>
       ) : (
         <Template isStudent title="Calendar">
-          <div className="content">
-            <BigCalendar />
-            {/* <Modal /> */}
-          </div>
+          <BigCalendar />
+
         </Template>
       ) }
     </>
   );
 }
+// { /* <div className="content"> */ }
+
+// { /* <Modal /> */ }
+// { /* <MenuStudent /> */ }
+// { /* </div> */ }

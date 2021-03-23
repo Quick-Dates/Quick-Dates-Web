@@ -81,7 +81,7 @@ export default function BigCalendar(): JSX.Element {
       startAccessor="start"
       endAccessor="end"
       culture="pt-br"
-      style={{ height: 500 }}
+      style={{ height: '100%' }}
       messages={{
         next: 'Próximo',
         previous: 'Anterior',
