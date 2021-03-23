@@ -22,7 +22,7 @@ export default function Login() {
   const [user, setUser] = useState('activities');
 
   function setProfessor() {
-    setUser('scheduleActivity');
+    setUser('schedule-activity');
   }
 
   function setAluno() {
