@@ -1,50 +1,41 @@
-/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './styles.css';
-import LogoHeader from '../../assets/logo-header.svg';
+import LogoMain from '../../assets/logo-main.svg';
 
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { MdEmail, MdLock } from 'react-icons/md';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { HiEye, HiEyeOff } from 'react-icons/hi';
 
 export default function Login() {
   const [show, setShow] = useState(false);
+  const [user, setUser] = useState('student');
 
   function handleClick(e: { preventDefault: () => void; }) {
     e.preventDefault();
     setShow(!show);
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [user, setUser] = useState('activities');
-
   function setProfessor() {
-    setUser('schedule-activity');
+    setUser('teacher');
   }
 
   function setAluno() {
-    setUser('activities');
+    setUser('student');
   }
 
   return (
     <div className="login">
-      <div className="logo">
-        <img src={LogoHeader} alt="logo" />
-      </div>
       <div className="loginR">
         <h1>Login</h1>
         <div className="acesso">
           <div className="lista-acesso">
-            <p onClick={setProfessor}> Professor </p>
-            <p onClick={setAluno}> Aluno </p>
+            <span onClick={setAluno} role="presentation" className={user === 'student' ? 'perfil selected' : 'perfil'}> Aluno </span>
+            <span onClick={setProfessor} role="presentation" className={user === 'teacher' ? 'perfil selected' : 'perfil'}> Professor </span>
           </div>
           <div className="login-loginInputMatricula">
             <MdEmail />
             <input
-              placeholder="Matricula"
+              placeholder={user === 'student' ? 'Matricula' : 'Login'}
             />
           </div>
           <div className="login-loginInputPassword">
@@ -68,9 +59,12 @@ export default function Login() {
             </div>
           </div>
           <button type="button">
-            <Link to={user}> Entrar </Link>
+            <Link to={user === 'student' ? '/activities' : '/shedule-activity'}> Entrar </Link>
           </button>
         </div>
+      </div>
+      <div className="logo">
+        <img src={LogoMain} alt="logo" />
       </div>
     </div>
   );

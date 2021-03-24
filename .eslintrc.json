@@ -39,6 +39,7 @@
       "react/require-default-props": "off",
       "@typescript-eslint/explicit-module-boundary-types": "off",
       "@typescript-eslint/no-unused-vars": "error",
+      "jsx-a11y/click-events-have-key-events": "off",
       "import/extensions": [
         "error",
         "ignorePackages",

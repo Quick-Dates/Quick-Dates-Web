@@ -1,7 +1,7 @@
 .login {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   height: 100vh;
   width: 100%;
   background-color: white;
@@ -22,19 +22,28 @@
   }
     
   
-  .list-acesso {
+  .lista-acesso {
     display: flex;
-    flex-direction:  row;
-    gap: 1rem;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 4rem;
+    margin-top: 1rem;
+  }
+  .lista-acesso .perfil {
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    transition: border 0.5s;
+    cursor: pointer;
+  }
+  .lista-acesso .perfil.selected {
+    border: 1px solid var(--color-button-border);
+    border-radius: 5rem;
   }
   
 
 .logo img {
-  flex-direction: row;
   position: relative;
   width: 400px;
   height: 600px;
-  top: 12px;
 }
 
 .loginR { 
@@ -51,29 +60,29 @@
 }
 
 .loginR h1 {
-  font-family: 'Roboto Slab';
+  font-weight: bold;
   font-size: 40px;
   margin-bottom: 20px;
 }
 
 .loginR h4 {
-  font-family: 'Roboto Slab';
   font-weight: 300;
   margin-top: 40px;
   font-size: 15px;
   font-weight: 500;
-  color: #247D7E;
+  color: var(--color-text-card);
 }
 
 .login-loginInputMatricula {
   display: flex;
   align-items: center;
-  color: #247D7E;
+  color: var(--color-text-card);
   border: 1px solid #000;
   border-radius: 10px;
   padding: 3px;
   width: 100%;
   height: 50px;
+  margin-bottom: 3rem;
 }
 
 .login-loginInputMatricula svg {
@@ -95,7 +104,7 @@
 .login-loginInputPassword {
   display: flex;
   align-items: center;
-  color: #247D7E;
+  color: var(--color-text-card);
   border: 1px solid #000;
   border-radius: 3px;
   padding: 3px;
@@ -103,10 +112,12 @@
   width: 100%;
   height: 50px;
   border-radius: 10px;
+  margin-bottom: 3rem;
 }
 
 .login-loginInputPassword svg {
   margin-left: 10px;
+  margin: 0.4rem 0.7rem 0 1rem;
   font-size: 25px;
 }
 
@@ -123,8 +134,8 @@
 
 .loginR button {
   width: 100%;
-  background-color: #247D7E;
-  color: white;
+  background-color: var(--background-button-primary);
+  color: var( --color-text-button);
   font-weight: 800;
   height: 50px;
   border-radius: 10px;
@@ -136,16 +147,16 @@
 }
 
 .loginR button:hover {
-  background-color: #0e5455;
+  background-color: var(--background-button-primary-hover);
   border: 1px solid #000;
   border-radius: 10px;
-  color:white;
   cursor: pointer;
+  border: none;
+  transition: background-color 1s;
 }
-.loginR button:hover a{
- 
-  color:white;
-  cursor: pointer;
+.loginR button a{
+  text-decoration: none;
+  color: var( --color-text-button);
 }
 
 .login-eye {
