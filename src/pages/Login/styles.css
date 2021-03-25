@@ -167,4 +167,86 @@
   margin-right: 10px;
 }
 
+@media(max-width: 425px){
+  .containerLogin{
+    width: 100%;
+    height: 100vh;
+    /* background-color: lawngreen; */
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logoLogin img{
+    margin-top: 4rem;
+    width: 25rem;
+  }
+
+  .lista-acesso {
+    justify-content: unsafe;
+    margin-bottom: 2rem;
+    margin-top: 0;
+  }
+  .lista-acesso .perfil {
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    transition: border 0.5s;
+    color: var(--color-text-card );
+  }
+  .lista-acesso .perfil.selected {
+    border: 0; 
+    border-radius: 0;
+    color: var(--background-header );
+  }
+
+  .login-loginInputMatricula {
+    width: 90%;
+    height: 4.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .login-loginInputMatricula input {
+    height: 100%;
+    font-size: 1.7rem;
+    margin-left: 1rem;
+  }
+  
+  .login-loginInputPassword {
+    width: 90%;
+    height: 4.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .login-loginInputPassword input {
+    height: 100%;
+    font-size: 1.7rem;
+    margin-left: 1rem;
+  }
+
+  .containerLogin button {
+    width: 90%;
+    background-color: var(--background-button-primary);
+    color: var( --color-text-button);
+    font-weight: 600;
+    height: 4.5rem;
+    border-radius: 10px;
+    font-size: 1.8rem;
+    margin-top: .5rem;
+    border: none;
+  
+    outline-width: 0;
+  }
+  
+  .containerLogin button:hover {
+    background-color: var(--background-button-primary-hover);
+    border: 1px solid #000;
+    border-radius: 1rem;
+    cursor: pointer;
+    border: none;
+    transition: background-color 1s;
+  }
+  .containerLogin button a{
+    text-decoration: none;
+    color: var( --color-text-button);
+  }
+}

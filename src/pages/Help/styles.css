@@ -33,6 +33,7 @@
     height: 90%;
     gap: 3rem;
     border-radius: 5px;
+    margin-top: 3rem;
   }
 
   .linksSocialMedia p{
@@ -42,5 +43,17 @@
 
   .socialMediaIcon{
     width: 10rem;
+  }
+}
+
+@media(max-width: 425px){
+  .socialMediaIcon{
+    width: 13rem;
+  }
+}
+
+@media(max-width: 280px){
+  .socialMediaIcon{
+    width: 11rem;
   }
 }

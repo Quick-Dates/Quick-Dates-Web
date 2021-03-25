@@ -28,7 +28,7 @@
 .anim-typewriter{
   animation: name duration timing-function delay iteration-count direction fill-mode;
   animation: typewriter 3s steps(44) 1s 1 normal both, 
-  blinkTextCursor 500ms steps(44) infinite normal ;
+  blinkTextCursor 500ms steps(10) infinite normal ;
 }
 
 @keyframes typewriter{

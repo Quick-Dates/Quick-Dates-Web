@@ -3,7 +3,7 @@
   margin-top: 2rem;
   /* margin-top: 3rem; */
   width: 100%;
-}
+} 
 
 span.rbc-toolbar-label{/*Label*/
   font-size: 2.5rem;
@@ -98,5 +98,22 @@ div.rbc-timeslot-group{
 
   .rbc-event-content{
     font-size: 1.5rem;
+  }
+}
+
+/*Mobile*/
+@media(max-width: 280px){
+  button{/*Buttons top*/
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6.5rem;
+    padding: 0;
+  }
+
+  span.rbc-toolbar-label{/*Label*/
+    font-size: 1.2rem;
+    width: 2.5rem;
   }
 }

@@ -1,8 +1,63 @@
-.container{
+.modal{
   position: relative;
-  z-index: 9;
-  width: 30rem;
-  background-color: brown;
+  z-index: 19;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 40rem;
   height: 50rem;
+
+  background-color: var(--background-primary);
   border-radius: 5px;
+  box-shadow: 0 0 5px 1px black;
+
+
+  margin-bottom: 10rem;
+}
+
+.modal h2{
+  font-size: 2.2rem;
+  color: var(--color-text-card);
+  margin-top: 3.5rem;
+}
+
+.modal p{
+  font-size: 1.9rem;
+  color: var(--color-text-card);
+  margin-top: 3rem;
+  
+  width: 80%;
+  text-align: justify;
+}
+
+.modal div{
+  margin-top: 2rem;
+
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal span{
+  font-size: 1.8rem;
+  color: var(--color-text-card);
+  font-weight: bold;
+  line-height: 2.5rem;
+}
+
+.modal button{
+  margin-top: 3rem;
+
+  width: 80%;
+  height: 4rem;
+
+  background-color: var(--background-button-tertiary);
+
+  color: var(--color-text-button);
+  font-size: 1.8rem;
+  text-align: center;
+
+  border: 0;
 }

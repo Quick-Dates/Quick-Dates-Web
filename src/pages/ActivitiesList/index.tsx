@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import BigCalendar from '../../components/BigCalendar/index';
 import Template from '../../components/Template';
-// import Modal from '../../components/Modal';
-// import MenuStudent from '../../components/MenuStudent';
 import './styles.css';
 
 // animations
@@ -11,7 +9,7 @@ import animation from '../../assets/calendar-animation.json';
 
 export default function ActivitiesList(): JSX.Element {
   const [isAnimation, setAnimation] = useState(true);
-  setTimeout(() => { setAnimation(false); }, 2000);// 5500
+  setTimeout(() => { setAnimation(false); }, 8000);// 5500
 
   const optionsAnimation = {
     loop: true,
@@ -36,7 +34,7 @@ export default function ActivitiesList(): JSX.Element {
 
     <>
       {isAnimation ? (
-        <div className="content">
+        <div className="contentAnimation">
           <Lottie
             options={optionsAnimation}
             height={height}
@@ -45,15 +43,11 @@ export default function ActivitiesList(): JSX.Element {
         </div>
       ) : (
         <Template isStudent title="Calendar">
-          <BigCalendar />
-
+          <div className="contentActivies">
+            <BigCalendar />
+          </div>
         </Template>
       ) }
     </>
   );
 }
-// { /* <div className="content"> */ }
-
-// { /* <Modal /> */ }
-// { /* <MenuStudent /> */ }
-// { /* </div> */ }
