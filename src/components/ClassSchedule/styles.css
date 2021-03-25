@@ -1,7 +1,7 @@
-.container {
+.container-class {
   display: flex;
-  flex-direction: row;
   margin: 5rem 0rem;
+  justify-content: center;
 }
 
 .horarios {

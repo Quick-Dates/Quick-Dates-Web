@@ -31,8 +31,8 @@ export default function Header({ isStudent }: IProps) {
     <>
       {width <= 425 ? (
         <header className="header">
-          <div className="logo">
-            <img src={LogoHeaderMobile} alt="logo" />
+          <div className="logo-header">
+            <img src={LogoHeaderMobile} alt="logo-header" />
           </div>
 
           { isStudent
@@ -61,8 +61,8 @@ export default function Header({ isStudent }: IProps) {
         </header>
       ) : (
         <header className="header">
-          <div className="logo">
-            <img src={LogoHeader} alt="logo" />
+          <div className="logo-header">
+            <img src={LogoHeader} alt="logo-header" />
           </div>
           { isStudent
             ? (

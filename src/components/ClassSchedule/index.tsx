@@ -3,7 +3,7 @@ import './styles.css';
 
 export default function ClassSchedule() {
   return (
-    <div className="container">
+    <div className="container-class">
       <div className="horarios">
         <span className="horario">07:00 - 07:50</span>
         <span className="horario">07:50 - 08:40</span>

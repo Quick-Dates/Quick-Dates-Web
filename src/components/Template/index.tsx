@@ -18,7 +18,7 @@ export default function Template({ children, isStudent, title }: IProps) {
         <title>Quick Dates | {title}</title>
       </Helmet>
       <Header isStudent={isStudent} />
-      <div className="content">
+      <div className="content-page">
         {children}
       </div>
       <Footer />
