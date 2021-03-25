@@ -14,8 +14,8 @@ export default function Routes() {
       <Route path="/activities" component={ActivitiesList} />
       <Route path="/help/:user" component={Help} />
       <Route path="/time" component={Time} />
+      <Route path="/schedule-activity" component={ScheduleActivity} />-
       <Route path="*" component={NotFound404} />
-      <Route path="/schedule-activity" component={ScheduleActivity} />
     </Switch>
   );
 }
