@@ -105,9 +105,11 @@ export default function Login() {
                   )}
                 </div>
               </div>
-              <button className="buttonLogin" type="button">
-                <Link to={user === 'student' ? '/activities' : '/shedule-activity'}> Entrar </Link>
-              </button>
+              <Link to={user === 'student' ? '/activities' : '/shedule-activity'}>
+                <button className="buttonLogin" type="button">
+                  Entrar
+                </button>
+              </Link>
             </div>
           </div>
           <div className="logo">

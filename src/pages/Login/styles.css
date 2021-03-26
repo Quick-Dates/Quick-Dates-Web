@@ -76,6 +76,7 @@
 .login-loginInputMatricula {
   display: flex;
   align-items: center;
+  justify-content: start;
   color: var(--color-text-card);
   border: 1px solid #000;
   border-radius: 10px;
@@ -99,6 +100,7 @@
   font-size: 17px;
   margin-left: 10px;
   margin-right: 10px;
+  margin-top: 0;
 }
 
 .login-loginInputPassword {
@@ -130,9 +132,17 @@
   font-size: 17px;
   margin-left: 10px;
   margin-right: 10px;
+  margin-top: 0px;
+
 }
 
-.loginR button {
+.loginR a{
+  width: 100%;
+  text-decoration: none;
+  color: var( --color-text-button);
+}
+
+.loginR a button {
   width: 100%;
   background-color: var(--background-button-primary);
   color: var( --color-text-button);
@@ -146,17 +156,13 @@
   outline-width: 0;
 }
 
-.loginR button:hover {
+.loginR a button:hover {
   background-color: var(--background-button-primary-hover);
   border: 1px solid #000;
   border-radius: 10px;
   cursor: pointer;
   border: none;
   transition: background-color 1s;
-}
-.loginR button a{
-  text-decoration: none;
-  color: var( --color-text-button);
 }
 
 .login-eye {
@@ -233,7 +239,6 @@
     font-size: 1.8rem;
     margin-top: .5rem;
     border: none;
-  
     outline-width: 0;
   }
   
