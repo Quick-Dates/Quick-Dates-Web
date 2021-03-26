@@ -7,7 +7,7 @@
 
   position: relative;
   z-index: 9;
-  top: -3rem;
+  top: 1rem;
   right: 9rem;
 
   animation: transi 0.5s linear;
@@ -44,10 +44,8 @@
 @keyframes transi{
   from {
     opacity: 0;
-    transform: translateX(100px);
   }
   to {
     opacity: 1;
-    transform: translateX(0px);
   }
-}
+} 
