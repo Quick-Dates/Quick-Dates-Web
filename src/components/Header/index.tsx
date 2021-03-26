@@ -5,6 +5,7 @@ import LogoHeader from '../../assets/logo-header.svg';
 import LogoHeaderMobile from '../../assets/logo-mobile.svg';
 import LogoMenu from '../../assets/menu-mobile.svg';
 import MenuStudent from '../MenuStudent';
+import MenuTeacher from '../MenuTeacher';
 import './styles.css';
 
 interface IProps{
@@ -44,19 +45,22 @@ export default function Header({ isStudent }: IProps) {
                 onClick={setVisible}
               >
                 <img src={LogoMenu} alt="" style={{ width: 58 }} />
-                {/* <img src={} alt="" /> */}
                 <div style={{ display: `${isVisible}` }}>
                   <MenuStudent />
                 </div>
               </div>
             )
             : (
-              <nav className="menu">
-                <Link to="/help/teacher" className={pathName === '/help' ? 'visited' : ''}> Ajuda </Link>
-                <Link to="/create/activities" className={pathName === '/create/activities' ? 'visited' : ''}> Agendar atividades  </Link>
-                <Link to="/list/activities" className={pathName === '/list/activities' ? 'visited' : ''}> Ver Atividades  </Link>
-                <Link to="/"> Sair  </Link>
-              </nav>
+              <div
+                role="presentation"
+                className="menuResponse"
+                onClick={setVisible}
+              >
+                <img src={LogoMenu} alt="" style={{ width: 58 }} />
+                <div style={{ display: `${isVisible}` }}>
+                  <MenuTeacher />
+                </div>
+              </div>
             )}
 
         </header>
@@ -69,7 +73,9 @@ export default function Header({ isStudent }: IProps) {
             ? (
               <nav className="menu">
                 <Link to="/help/student" className={pathName === '/help/student' || pathName === '/help/teacher' ? 'visited' : ''}> Ajuda </Link>
+
                 <Link to="/activities" className={pathName === '/activities' ? 'visited' : ''}> Calendário  </Link>
+
                 <Link to="/time" className={pathName === '/time' ? 'visited' : ''}> Horário  </Link>
                 <Link to="/"> Sair  </Link>
               </nav>

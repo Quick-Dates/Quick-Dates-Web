@@ -14,7 +14,7 @@
     flex-direction: column;
   }
 
-   .fundo input{
+  .fundo input{
     text-align: center; 
     margin-left: 50px;
     margin-top: 10px;
@@ -31,4 +31,79 @@
   border-radius: 20px;
   background-color: black;
   width: 368px; height: 20px;
+}
+
+@media(max-width: 465px){
+  .containerScheduleActivity{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-around; */
+    margin-top: 3rem;
+
+    width: 100%;
+    height: 100%;
+  }
+
+  .contentScheduleActivity{
+    width: 90%;
+    height: 80%;
+    height: 42rem;
+    padding-bottom: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    /* justify-content: center; */
+
+    background-color: var(--background-card);
+    border-radius: 5px;
+  }
+
+  .contentScheduleActivity h1{
+    margin: 1.5rem 0 0 0;
+  }
+
+  .containerInputScheduleActivity{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-around; */
+    width: 80%;
+    height: 30rem;
+    gap: 1rem;
+    /* background-color: cadetblue; */
+  }
+
+  .contentScheduleActivity input{
+    height: 3.8rem;
+    border-radius: 5px;
+    border: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--color-text-card)
+  }
+
+  .contentScheduleActivity input::placeholder{
+    color: var(--color-text-card)
+  }
+
+  .buttonScheduleActivityMobile{
+    width: 80%;
+    height: 4rem;
+    border-radius: 5px;
+    border: 0;
+    background-color: var(--background-button-primary);
+    color: var(--color-text-button);
+    font-weight: bold;
+    font-size: 1.6rem;
+    transition: background-color .2s;
+  }
+
+  .buttonScheduleActivityMobile:hover{
+    background-color: var(--background-button-secondary);
+  }
+
 }
