@@ -7,7 +7,7 @@
     color: #247D7E;
     margin-left: 50px; 
     
-         }
+         } 
  
   .direita{
     display: flex; 
@@ -24,7 +24,7 @@
   }
 
    
-   button {
+  .buttonScheduleActivity {
    color: white;
    text-align: center;
    border: 0px ;

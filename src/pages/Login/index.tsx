@@ -25,18 +25,6 @@ export default function Login() {
   }
 
   const { innerWidth: width } = window;
-
-  // let breadth = 0;
-  // let height = 0;
-
-  // if (width <= 425) {
-  //   breadth = 300;
-  //   height = 300;
-  // } else {
-  //   breadth = 400;
-  //   height = 400;
-  // }
-
   return (
     <>
       {width <= 425 ? (
@@ -76,7 +64,7 @@ export default function Login() {
                 )}
               </div>
             </div>
-            <button type="button">
+            <button className="buttonLogin" type="button">
               <Link to={user === 'student' ? '/activities' : '/shedule-activity'}> Entrar </Link>
             </button>
           </div>
@@ -117,7 +105,7 @@ export default function Login() {
                   )}
                 </div>
               </div>
-              <button type="button">
+              <button className="buttonLogin" type="button">
                 <Link to={user === 'student' ? '/activities' : '/shedule-activity'}> Entrar </Link>
               </button>
             </div>

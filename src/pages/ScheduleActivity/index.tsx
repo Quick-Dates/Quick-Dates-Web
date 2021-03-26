@@ -19,7 +19,7 @@ export default function ScheduleActivity() {
             <div className="direita">
               <input type="Descricao" name="descricao" id="descricao" placeholder="Descrição" />
             </div>
-            <button type="button">ENVIAR</button>
+            <button className="buttonScheduleActivity" type="button">ENVIAR</button>
           </div>
 
         </form>
