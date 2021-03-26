@@ -7,8 +7,8 @@
     color: #247D7E;
     margin-left: 50px; 
     
-         } 
- 
+} 
+
   .direita{
     display: flex; 
     flex-direction: column;
@@ -23,13 +23,12 @@
     width: 368px; height: 30px;
   }
 
-   
   .buttonScheduleActivity {
-   color: white;
-   text-align: center;
-   border: 0px ;
-   margin-left: 50px;
-   border-radius: 20px;
-   background-color: black;
-   width: 368px; height: 20px;
- }
+  color: white;
+  text-align: center;
+  border: 0px ;
+  margin-left: 50px;
+  border-radius: 20px;
+  background-color: black;
+  width: 368px; height: 20px;
+}

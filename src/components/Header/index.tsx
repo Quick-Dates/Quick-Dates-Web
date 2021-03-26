@@ -26,10 +26,11 @@ export default function Header({ isStudent }: IProps) {
       setIsVisble('flex');
     }
   }
+
   return (
 
     <>
-      {width <= 425 ? (
+      {width <= 465 ? (
         <header className="header">
           <div className="logo-header">
             <img src={LogoHeaderMobile} alt="logo-header" />

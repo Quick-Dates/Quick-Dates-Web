@@ -25,6 +25,8 @@ export default function Login() {
   }
 
   const { innerWidth: width } = window;
+  // eslint-disable-next-line no-console
+  console.log(width);
   return (
     <>
       {width <= 425 ? (

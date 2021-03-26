@@ -1,7 +1,8 @@
+/* eslint-disable max-len */
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import help from '../../assets/ajuda-mobile-icon.svg';
-import clock from '../../assets/horarios-mobile-icon.svg';
+// import clock from '../../assets/horarios-mobile-icon.svg';
 import calendar from '../../assets/calendario-mobile-icon.svg';
 import exit from '../../assets/exit.svg';
 
@@ -21,16 +22,17 @@ export default function MenuStudent() {
           </section>
 
           <section>
-            <Link to="/time" className={pathName === '/time' ? 'visited' : ''}><img src={clock} alt="" /> </Link>
-            <p>Horário</p>
-          </section>
-        </div>
-
-        <div>
-          <section>
             <Link to="/help/student" className={pathName === '../../pages/help/student' || pathName === '/help/teacher' ? 'visited' : ''}><img src={help} alt="" /></Link>
             <p>Ajuda</p>
           </section>
+
+          {/* <section>
+            <Link to="/time" className={pathName === '/time' ? 'visited' : ''}><img src={clock} alt="" /> </Link>
+            <p>Horário</p>
+          </section> */}
+        </div>
+
+        <div>
 
           <section>
             <Link to="/"><img src={exit} alt="" /></Link>

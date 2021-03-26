@@ -13,6 +13,7 @@ interface IProps{
 
 export default function Help() {
   const { user }:IProps = useParams();
+
   return (
     <Template isStudent={user === 'student' ? true : false} title="Help">
       <div className="socialMedia">
