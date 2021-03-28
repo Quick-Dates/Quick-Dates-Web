@@ -1,0 +1,31 @@
+h1#nomeatividades{
+  margin-top: 30px;
+  margin-left: 100px;
+  margin-bottom: 10px;
+}
+
+
+.avaliacoes{
+  display: flex;
+  background-color: #F1F1F1; width:400px; height: 68px; border-radius: 20px;
+  justify-content: center;
+  margin-left: 100px;
+  align-items: center;
+  margin-bottom: 15px;
+  
+}
+h1#avaliacao_nome{
+  margin-right: 40px;
+  align-items: center;
+  justify-content: center;
+
+}
+.todas{
+  display: inline-block;
+}
+.informacao{
+  background-color: #F1F1F1; width: 800px; height: 600px; border-radius: 20px;
+  margin-left: 30px;
+  display: inline-block;
+}
+

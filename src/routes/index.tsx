@@ -6,6 +6,7 @@ import Login from '../pages/Login';
 import NotFound404 from '../pages/NotFound404';
 import Time from '../pages/Time';
 import ScheduleActivity from '../pages/ScheduleActivity';
+import EditActivity from '../pages/EditActivity';
 
 export default function Routes() {
   return (
@@ -15,6 +16,7 @@ export default function Routes() {
       <Route path="/help/:user" component={Help} />
       <Route path="/time" component={Time} />
       <Route path="/shedule-activity" component={ScheduleActivity} />-
+      <Route path="/edit-activity" component={EditActivity} />
       <Route path="*" component={NotFound404} />
     </Switch>
   );
