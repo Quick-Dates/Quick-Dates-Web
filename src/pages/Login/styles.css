@@ -173,7 +173,7 @@
   margin-right: 10px;
 }
 
-@media(max-width: 425px){
+@media(max-width: 950px){
   .containerLogin{
     width: 100%;
     height: 100vh;

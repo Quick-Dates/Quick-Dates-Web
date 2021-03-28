@@ -29,7 +29,7 @@ export default function Login() {
   console.log(width);
   return (
     <>
-      {width <= 425 ? (
+      {width <= 950 ? (
         <div className="containerLogin">
           <div className="logoLogin">
             <img src={LogoMain} alt="logo" />

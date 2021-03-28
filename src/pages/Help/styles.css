@@ -46,9 +46,14 @@
   }
 }
 
-@media(max-width: 425px){
+@media(max-width: 950px){
   .socialMedia{
-    width: 60%;
+    width: 80%;
+    height: 45rem;
+    display: flex;
+    margin: 2rem auto;
+    flex-direction: column;
+    gap: 1rem;
   }
 
   .linksSocialMedia p{
@@ -57,7 +62,7 @@
   }
 
   .socialMediaIcon{
-    width: 8rem;
+    width: 10rem;
   }
 }
 
