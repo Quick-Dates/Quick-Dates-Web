@@ -31,7 +31,7 @@ export default function Header({ isStudent }: IProps) {
   return (
 
     <>
-      {width <= 465 ? (
+      {width <= 950 ? (
         <header className="header">
           <div className="logo-header">
             <img src={LogoHeaderMobile} alt="logo-header" />

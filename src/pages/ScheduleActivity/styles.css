@@ -33,7 +33,7 @@
   width: 368px; height: 20px;
 }
 
-@media(max-width: 465px){
+@media(max-width: 950px){
   .containerScheduleActivity{
     display: flex;
     flex-direction: column;

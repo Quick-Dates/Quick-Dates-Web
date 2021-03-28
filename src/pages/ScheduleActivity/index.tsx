@@ -7,7 +7,7 @@ export default function ScheduleActivity() {
 
   return (
     <>
-      {width <= 465 ? (
+      {width <= 950 ? (
         <Template title="Professor">
           <div className="containerScheduleActivity">
             <div className="contentScheduleActivity">
