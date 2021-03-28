@@ -8,6 +8,8 @@ import Time from '../pages/Time';
 import ScheduleActivity from '../pages/ScheduleActivity';
 import EditActivity from '../pages/EditActivity';
 
+import ActitvityDetails from '../pages/ActivityDetails';
+
 export default function Routes() {
   return (
     <Switch>
@@ -15,6 +17,7 @@ export default function Routes() {
       <Route path="/activities" component={ActivitiesList} />
       <Route path="/help/:user" component={Help} />
       <Route path="/time" component={Time} />
+      <Route path="/ativity-details" component={ActitvityDetails} />
       <Route path="/shedule-activity" component={ScheduleActivity} />-
       <Route path="/edit-activity" component={EditActivity} />
       <Route path="*" component={NotFound404} />
