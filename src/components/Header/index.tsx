@@ -72,7 +72,7 @@ export default function Header({ isStudent }: IProps) {
           { isStudent
             ? (
               <nav className="menu">
-                <Link to="/help/student" className={pathName === '/help/student' || pathName === '/help/teacher' ? 'visited' : ''}> Ajuda </Link>
+                <Link to="/help/student" className={pathName === '/help/student' ? 'visited' : ''}> Ajuda </Link>
 
                 <Link to="/activities" className={pathName === '/activities' ? 'visited' : ''}> Calendário  </Link>
 
@@ -82,9 +82,9 @@ export default function Header({ isStudent }: IProps) {
             )
             : (
               <nav className="menu">
-                <Link to="/help/teacher" className={pathName === '/help' ? 'visited' : ''}> Ajuda </Link>
-                <Link to="/create/activities" className={pathName === '/create/activities' ? 'visited' : ''}> Agendar atividades  </Link>
-                <Link to="/list/activities" className={pathName === '/list/activities' ? 'visited' : ''}> Ver Atividades  </Link>
+                <Link to="/help/teacher" className={pathName === '/help/teacher' ? 'visited' : ''}> Ajuda </Link>
+                <Link to="/shedule-activity" className={pathName === '/shedule-activity' ? 'visited' : ''}> Agendar atividades  </Link>
+                <Link to="/ativity-details" className={pathName === '/ativity-details' ? 'visited' : ''}> Ver Atividades  </Link>
                 <Link to="/"> Sair  </Link>
               </nav>
             )}
