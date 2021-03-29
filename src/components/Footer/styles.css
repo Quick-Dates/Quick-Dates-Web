@@ -1,9 +1,9 @@
 .footer {
-  background-color: var(--background-footer);
-  color: var(--color-text-footer);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: var(--background-footer);
+  color: var(--color-text-footer);
   padding: 20px;
   bottom: 0;
   font-size: 1.5rem;
