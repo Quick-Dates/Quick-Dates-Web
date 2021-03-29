@@ -1,31 +1,96 @@
-h1#nomeatividades{
-  margin-top: 30px;
-  margin-left: 100px;
-  margin-bottom: 10px;
+.esquerdaDireita{
+  display: flex;
 }
 
-
-.avaliacoes{
-  display: flex;
-  background-color: #F1F1F1; width:400px; height: 68px; border-radius: 20px;
-  justify-content: center;
-  margin-left: 100px;
-  align-items: center;
-  margin-bottom: 15px;
+.tabelaEsquerda{
   
 }
-h1#avaliacao_nome{
-  margin-right: 40px;
-  align-items: center;
+
+
+.tabelaEsquerda .conteudoAvaliacoes{
+  background-color: var(--background-card); border-radius: 10px;
+  width: 400px;
+  height:30px;
+  margin-top: 20px;
+  
+}
+
+
+
+.tabelaDescricao{
+   
+  
+  width: 100%;
+  height: 100%;
+  display: flex;
   justify-content: center;
+}
+.tabelaConteudo{
+  width: 550px;
+  height: 600px;
+  background-color: var(--background-card); border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0 0 0;
+  margin-top: 2rem;
+  }
+.tabelaConteudo .tituloTabela{
+  color: var(--color-text-card);
+  font-size: 2rem;
+  font-weight: bold;
+}
 
-}
-.todas{
-  display: inline-block;
-}
-.informacao{
-  background-color: #F1F1F1; width: 800px; height: 600px; border-radius: 20px;
-  margin-left: 30px;
-  display: inline-block;
+.tabelaConteudo .subConteudo p{
+  
+  width: 400px;
+  color: var(--color-text-card);
+  font-size: 2.2rem;
+  text-align: justify;
+  margin-left: 50px;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 
+.tabelaConteudo .subConteudo .notaDataTipo{
+  margin-left: 50px;
+  font-size: 20px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.tabelaConteudo .subConteudo .notaDataTipo span{
+  text-align: start;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--color-text-card);
+}
+
+.tabelaConteudo .botoesEditDelete{
+  width: 85%;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 5rem;
+}
+
+.tabelaConteudo .botoesEditDelete button{
+  margin-top: 190px;
+  width: 15rem;
+  height: 4rem;
+  font-size: 1.8rem;
+  text-align: center;
+  border-radius: 5px;
+  border: 0;
+  color: var(--color-text-button);
+}
+
+.tabelaConteudo .botoesEditDelete .editar{
+  background-color: var(--background-button-secondary);
+}
+
+.tabelaConteudo .botoesEditDelete .excluir{
+  background-color: var(--background-button-tertiary);
+}
