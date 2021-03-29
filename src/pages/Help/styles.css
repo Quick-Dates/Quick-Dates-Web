@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 200px);
+  height: calc(100vh - 20rem);
 }
 
 .socialMedia {
@@ -10,8 +10,9 @@
   align-items: center;
   justify-content: center;
   background-color: var(--background-card-secundary);
-  width: 1000px;
-  height: 300px;
+  width: 100rem;
+  height: 30rem;
+  margin-top: 2rem;
   margin-left: auto;
   margin-right: auto;
 }
@@ -22,15 +23,15 @@
 }
 
 .socialMediaIcon{
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: 5rem;
+  margin-right: 5rem;
 }
 
 .nameSocialMedia{
   text-align: center;
 }
 
-@media(max-width: 465px){
+@media(max-width: 46,5rem){
   .socialMedia{
     display: flex;
     flex-direction: column;
@@ -39,7 +40,7 @@
     width: 80%;
     height: 90%;
     gap: 3rem;
-    border-radius: 5px;
+    border-radius: 0.5rem;
     margin-top: 3rem;
   }
 
@@ -73,7 +74,7 @@
   }
 }
 
-@media(max-width: 411px){
+@media(max-width: 41.1rem){
   .linksSocialMedia p{
     font-size: 1.8rem;
     font-weight: bold;
@@ -84,7 +85,7 @@
   }
 }
 
-@media(max-width: 375px){
+@media(max-width: 37.5rem){
   .socialMedia{
     width: 70%;
   }
@@ -99,13 +100,13 @@
   }
 }
 
-@media(max-width: 320px){
+@media(max-width: 32rem){
   .socialMediaIcon{
     width: 7rem;
   }
 }
 
-@media(max-width: 280px){
+@media(max-width: 28rem){
   .socialMediaIcon{
     width: 9rem;
   }
