@@ -7,7 +7,7 @@ export default function ScheduleActivity() {
 
   return (
     <>
-      {width <= 950 ? (
+      {width <= 465 ? (
         <Template title="Professor">
           <div className="containerScheduleActivity">
             <div className="contentScheduleActivity">
@@ -47,32 +47,37 @@ export default function ScheduleActivity() {
           <div className="content" id="EditarTarefa">
             <form action="">
               <div className="fundo">
-                <h1> Agendar atividades </h1>
-                <div className="esquerda">
-                  <input type="curso" name="turma" id="turma" placeholder="Curso" />
-                  <input type="ano" name="ano" id="ano" placeholder="Ano" />
 
-                  <input type="Título" name="titulo" id="titulo" placeholder="Título" />
+                <h1>Agendar atividades</h1>
 
-                  <input type="Pontuação" name="pontuacao" id="pontuacao" placeholder="Pontuação" />
+                <div className="containerAgendar">
 
-                  <input type="tipo" name="tipo" id="tipo" placeholder="Tipo de avaliação" />
+                  <div className="left">
+                    <input type="Título" name="titulo" id="titulo" placeholder="Título" />
 
+                    <input type="Data" name="Data" id="Data" placeholder="Data" />
+
+                    <input type="curso" name="turma" id="turma" placeholder="Turma" />
+
+                    <input type="Pontuação" name="pontuacao" id="pontuacao" placeholder="Pontuação" />
+
+                    <button className="buttonScheduleActivity" type="button">Agendar</button>
+
+                  </div>
+
+                  <div className="right">
+                    <input type="tipo" name="tipo" id="tipo" placeholder="Tipo de avaliação" />
+
+                    <div className="inputDescricaoSchedule">
+                      <input type="Descricao" name="descricao" id="descricao" placeholder="Descrição" />
+                    </div>
+                  </div>
                 </div>
-
-                <div className="direita">
-                  <input type="Descricao" name="descricao" id="descricao" placeholder="Descrição" />
-                </div>
-
-                <button className="buttonScheduleActivity" type="button">ENVIAR</button>
-
               </div>
-
             </form>
           </div>
         </Template>
       ) }
     </>
-
   );
 }

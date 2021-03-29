@@ -1,18 +1,38 @@
 
+
 .fundo{
-  background-color: #F1F1F1; width:850px; height: 500px; border-radius: 20px;
+  background-color: #F1F1F1; width:850px; height: 500px; border-radius: 20px; 
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  justify-content: center;
     }
-    
+
   h1{
     color: #247D7E;
     margin-left: 50px; 
-    
 } 
+.containerAgendar{
+   display: flex;
+  flex-direction: row;
+  width: 80%;
+  height: 50rem;
+}
+.left{
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+}
+ .right{
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+}
 
-  .direita{
-    display: flex; 
-    flex-direction: column;
-  }
+.inputDescricaoSchedule input{
+  height: 50px;
+}
+
 
   .fundo input{
     text-align: center; 
@@ -20,20 +40,21 @@
     margin-top: 10px;
     border: 0px;
     border-radius: 20px;
-    width: 368px; height: 30px;
+    width: 300px; height: 30px;
   }
 
   .buttonScheduleActivity {
   color: white;
   text-align: center;
   border: 0px ;
+  margin-top: 120px;
   margin-left: 50px;
   border-radius: 20px;
-  background-color: black;
-  width: 368px; height: 20px;
+  background-color: #247D7E;
+  width: 80%; height: 3rem;
 }
 
-@media(max-width: 950px){
+@media(max-width: 465px){
   .containerScheduleActivity{
     display: flex;
     flex-direction: column;
@@ -107,3 +128,4 @@
   }
 
 }
+
