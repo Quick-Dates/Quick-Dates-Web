@@ -1,10 +1,14 @@
+/* eslint-disable no-shadow */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable no-return-assign */
 import moment from 'moment';
-import React from 'react';
+import React, { useContext } from 'react';
 import { Calendar, momentLocalizer } from 'react-big-calendar';
 import 'moment/locale/pt-br';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 
 // data
+import { DataEventsContext } from '../../Context/DataEvents';
 import { DataEventsActivies } from '../../Context/DataActivies';
 
 // css
@@ -23,20 +27,13 @@ interface Object {
 
 export default function BigCalendar(): JSX.Element {
   const localizer = momentLocalizer(moment);
-  // eslint-disable-next-line @typescript-eslint/ban-types
-  function click(event: Object) {
-    // eslint-disable-next-line no-console
-    console.log(event);
-  }
+  const { modal } = useContext(DataEventsContext);
 
   return (
     <Calendar
-      onSelectEvent={(event) => click(event)}
+      onSelectEvent={(event) => modal(true)}
       events={[
         DataEventsActivies.eventsData[0],
-        DataEventsActivies.eventsData[1],
-        DataEventsActivies.eventsData[2],
-        DataEventsActivies.eventsData[3],
       ]}
       localizer={localizer}
       startAccessor="start"

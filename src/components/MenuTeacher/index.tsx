@@ -16,12 +16,12 @@ export default function MenuStudent() {
 
         <div>
           <section>
-            <Link to="/create/activities" className={pathName === '/create/activities' ? 'visited' : ''}><img src={schedule} alt="" /></Link>
+            <Link to="/shedule-activity" className={pathName === '/shedule-activity' ? 'visited' : ''}> <img src={schedule} alt="" /></Link>
             <p>Agendar</p>
           </section>
 
           <section>
-            <Link to="/help/student" className={pathName === '../../pages/help/student' || pathName === '/help/teacher' ? 'visited' : ''}><img src={help} alt="" /></Link>
+            <Link to="/help/teacher" className={pathName === '../../pages/help/student' || pathName === '/help/teacher' ? 'visited' : ''}><img src={help} alt="" /></Link>
             <p>Ajuda</p>
           </section>
         </div>

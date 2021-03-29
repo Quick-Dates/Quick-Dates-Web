@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import React, { useContext, useState } from 'react';
 import BigCalendar from '../../components/BigCalendar/index';
 import Template from '../../components/Template';
 import './styles.css';
@@ -7,9 +8,12 @@ import './styles.css';
 import Lottie from 'react-lottie';
 import animation from '../../assets/calendar-animation.json';
 
+import { DataEventsContext } from '../../Context/DataEvents';
+import Modal from '../../components/Modal';
+
 export default function ActivitiesList(): JSX.Element {
   const [isAnimation, setAnimation] = useState(true);
-  setTimeout(() => { setAnimation(false); }, 8000);// 5500
+  setTimeout(() => { setAnimation(false); }, 2000);// 5500
 
   const optionsAnimation = {
     loop: true,
@@ -30,6 +34,10 @@ export default function ActivitiesList(): JSX.Element {
     height = 400;
   }
 
+  const { isVisible } = useContext(DataEventsContext);
+
+  // function
+
   return (
 
     <>
@@ -45,6 +53,7 @@ export default function ActivitiesList(): JSX.Element {
         <Template isStudent title="Calendar">
           <div className="contentActivies">
             <BigCalendar />
+            {isVisible && <Modal />}
           </div>
         </Template>
       ) }

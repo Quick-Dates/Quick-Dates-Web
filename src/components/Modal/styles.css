@@ -1,13 +1,28 @@
+.overlay {
+  /* background: rgba(242, 243, 245, 0.8); */
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  z-index: 9;
+
+}
+
 .modal{
   position: relative;
   z-index: 19;
 
   display: flex;
-  flex-direction: column;
+  flex-direction: column ;
   align-items: center;
 
   width: 40rem;
-  height: 50rem;
+  height: 45rem;
 
   background-color: var(--background-primary);
   border-radius: 5px;
@@ -15,6 +30,23 @@
 
 
   margin-bottom: 10rem;
+  position: relative;
+  margin: auto;
+
+  animation: animationModal .5s linear ;
+}
+
+@keyframes animationModal{
+  from{
+    transform: translateY(1000px);
+    opacity: 0;
+
+  }
+
+  to{
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .modal h2{
@@ -26,16 +58,24 @@
 .modal p{
   font-size: 1.9rem;
   color: var(--color-text-card);
-  margin-top: 3rem;
+  margin-top: 3.5rem;
   
   width: 80%;
   text-align: justify;
 }
 
-.modal div{
-  margin-top: 2rem;
-
+.modal section{
   width: 80%;
+  height: 80%;
+  /* height: 25rem; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.modal div{
+  width: 70%;
   display: flex;
   flex-direction: column;
 }
@@ -50,7 +90,7 @@
 .modal button{
   margin-top: 3rem;
 
-  width: 80%;
+  width: 100%;
   height: 4rem;
 
   background-color: var(--background-button-tertiary);
@@ -61,3 +101,29 @@
 
   border: 0;
 }
+
+@media(max-width: 950px){
+  .modal{
+    width: 90%;
+  }
+
+  .modal span{
+    font-size: 1.7rem;
+  }
+}
+
+@media(max-width: 320px){
+
+  .modal p{
+    font-size: 1.8rem;
+  }
+
+  .modal div{
+    width: 85%;
+  }
+
+  .modal span{
+    font-size: 1.8rem;
+  }
+}
+
