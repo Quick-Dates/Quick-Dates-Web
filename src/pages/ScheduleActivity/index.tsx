@@ -22,14 +22,6 @@ export default function ScheduleActivity() {
 
                 <input autoComplete="off" pattern="[A-Za-z]{3}" type="text" name="turma" id="turma" placeholder="Turma" />
 
-                {/* list="turmas"
-                <datalist id="turmas">
-                  <option value="Informática">Informática</option>
-                  <option value="Química">Química</option>
-                  <option value="Alimentos">Alimentos</option>
-                  <option value="Secretáriado">Secretáriado</option>
-                </datalist> */}
-
                 <input autoComplete="off" type="pontuação" name="pontuação" id="pontuação" placeholder="Pontuação" />
 
                 <input autoComplete="off" pattern="[A-Za-z]{3}" type="text" name="type" id="type" placeholder="Tipo de Avaliação" />
@@ -44,35 +36,28 @@ export default function ScheduleActivity() {
         </Template>
       ) : (
         <Template title="Professor">
-          <div className="content" id="EditarTarefa">
-            <form action="">
+          <div className="content-shedule">
+            <form>
               <div className="fundo">
 
-                <h1>Agendar atividades</h1>
+                <h1 className="title-shedule">Agendar atividades</h1>
 
                 <div className="containerAgendar">
 
-                  <div className="left">
-                    <input type="Título" name="titulo" id="titulo" placeholder="Título" />
+                  <input type="text" name="titulo" placeholder="Título" />
 
-                    <input type="Data" name="Data" id="Data" placeholder="Data" />
+                  <input type="date" name="Data" className="date-input" placeholder="Data" />
 
-                    <input type="curso" name="turma" id="turma" placeholder="Turma" />
+                  <input type="text" name="turma" placeholder="Turma" />
 
-                    <input type="Pontuação" name="pontuacao" id="pontuacao" placeholder="Pontuação" />
+                  <input type="number" name="pontuacao" placeholder="Pontuação" />
 
-                    <button className="buttonScheduleActivity" type="button">Agendar</button>
+                  <input type="text" name="tipo" placeholder="Tipo de avaliação" />
 
-                  </div>
+                  <input type="text" name="descricao" className="descricao" placeholder="Descrição" />
 
-                  <div className="right">
-                    <input type="tipo" name="tipo" id="tipo" placeholder="Tipo de avaliação" />
-
-                    <div className="inputDescricaoSchedule">
-                      <input type="Descricao" name="descricao" id="descricao" placeholder="Descrição" />
-                    </div>
-                  </div>
                 </div>
+                <button className="buttonScheduleActivity" type="button">Agendar</button>
               </div>
             </form>
           </div>
