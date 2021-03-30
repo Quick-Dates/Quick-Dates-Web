@@ -1,104 +1,175 @@
-.ambasTabelas{
-  margin-left: 10%;
-  display: flex;
-  gap: 1.5rem;
-  margin-top: 2.5rem;
-  
-  }
-
-.tabelaAtividades{
-  display: flex;
-  
-  }
-
-.tabelaAtividades .dentroDiv{
-  display: flex;
-  flex-direction: column;
-  gap:20px;
- 
-}
-.tabelaAtividades .dentroDiv div{
-  text-align:center;
-  font-size: 2.2rem;
-  font-weight: bold;
-  color: var(--color-text-card);
-  background-color: var(--background-card); border-radius: 5px;
-  width: 400px;
-  height:60px;
-}
-
-
-
-.tabelaDescricao{
- 
+.containerEditActivity{
   width: 100%;
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.tabelaConteudo{
-  width: 40%;
-  background-color: var(--background-card); border-radius: 5px;
-  padding: 2rem 0 0 0;
-  
-  }
-  
-.tabelaConteudo .tituloTabela{
-  color: var(--color-text-card);
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-.tabelaConteudo p{
-  
-  width: 400px;
-  color: var(--color-text-card);
-  font-size: 2.2rem;
-  text-align: justify;
-  margin-left: 50px;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
-}
-
-.tabelaConteudo .notaDataTipo{
-  margin-left: 20%;
-  font-size: 20px;
+.contentEditActivity{
   width: 80%;
+  height: 80%;
+  display: flex;
+
+  flex-direction: column;
+  margin: 2rem 0 3rem 0;
+}
+
+.titlePage{
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--color-text-card);
+}
+
+.containerDiv{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.containerDiv .containerList{
+  width: 50%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  margin-top: 2rem;
+  gap: 1rem;
 }
 
-.tabelaConteudo .notaDataTipo span{
-  text-align: start;
+.containerDiv .containerList div{
+  height: 6rem;
+  width: 100%;
+  padding-left: 1.5rem;
+  display: flex;
+  align-items: center;
   font-size: 1.8rem;
+  background-color: var(--background-card-secundary);
+  border-radius: 5px;
+  color: var(--color-text-card);
   font-weight: bold;
+}
+
+.containerDiv .containerEdit{
+  width: 45%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+  border-radius: 5px;
+  background-color: var(--background-card-secundary);
+}
+
+.containerDiv .containerEdit .titleEdit{
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--color-text-card);
+  text-align: center;
+}
+
+.containerDiv .containerEdit p{
+  width: 90%;
+  font-size: 1.8rem;
+  text-align: justify;
   color: var(--color-text-card);
 }
 
-.tabelaConteudo .botoesEditDelete{
-  width: 85%;
+.containerDiv .containerEdit .spanButton{
+  height: 100%;
+  width: 90%;
+  margin-top: 2rem;
   display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  margin-top: 5rem;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.tabelaConteudo .botoesEditDelete button{
-  margin-top: 61px;
-  width: 15rem;
-  height: 4rem;
+.containerDiv .containerEdit .spanButton .containerInformations{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.containerDiv .containerEdit .spanButton .containerInformations span{
   font-size: 1.8rem;
-  text-align: center;
-  border-radius: 5px;
-  border: 0;
-  color: var(--color-text-button);
+  color: var(--color-text-card);
+  font-weight: 600;
 }
 
-.tabelaConteudo .botoesEditDelete .editar{
+.containerDiv .containerEdit .spanButton .containerButtons{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.containerDiv .containerEdit .spanButton .containerButtons button{
+  width: 48%;
+  height: 4.3rem;
+  font-size: 2rem;
+  border-radius: 5px;
+  color: var(--color-text-button);
+  border: none;
+  margin-top: 2rem;
+
+}
+
+.containerDiv .containerEdit .spanButton .containerButtons .edit{
   background-color: var(--background-button-secondary);
 }
 
-.tabelaConteudo .botoesEditDelete .excluir{
+.containerDiv .containerEdit .spanButton .containerButtons .delete{
   background-color: var(--background-button-tertiary);
 }
 
+@media(max-width: 950px){
+  /* .containerEditActivity{
+
+  } */
+
+  .contentEditActivity{
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 90%;
+  }
+
+  .contentEditActivity .titlePage{
+    font-size: 2.2rem;
+  }
+
+  .contentEditActivity .containerList{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .contentEditActivity .containerList div{
+    width: 100%;
+    height: 5.5rem;
+    background-color: var(--background-card-secundary);
+    padding-left: 1.5rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.7rem;
+  background-color: var(--background-card-secundary);
+  border-radius: 5px;
+  color: var(--color-text-card);
+  font-weight: bold;
+  }
+}
+
+@media(max-width: 320px){
+  .contentEditActivity .containerList div{
+    font-size: 1.6rem;
+  }
+}
+
+@media(max-width: 280px){
+  .contentEditActivity .containerList div{
+    font-size: 1.4rem;
+  }
+}
