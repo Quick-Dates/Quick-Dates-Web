@@ -1,7 +1,8 @@
 .ambasTabelas{
+  margin-left: 10%;
   display: flex;
   gap: 1.5rem;
-  margin-top: 2rem;
+  margin-top: 2.5rem;
   
   }
 
@@ -21,7 +22,7 @@
   font-size: 2.2rem;
   font-weight: bold;
   color: var(--color-text-card);
-  background-color: var(--background-card); border-radius: 10px;
+  background-color: var(--background-card); border-radius: 5px;
   width: 400px;
   height:60px;
 }
@@ -29,13 +30,14 @@
 
 
 .tabelaDescricao{
+ 
   width: 100%;
   height: 100%;
 }
 
 .tabelaConteudo{
   width: 40%;
-  background-color: var(--background-card); border-radius: 20px;
+  background-color: var(--background-card); border-radius: 5px;
   padding: 2rem 0 0 0;
   
   }
@@ -82,7 +84,7 @@
 }
 
 .tabelaConteudo .botoesEditDelete button{
-  margin-top: 190px;
+  margin-top: 61px;
   width: 15rem;
   height: 4rem;
   font-size: 1.8rem;

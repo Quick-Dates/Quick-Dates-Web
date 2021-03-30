@@ -5,12 +5,12 @@ import './styles.css';
 export default function EditActivity() {
   return (
     <Template title="Professor">
+
       <div className="ambasTabelas">
         <div className="tabelaAtividades">
-
           <h1 className="exemploAtividade">Atividades</h1>
-
           <div className="dentroDiv">
+            <div>2° Informática - prova -  03/10 </div>
             <div>2° Informática - prova -  03/10 </div>
             <div>2° Informática - prova -  03/10 </div>
             <div>2° Informática - prova -  03/10 </div>
