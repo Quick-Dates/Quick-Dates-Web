@@ -10,7 +10,7 @@ export const DataEventsActivies = {
     title: 'Prova português',
     start: new Date(2021, 2, 1, 10, 0), // 10.00 AM
     end: new Date(2021, 2, 1, 14, 0), // 2.00 PM
-    details: 'Pontuação',
+    details: 'Gramática',
     minValue: 0,
     maxValue: 10,
     typeEvaluation: 'Prova',
