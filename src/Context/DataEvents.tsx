@@ -7,15 +7,15 @@ import React, { useState } from 'react';
 
 export const DataEventsActivies = {
   eventsData: [{
-    title: 'Prova português',
-    start: new Date(2021, 2, 1, 10, 0), // 10.00 AM
-    end: new Date(2021, 2, 1, 14, 0), // 2.00 PM
-    details: 'Gramática',
+    title: 'RESUMO DE REDES DE COMPUTADORES',
+    start: new Date(2021, 3, 1, 10, 0), // 10.00 AM
+    end: new Date(2021, 3, 1, 14, 0), // 2.00 PM
+    details: 'Escrever um resumo sobre as diferenças que os avaços na tecnologia proveram ao mundo nos ultimos 70 anos.',
     minValue: 0,
-    maxValue: 10,
-    typeEvaluation: 'Prova',
+    maxValue: 8,
+    typeEvaluation: 'Resumo',
     class: '3° Informática',
-    deliver: '01/03',
+    deliver: '01/04',
   },
   ],
 };

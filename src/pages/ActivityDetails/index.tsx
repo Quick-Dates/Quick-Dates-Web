@@ -8,7 +8,7 @@ export default function ActivityDeatails() {
     <Template title="Detahes da Atividade">
       <div className="containerActivityDetails">
         <div>
-          <h2 className="titleActivityDeatails">2° Informática - prova -  03/10</h2>
+          <h1 className="titleActivityDeatails">RESUMO DE REDES DE COMPUTADORES</h1>
 
           <p>
             Escrever um resumo sobre as diferenças que os avaços na tecnologia proveram ao mundo nos ultimos 70 anos.

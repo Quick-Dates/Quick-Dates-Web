@@ -21,6 +21,7 @@
   color: var(--color-text-card);
   font-size: 2rem;
   font-weight: bold;
+  text-align: center;
 }
 
 .containerActivityDetails div p{

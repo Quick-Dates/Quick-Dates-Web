@@ -16,27 +16,40 @@ export default function Modal() {
   const [text, setText] = useState(' ');
   const [color, setColor] = useState('gray');
   const [radius, setRadius] = useState('.5');
+  const [count, setCount] = useState(1);
 
   function check() {
-    setText('V');
-    setColor('darkgreen');
-    setRadius('1');
+    // setText('V');
+    // setColor('darkgreen');
+    // setRadius('1');
+
+    setCount(count + 1);
+
+    if (count % 2 === 0) {
+      setText('V');
+      setColor('darkgreen');
+      setRadius('1');
+    } else {
+      setText(' ');
+      setColor('gray');
+      setRadius('.5');
+    }
   }
 
   return (
     <div className="overlay">
       <div className="modal">
-        <h2>{DataEventsActivies.eventsData[1].title}</h2>
+        <h1>{DataEventsActivies.eventsData[0].title}</h1>
 
-        <p>{DataEventsActivies.eventsData[1].details}</p>
+        <p>{DataEventsActivies.eventsData[0].details}</p>
 
         <section>
           <div>
-            <span>Pontuação: {DataEventsActivies.eventsData[1].maxValue}</span>
+            <span>Pontuação: {DataEventsActivies.eventsData[0].maxValue}</span>
 
             <span>Data de entrega: {DataEventsActivies.eventsData[0].deliver}</span>
 
-            <span>Tipo de Atividade: {DataEventsActivies.eventsData[1].typeEvaluation}</span>
+            <span>Tipo de Atividade: {DataEventsActivies.eventsData[0].typeEvaluation}</span>
 
             <button
               onClick={check}

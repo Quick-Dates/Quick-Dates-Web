@@ -44,7 +44,7 @@ export default function EditActivity() {
 
                 <div className="containerEdit">
 
-                  <h1 className="titleEdit">PROVA DE REDES DE COMPUTADORES</h1>
+                  <h1 className="titleEdit">RESUMO DE REDES DE COMPUTADORES</h1>
 
                   <p>
                     Escrever um resumo sobre as diferenças que os avaços na tecnologia
