@@ -4,28 +4,72 @@ import Template from '../../components/Template';
 import './styles.css';
 
 export default function ActivityDeatails() {
+  const { innerWidth: width } = window;
+
   return (
-    <Template title="Detahes da Atividade">
-      <div className="containerActivityDetails">
-        <div>
-          <h2 className="titleActivityDeatails">2° Informática - prova -  03/10</h2>
+    <>
+      {width <= 950 ? (
+        <Template title="Professor">
+          <div className="containerEditActivity">
+            <div className="contentEditActivity">
+              <h1 className="titlePage">Atividades</h1>
 
-          <p>
-            Escrever um resumo sobre as diferenças que os avaços na tecnologia proveram ao mundo nos ultimos 70 anos.
-          </p>
+              <div className="containerList">
+                <div>2° Informática - prova -  03/10 </div>
+                <div>2° Informática - prova -  03/10 </div>
+                <div>2° Informática - prova -  03/10 </div>
+                <div>2° Informática - prova -  03/10 </div>
+                <div>2° Informática - prova -  03/10 </div>
+                <div>2° Informática - prova -  03/10 </div>
+              </div>
+            </div>
+          </div>
+        </Template>
+      ) : (
+        <Template title="Professor">
+          <div className="containerEditActivity">
+            <div className="contentEditActivity">
 
-          <section className="informations">
-            <span>Pontuação máxima: 8</span>
-            <span>Data de entrega: 03/10 </span>
-            <span>tipo de atividade: Resumo</span>
-          </section>
+              <h1 className="titlePage">Atividades</h1>
 
-          <section className="buttonsContainer">
-            <button className="buttonEdit" type="button">Editar</button>
-            <button className="buttonDelete" type="button">Excluir</button>
-          </section>
-        </div>
-      </div>
-    </Template>
+              <div className="containerDiv">
+                <div className="containerList">
+                  <div>2° Informática - prova -  03/10 </div>
+                  <div>2° Informática - prova -  03/10 </div>
+                  <div>2° Informática - prova -  03/10 </div>
+                  <div>2° Informática - prova -  03/10 </div>
+                  <div>2° Informática - prova -  03/10 </div>
+                  <div>2° Informática - prova -  03/10 </div>
+                </div>
+
+                <div className="containerEdit">
+
+                  <h1 className="titleEdit">PROVA DE REDES DE COMPUTADORES</h1>
+
+                  <p>
+                    Escrever um resumo sobre as diferenças que os avaços na tecnologia
+                    proveram ao mundo nos ultimos 70 anos.
+                  </p>
+
+                  <div className="spanButton">
+                    <section className="containerInformations">
+                      <span>Pontuação máxima: 8</span>
+                      <span>Data de entrega: 03/10</span>
+                      <span>tipo de atividade: Resumo</span>
+                    </section>
+
+                    <div className="containerButtons">
+                      <button className="edit" type="button">Editar</button>
+                      <button className="delete" type="button">Excluir</button>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </Template>
+      )}
+    </>
   );
 }
