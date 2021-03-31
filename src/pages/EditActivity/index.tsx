@@ -15,12 +15,12 @@ export default function EditActivity() {
               <h1 className="titlePage">Atividades</h1>
 
               <div className="containerList">
-                <Link to="/ativity-details" className="linkPara"> 2° Informática - prova -  03/10 </Link>
-                <Link to="/ativity-details" className="linkPara"> 2° Informática - prova -  03/10 </Link>
-                <Link to="/ativity-details" className="linkPara"> 2° Informática - prova -  03/10 </Link>
-                <Link to="/ativity-details" className="linkPara"> 2° Informática - prova -  03/10 </Link>
-                <Link to="/ativity-details" className="linkPara"> 2° Informática - prova -  03/10 </Link>
-                <Link to="/ativity-details" className="linkPara"> 2° Informática - prova -  03/10 </Link>
+                <Link to="/activity-details" className="linkPara"> 3° Informática - resumo -  04/10 </Link>
+                <Link to="/activity-details" className="linkPara"> 3° Informática - resumo -  04/10 </Link>
+                <Link to="/activity-details" className="linkPara"> 3° Informática - resumo -  04/10 </Link>
+                <Link to="/activity-details" className="linkPara"> 3° Informática - resumo -  04/10 </Link>
+                <Link to="/activity-details" className="linkPara"> 3° Informática - resumo -  04/10 </Link>
+                <Link to="/activity-details" className="linkPara"> 3° Informática - resumo -  04/10 </Link>
               </div>
             </div>
           </div>
@@ -34,12 +34,12 @@ export default function EditActivity() {
 
               <div className="containerDiv">
                 <div className="containerList">
-                  <div>2° Informática - prova -  03/10 </div>
-                  <div>2° Informática - prova -  03/10 </div>
-                  <div>2° Informática - prova -  03/10 </div>
-                  <div>2° Informática - prova -  03/10 </div>
-                  <div>2° Informática - prova -  03/10 </div>
-                  <div>2° Informática - prova -  03/10 </div>
+                  <div>3° Informática - resumo -  04/10 </div>
+                  <div>3° Informática - resumo -  04/10 </div>
+                  <div>3° Informática - resumo -  04/10 </div>
+                  <div>3° Informática - resumo -  04/10 </div>
+                  <div>3° Informática - resumo -  04/10 </div>
+                  <div>3° Informática - resumo -  04/10 </div>
                 </div>
 
                 <div className="containerEdit">
@@ -54,7 +54,7 @@ export default function EditActivity() {
                   <div className="spanButton">
                     <section className="containerInformations">
                       <span>Pontuação máxima: 8</span>
-                      <span>Data de entrega: 03/10</span>
+                      <span>Data de entrega: 04/10</span>
                       <span>tipo de atividade: Resumo</span>
                     </section>
 

@@ -60,12 +60,11 @@ input[type="date"] {
   text-transform: uppercase;
 }
 
-@media(max-width: 465px){
+@media(max-width: 950px){
   .containerScheduleActivity{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 3rem;
 
     width: 100%;
     height: 100%;
@@ -76,6 +75,7 @@ input[type="date"] {
     height: 80%;
     height: 42rem;
     padding-bottom: 2rem;
+    margin: 2rem 0 3rem 0;
 
     display: flex;
     flex-direction: column;
@@ -88,11 +88,12 @@ input[type="date"] {
 
   .contentScheduleActivity h1{
     margin: 1.5rem 0 0 0;
+    color: var(--background-button-primary);
   }
 
   .containerInputScheduleActivity{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
     width: 80%;
     height: 30rem;
     gap: 1rem;

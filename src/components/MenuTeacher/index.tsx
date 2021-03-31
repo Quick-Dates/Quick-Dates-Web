@@ -4,6 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 import help from '../../assets/ajuda-mobile-icon.svg';
 import schedule from '../../assets/agendar-atividades-icon.svg';
 import exit from '../../assets/exit.svg';
+import list from '../../assets/agendar-atividades.svg';
 
 import './styles.css';
 
@@ -27,6 +28,10 @@ export default function MenuStudent() {
         </div>
 
         <div>
+          <section>
+            <Link to="/edit-activity" className={pathName === '../../pages/edit-activity' || pathName === '/edit-activity' ? 'visited' : ''}><img src={list} alt="" /></Link>
+            <p>Marcadas</p>
+          </section>
 
           <section>
             <Link to="/"><img src={exit} alt="" /></Link>

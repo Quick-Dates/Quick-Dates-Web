@@ -18,9 +18,16 @@ export default function ScheduleActivity() {
 
                 <input autoComplete="off" pattern="[A-Za-z]{3}" type="text" name="titulo" id="titulo" placeholder="Título" />
 
-                <input type="data" name="data" id="data" placeholder="Data" />
+                <input type="date" name="data" id="data" placeholder="Data" />
 
-                <input autoComplete="off" pattern="[A-Za-z]{3}" type="text" name="turma" id="turma" placeholder="Turma" />
+                <datalist id="classes">
+                  <option value="Informática">Informática</option>
+                  <option value="Secretariado">Secretáriado</option>
+                  <option value="Alimentos">Alimentos</option>
+                  <option value="Química">Química</option>
+                </datalist>
+
+                <input list="classes" autoComplete="off" pattern="[A-Za-z]{3}" type="text" name="turma" id="turma" placeholder="Turma" />
 
                 <input autoComplete="off" type="pontuação" name="pontuação" id="pontuação" placeholder="Pontuação" />
 
@@ -48,7 +55,14 @@ export default function ScheduleActivity() {
 
                   <input type="date" name="Data" className="date-input" placeholder="Data" />
 
-                  <input type="text" name="turma" placeholder="Turma" />
+                  <datalist id="classes">
+                    <option value="Informática">Informática</option>
+                    <option value="Secretariado">Secretariado</option>
+                    <option value="Alimentos">Alimentos</option>
+                    <option value="Química">Química</option>
+                  </datalist>
+
+                  <input list="classes" type="text" name="turma" placeholder="Turma" />
 
                   <input type="number" name="pontuacao" placeholder="Pontuação" />
 
