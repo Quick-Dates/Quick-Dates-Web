@@ -156,7 +156,7 @@
   outline-width: 0;
 }
 
-.loginR a button:hover {
+.loginR .buttonLogin:hover {
   background-color: var(--background-button-primary-hover);
   border: 1px solid #000;
   border-radius: 10px;
@@ -238,7 +238,7 @@
     margin-left: 1rem;
   }
 
-  .containerLogin button {
+  .containerLogin .buttonLogin {
     width: 90%;
     background-color: var(--background-button-primary);
     color: var( --color-text-button);
