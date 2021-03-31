@@ -26,17 +26,17 @@ export default function Modal() {
   return (
     <div className="overlay">
       <div className="modal">
-        <h2>{DataEventsActivies.eventsData[1].title}</h2>
+        <h1>{DataEventsActivies.eventsData[0].title}</h1>
 
-        <p>{DataEventsActivies.eventsData[1].details}</p>
+        <p>{DataEventsActivies.eventsData[0].details}</p>
 
         <section>
           <div>
-            <span>Pontuação: {DataEventsActivies.eventsData[1].maxValue}</span>
+            <span>Pontuação: {DataEventsActivies.eventsData[0].maxValue}</span>
 
             <span>Data de entrega: {DataEventsActivies.eventsData[0].deliver}</span>
 
-            <span>Tipo de Atividade: {DataEventsActivies.eventsData[1].typeEvaluation}</span>
+            <span>Tipo de Atividade: {DataEventsActivies.eventsData[0].typeEvaluation}</span>
 
             <button
               onClick={check}

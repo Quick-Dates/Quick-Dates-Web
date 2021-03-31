@@ -17,7 +17,7 @@ export default function Routes() {
       <Route path="/activities" component={ActivitiesList} />
       <Route path="/help/:user" component={Help} />
       <Route path="/time" component={Time} />
-      <Route path="/ativity-details" component={ActitvityDetails} />
+      <Route path="/activity-details" component={ActitvityDetails} />
       <Route path="/shedule-activity" component={ScheduleActivity} />-
       <Route path="/edit-activity" component={EditActivity} />
       <Route path="*" component={NotFound404} />
