@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Template from '../../components/Template';
 import './styles.css';
 
@@ -14,12 +15,12 @@ export default function EditActivity() {
               <h1 className="titlePage">Atividades</h1>
 
               <div className="containerList">
-                <div>2° Informática - prova -  03/10 </div>
-                <div>2° Informática - prova -  03/10 </div>
-                <div>2° Informática - prova -  03/10 </div>
-                <div>2° Informática - prova -  03/10 </div>
-                <div>2° Informática - prova -  03/10 </div>
-                <div>2° Informática - prova -  03/10 </div>
+                <Link to="/ativity-details" className="linkPara"> 2° Informática - prova -  03/10 </Link>
+                <Link to="/ativity-details" className="linkPara"> 2° Informática - prova -  03/10 </Link>
+                <Link to="/ativity-details" className="linkPara"> 2° Informática - prova -  03/10 </Link>
+                <Link to="/ativity-details" className="linkPara"> 2° Informática - prova -  03/10 </Link>
+                <Link to="/ativity-details" className="linkPara"> 2° Informática - prova -  03/10 </Link>
+                <Link to="/ativity-details" className="linkPara"> 2° Informática - prova -  03/10 </Link>
               </div>
             </div>
           </div>

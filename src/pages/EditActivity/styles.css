@@ -48,6 +48,19 @@
   border-radius: 5px;
   color: var(--color-text-card);
   font-weight: bold;
+ }
+ .containerList .linkPara{
+  height: 6rem;
+  width: 100%;
+  padding-left: 1.5rem;
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem;
+  background-color: var(--background-card-secundary);
+  border-radius: 5px;
+  color: var(--color-text-card);
+  font-weight: bold;
+  text-decoration: none;
 }
 
 .containerDiv .containerEdit{
