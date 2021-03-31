@@ -7,25 +7,30 @@
 
 .fundo{
   background-color: #F1F1F1; 
-  width: 85rem; 
+  width: 90rem; 
   height: 30rem; 
-  border-radius: 20px; 
+  border-radius: 5px; 
   margin-left: auto;
   margin-right: auto;
   padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
 .title-shedule{
     color: #247D7E;
-    margin-left: 5rem; 
-    margin-bottom: 1rem;
+    /* margin-left: 5rem;  */
+    /* margin-bottom: 1rem; */
+  /* margin: auto; */
+
 } 
 .containerAgendar{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: 80%;
+  width: 90%;
+  margin: auto;
 }
 
 .descricao{
@@ -38,23 +43,31 @@ input[type="date"] {
 
 
   .fundo input{
-    text-align: center; 
-    margin-left: 50px;
-    margin-top: 10px;
+    text-align: center;
+    margin: 1rem auto 0 auto;
     border: 0px;
-    border-radius: 20px;
-    width: 300px; height: 30px;
+    border-radius: 5px;
+    width: 90%; 
+    height: 4rem;
+    font-size: 1.8rem;
+    color: #247D7E;
+  }
+
+  .fundo input::placeholder{
+    color: #247D7E;
+
   }
 
   .buttonScheduleActivity {
   color: white;
   text-align: center;
   border: none;
+  /* margin: 4rem auto 5rem auto; */
   margin-top: 4rem;
-  margin-left: 5rem;
-  border-radius: 2rem;
+  /* margin-left: 5rem; */
+  border-radius: 5px;
   background-color: #247D7E;
-  width: 80%; 
+  width: 85%; 
   height: 4rem;
   font-size: 1.4rem;
   text-transform: uppercase;
