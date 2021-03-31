@@ -16,11 +16,24 @@ export default function Modal() {
   const [text, setText] = useState(' ');
   const [color, setColor] = useState('gray');
   const [radius, setRadius] = useState('.5');
+  const [count, setCount] = useState(1);
 
   function check() {
-    setText('V');
-    setColor('darkgreen');
-    setRadius('1');
+    // setText('V');
+    // setColor('darkgreen');
+    // setRadius('1');
+
+    setCount(count + 1);
+
+    if (count % 2 === 0) {
+      setText('V');
+      setColor('darkgreen');
+      setRadius('1');
+    } else {
+      setText(' ');
+      setColor('gray');
+      setRadius('.5');
+    }
   }
 
   return (
