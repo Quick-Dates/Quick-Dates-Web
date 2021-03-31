@@ -42,8 +42,9 @@
 
 .logo img {
   position: relative;
-  width: 400px;
-  height: 600px;
+  width: 40rem;
+  height: 60rem;
+  animation: esfumacar 1s linear;
 }
 
 .loginR { 
@@ -142,7 +143,7 @@
   color: var( --color-text-button);
 }
 
-.loginR a button {
+.loginR .buttonLogin {
   width: 100%;
   background-color: var(--background-button-primary);
   color: var( --color-text-button);
@@ -173,12 +174,21 @@
   margin-right: 10px;
 }
 
+@keyframes esfumacar {
+  from {
+    transform:  translateX(200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 @media(max-width: 950px){
   .containerLogin{
     width: 100%;
     height: 100vh;
-    /* background-color: lawngreen; */
-
     display: flex;
     flex-direction: column;
     align-items: center;
