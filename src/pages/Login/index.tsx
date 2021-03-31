@@ -95,11 +95,9 @@ export default function Login() {
                 )}
               </div>
             </div>
-            <Link to={user === 'student' ? '/activities' : '/shedule-activity'}>
-              <button className="buttonLogin" type="button">
-                Entrar
-              </button>
-            </Link>
+            <button className="buttonLogin" type="button" onClick={handleAuthenticate}>
+              Entrar
+            </button>
           </div>
           <ToastContainer />
         </div>
