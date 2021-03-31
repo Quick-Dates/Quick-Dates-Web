@@ -239,12 +239,8 @@
     margin-left: 1rem;
   }
 
-  .containerLogin a{
-    width: 90%;
-  }
-
   .containerLogin button {
-    width: 100%;
+    width: 90%;
     background-color: var(--background-button-primary);
     color: var( --color-text-button);
     font-weight: 600;
