@@ -69,7 +69,7 @@ export default function Login() {
               <input
                 onChange={(e) => setLogin(e.target.value)}
                 value={login}
-                placeholder={user === 'student' ? 'Matricula' : 'Login'}
+                placeholder="Matricula"
 
               />
             </div>
