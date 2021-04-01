@@ -70,7 +70,6 @@ export default function Login() {
                 onChange={(e) => setLogin(e.target.value)}
                 value={login}
                 placeholder="Matricula"
-
               />
             </div>
             <div className="login-loginInputPassword">
