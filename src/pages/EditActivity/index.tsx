@@ -34,12 +34,12 @@ export default function EditActivity() {
 
               <div className="containerDiv">
                 <div className="containerList">
-                  <div>2° Informática - prova -  03/10 </div>
-                  <div>2° Informática - prova -  03/10 </div>
-                  <div>2° Informática - prova -  03/10 </div>
-                  <div>2° Informática - prova -  03/10 </div>
-                  <div>2° Informática - prova -  03/10 </div>
-                  <div>2° Informática - prova -  03/10 </div>
+                  <div>3° Informática - resumo -  04/10 </div>
+                  <div>3° Informática - resumo -  04/10 </div>
+                  <div>3° Informática - resumo -  04/10 </div>
+                  <div>3° Informática - resumo -  04/10 </div>
+                  <div>3° Informática - resumo -  04/10 </div>
+                  <div>3° Informática - resumo -  04/10 </div>
                 </div>
 
                 <div className="containerEdit">
@@ -54,7 +54,7 @@ export default function EditActivity() {
                   <div className="spanButton">
                     <section className="containerInformations">
                       <span>Pontuação máxima: 8</span>
-                      <span>Data de entrega: 03/10</span>
+                      <span>Data de entrega: 04/10</span>
                       <span>tipo de atividade: Resumo</span>
                     </section>
 

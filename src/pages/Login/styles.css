@@ -101,6 +101,12 @@
   margin-left: 10px;
   margin-right: 10px;
   margin-top: 0;
+  font-size: 1.8rem;
+  color: #247D7E;
+}
+
+.login-loginInputMatricula input::placeholder{
+  color: #247D7E;
 }
 
 .login-loginInputPassword {
@@ -129,11 +135,15 @@
   outline-width: 0;
   color:  black;
   border: none;
-  font-size: 17px;
+  font-size: 1.8rem;
   margin-left: 10px;
   margin-right: 10px;
   margin-top: 0px;
+  color: #247D7E;
+}
 
+.login-loginInputPassword input::placeholder{
+  color: #247D7E;
 }
 
 .loginR a{
