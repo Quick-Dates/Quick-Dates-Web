@@ -42,8 +42,9 @@
 
 .logo img {
   position: relative;
-  width: 400px;
-  height: 600px;
+  width: 40rem;
+  height: 60rem;
+  animation: esfumacar 1s linear;
 }
 
 .loginR { 
@@ -76,7 +77,6 @@
 .login-loginInputMatricula {
   display: flex;
   align-items: center;
-  justify-content: start;
   color: var(--color-text-card);
   border: 1px solid #000;
   border-radius: 10px;
@@ -101,6 +101,12 @@
   margin-left: 10px;
   margin-right: 10px;
   margin-top: 0;
+  font-size: 1.8rem;
+  color: #247D7E;
+}
+
+.login-loginInputMatricula input::placeholder{
+  color: #247D7E;
 }
 
 .login-loginInputPassword {
@@ -129,11 +135,15 @@
   outline-width: 0;
   color:  black;
   border: none;
-  font-size: 17px;
+  font-size: 1.8rem;
   margin-left: 10px;
   margin-right: 10px;
   margin-top: 0px;
+  color: #247D7E;
+}
 
+.login-loginInputPassword input::placeholder{
+  color: #247D7E;
 }
 
 .loginR a{
@@ -142,7 +152,7 @@
   color: var( --color-text-button);
 }
 
-.loginR a button {
+.loginR .buttonLogin {
   width: 100%;
   background-color: var(--background-button-primary);
   color: var( --color-text-button);
@@ -156,7 +166,7 @@
   outline-width: 0;
 }
 
-.loginR a button:hover {
+.loginR .buttonLogin:hover {
   background-color: var(--background-button-primary-hover);
   border: 1px solid #000;
   border-radius: 10px;
@@ -173,12 +183,21 @@
   margin-right: 10px;
 }
 
+@keyframes esfumacar {
+  from {
+    transform:  translateX(200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 @media(max-width: 950px){
   .containerLogin{
     width: 100%;
     height: 100vh;
-    /* background-color: lawngreen; */
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -229,12 +248,8 @@
     margin-left: 1rem;
   }
 
-  .containerLogin a{
+  .containerLogin .buttonLogin {
     width: 90%;
-  }
-
-  .containerLogin button {
-    width: 100%;
     background-color: var(--background-button-primary);
     color: var( --color-text-button);
     font-weight: 600;

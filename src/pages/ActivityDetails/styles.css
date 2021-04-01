@@ -5,58 +5,67 @@
   justify-content: center;
 }
 
-.containerActivityDetails div{
+.containerActivityDetails .contentActivityDetails{
   width: 90%;
-  height: 37rem;
+  height: 90%;
   background-color: var(--background-card);
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem 0 0 0;
+  padding: 2rem 0;
   margin-top: 2rem;
   border-radius: 5px;
 }
 
-.containerActivityDetails div .titleActivityDeatails{
+.containerActivityDetails .contentActivityDetails .titleActivityDeatails{
   color: var(--color-text-card);
   font-size: 2rem;
   font-weight: bold;
+  text-align: center;
 }
 
-.containerActivityDetails div p{
-  width: 85%;
+.containerActivityDetails .contentActivityDetails p{
+  width: 90%;
+
   color: var(--color-text-card);
   font-size: 1.8rem;
   text-align: justify;
   margin-top: 2rem;
 }
 
-.containerActivityDetails div .informations{
-  width: 80%;
+.containerActivityDetails .contentActivityDetails .containerButtonSpan{
+  width: 90%;
+  height: 100%;
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
-  margin-top: 2rem;
+  justify-content: space-between;
 }
 
-.containerActivityDetails div .informations span{
+.containerActivityDetails .contentActivityDetails .informations{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.containerActivityDetails .contentActivityDetails .informations span{
   text-align: start;
   font-size: 1.8rem;
   font-weight: bold;
   color: var(--color-text-card);
 }
 
-.containerActivityDetails div .buttonsContainer{
-  width: 85%;
+.containerActivityDetails .contentActivityDetails .buttonsContainer{
+  width: 100%;
   display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  margin-top: 5rem;
-
+  align-items: center;
+  justify-content: space-around;
 }
 
-.containerActivityDetails div .buttonsContainer button{
-  width: 15rem;
-  height: 4rem;
+.containerActivityDetails .contentActivityDetails .containerButtonSpan .buttonsContainer button{
+  width: 48%;
+  height: 4rem; 
   font-size: 1.8rem;
   text-align: center;
   border-radius: 5px;
@@ -64,10 +73,16 @@
   color: var(--color-text-button);
 }
 
-.containerActivityDetails div .buttonsContainer .buttonEdit{
+.containerActivityDetails .contentActivityDetails .buttonsContainer .buttonEdit{
   background-color: var(--background-button-secondary);
 }
 
-.containerActivityDetails div .buttonsContainer .buttonDelete{
+.containerActivityDetails .contentActivityDetails .buttonsContainer .buttonDelete{
   background-color: var(--background-button-tertiary);
 }
+
+@media(min-width: 375px){
+  .containerActivityDetails .contentActivityDetails{
+    height: 58%;
+  }
+} 

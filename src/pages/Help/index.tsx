@@ -18,7 +18,7 @@ export default function Help() {
     <Template isStudent={user === 'student' ? true : false} title="Help">
       <div className="containerSocialMedia">
         <div className="socialMedia">
-          <a className="linksSocialMedia" href="https://t.me/WillianSalve">
+          <a className="linksSocialMedia" href="https://t.me/QuickDate">
             <img className="socialMediaIcon" src={TelegramIcon} alt="Telegram" />
             <p className="nameSocialMedia">Telegram</p>
           </a>
@@ -26,7 +26,7 @@ export default function Help() {
             <img className="socialMediaIcon" src={GmailIcon} alt="Gmail" />
             <p className="nameSocialMedia">Gmail</p>
           </a>
-          <a className="linksSocialMedia" href="https://api.whatsapp.com/send?phone=556699730596&text=Ol%C3%A1%2C%20tenho%20uma%20d%C3%BAvida%20no%20QuickDates%20em%3A">
+          <a className="linksSocialMedia" href="https://api.whatsapp.com/send?phone=5566999357137&text=Ol%C3%A1%2C%20tenho%20uma%20d%C3%BAvida%20no%20QuickDates%20em%3A">
             <img className="socialMediaIcon" src={WhatsAppIcon} alt="WhatsApp" />
             <p className="nameSocialMedia"> WhatsApp </p>
           </a>

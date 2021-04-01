@@ -81,7 +81,7 @@ export default function Header({ isStudent }: IProps) {
             : (
               <nav className="menu">
                 <Link to="/shedule-activity" className={pathName === '/shedule-activity' ? 'visited' : ''}> Agendar atividades  </Link>
-                <Link to="/ativity-details" className={pathName === '/ativity-details' ? 'visited' : ''}> Ver Atividades  </Link>
+                <Link to="/edit-activity" className={pathName === '/ativity-details' ? 'visited' : ''}> Ver atividades  </Link>
                 <Link to="/help/teacher" className={pathName === '/help/teacher' ? 'visited' : ''}> Ajuda </Link>
                 <Link to="/"> Sair  </Link>
               </nav>

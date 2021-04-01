@@ -2,7 +2,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import help from '../../assets/ajuda-mobile-icon.svg';
-// import clock from '../../assets/horarios-mobile-icon.svg';
 import calendar from '../../assets/calendario-mobile-icon.svg';
 import exit from '../../assets/exit.svg';
 
@@ -26,10 +25,6 @@ export default function MenuStudent() {
             <p>Ajuda</p>
           </section>
 
-          {/* <section>
-            <Link to="/time" className={pathName === '/time' ? 'visited' : ''}><img src={clock} alt="" /> </Link>
-            <p>Horário</p>
-          </section> */}
         </div>
 
         <div>
