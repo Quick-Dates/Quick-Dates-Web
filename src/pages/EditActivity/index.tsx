@@ -15,6 +15,7 @@ export default function EditActivity() {
               <h1 className="titlePage">Atividades</h1>
 
               <div className="containerList">
+
                 <Link to="/activity-details" className="linkPara"> 2° Informática - prova -  03/10 </Link>
                 <Link to="/activity-details" className="linkPara"> 2° Informática - prova -  03/10 </Link>
                 <Link to="/activity-details" className="linkPara"> 2° Informática - prova -  03/10 </Link>
