@@ -21,7 +21,7 @@ export default function EditActivity() {
                 <Link to="/activity-details" className="linkPara"> 2° Informática - prova -  03/10 </Link>
                 <Link to="/activity-details" className="linkPara"> 2° Informática - prova -  03/10 </Link>
                 <Link to="/activity-details" className="linkPara"> 2° Informática - prova -  03/10 </Link>
-                <Link to="/activity-details" className="linkPara"> 2° Informática - prova -  03/10 </Link>
+                <Link to="/activity-details" className="linkPara"> 3° Informática - Exercício -  03/10 </Link>
               </div>
             </div>
           </div>
