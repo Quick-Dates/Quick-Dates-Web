@@ -58,9 +58,7 @@ a[role="cell"]{/*Day number*/
 }
 
 
-.rbc-btn-group:last-child{/*botoes*/
-  display: none;
-}
+
 
 .rbc-btn-group:last-child button:nth-child(4){/*botoes*/
   display: none;
