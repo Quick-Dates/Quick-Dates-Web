@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import React, { useState } from 'react';
+import React, { FormEvent, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import './styles.css';
 import LogoMain from '../../assets/logo-main.svg';
@@ -21,7 +21,8 @@ export default function Login() {
     setShow(!show);
   }
 
-  function handleAuthenticate() {
+  function handleAuthenticate(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
     if (user === 'student') {
       if (login === '123' && password === 'aluno123') {
         history.push('/activities');
@@ -59,7 +60,7 @@ export default function Login() {
             <img src={LogoMain} alt="logo" />
           </div>
 
-          <div className="acesso">
+          <form className="acesso" onSubmit={(event) => handleAuthenticate(event)}>
             <div className="lista-acesso">
               <span onClick={setAluno} role="presentation" className={user === 'student' ? 'perfil selected' : 'perfil'}> Aluno </span>
               <span onClick={setProfessor} role="presentation" className={user === 'teacher' ? 'perfil selected' : 'perfil'}> Professor </span>
@@ -94,17 +95,17 @@ export default function Login() {
                 )}
               </div>
             </div>
-            <button className="buttonLogin" type="button" onClick={handleAuthenticate}>
+            <button className="buttonLogin" type="submit">
               Entrar
             </button>
-          </div>
+          </form>
           <ToastContainer />
         </div>
       ) : (
         <div className="login">
           <div className="loginR">
             <h1>Login</h1>
-            <div className="acesso">
+            <form className="acesso" onSubmit={(event) => handleAuthenticate(event)}>
               <div className="lista-acesso">
                 <span onClick={setAluno} role="presentation" className={user === 'student' ? 'perfil selected' : 'perfil'}> Aluno </span>
                 <span onClick={setProfessor} role="presentation" className={user === 'teacher' ? 'perfil selected' : 'perfil'}> Professor </span>
@@ -139,10 +140,10 @@ export default function Login() {
                   )}
                 </div>
               </div>
-              <button className="buttonLogin" type="button" onClick={handleAuthenticate}>
+              <button className="buttonLogin" type="submit">
                 Entrar
               </button>
-            </div>
+            </form>
           </div>
           <div className="logo">
             <img src={LogoMain} alt="logo" />
