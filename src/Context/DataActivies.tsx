@@ -3,7 +3,7 @@ export const DataEventsActivies = {
     title: 'RESUMO DE REDES DE COMPUTADORES',
     start: new Date(2021, 3, 1, 10, 0), // 10.00 AM
     end: new Date(2021, 3, 1, 14, 0), // 2.00 PM
-    details: 'Escrever um resumo sobre as diferenças que os avaços na tecnologia proveram ao mundo nos ultimos 70 anos.',
+    details: 'Escrever um resumo sobre as diferenças que os avanços na tecnologia proveram ao mundo nos ultimos 70 anos.',
     minValue: 0,
     maxValue: 8,
     typeEvaluation: 'Resumo',

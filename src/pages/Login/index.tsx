@@ -84,11 +84,13 @@ export default function Login() {
               <div className="login-Eye">
                 {show ? (
                   <HiEye
+                    className="cursor-pointer"
                     size={20}
                     onClick={handleClick}
                   />
                 ) : (
                   <HiEyeOff
+                    className="cursor-pointer"
                     size={20}
                     onClick={handleClick}
                   />
@@ -129,11 +131,13 @@ export default function Login() {
                 <div className="login-Eye">
                   {show ? (
                     <HiEye
+                      className="cursor-pointer"
                       size={20}
                       onClick={handleClick}
                     />
                   ) : (
                     <HiEyeOff
+                      className="cursor-pointer"
                       size={20}
                       onClick={handleClick}
                     />

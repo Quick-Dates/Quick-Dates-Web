@@ -36,3 +36,7 @@ button {
   --color-text-footer: #ffffff80;
   --color-text-visited-header: #c2c2c2;
 }
+
+.cursor-pointer {
+  cursor: pointer;
+}

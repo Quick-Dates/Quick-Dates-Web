@@ -48,7 +48,7 @@ export default function EditActivity() {
                   <h1 className="titleEdit">RESUMO DE REDES DE COMPUTADORES</h1>
 
                   <p>
-                    Escrever um resumo sobre as diferenças que os avaços na tecnologia
+                    Escrever um resumo sobre as diferenças que os avanços na tecnologia
                     proveram ao mundo nos ultimos 70 anos.
                   </p>
 

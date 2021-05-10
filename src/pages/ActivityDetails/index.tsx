@@ -11,7 +11,7 @@ export default function ActivityDeatails() {
           <h1 className="titleActivityDeatails">RESUMO DE REDES DE COMPUTADORES</h1>
 
           <p>
-            Escrever um resumo sobre as diferenças que os avaços na tecnologia proveram ao mundo nos ultimos 70 anos.
+            Escrever um resumo sobre as diferenças que os avanços na tecnologia proveram ao mundo nos ultimos 70 anos.
           </p>
 
           <div className="containerButtonSpan">
