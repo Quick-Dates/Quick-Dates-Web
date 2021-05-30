@@ -195,7 +195,7 @@
 }
 
 @media(max-width: 950px){
-  .containerLogin{
+  .login{
     width: 100%;
     height: 100vh;
     display: flex;
@@ -203,9 +203,10 @@
     align-items: center;
   }
 
-  .logoLogin img{
+  .logo img{
     margin-top: 4rem;
     width: 25rem;
+    height: auto;
   }
 
   .lista-acesso {

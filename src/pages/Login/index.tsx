@@ -51,111 +51,56 @@ export default function Login() {
     setUser('student');
   }
 
-  const { innerWidth: width } = window;
   return (
-    <>
-      {width <= 950 ? (
-        <div className="containerLogin">
-          <div className="logoLogin">
-            <img src={LogoMain} alt="logo" />
+    <div className="login">
+      <div className="logo">
+        <img src={LogoMain} alt="logo" />
+      </div>
+      <div className="loginR">
+        <h1>Login</h1>
+        <form className="acesso" onSubmit={(event) => handleAuthenticate(event)}>
+          <div className="lista-acesso">
+            <span onClick={setAluno} role="presentation" className={user === 'student' ? 'perfil selected' : 'perfil'}> Aluno </span>
+            <span onClick={setProfessor} role="presentation" className={user === 'teacher' ? 'perfil selected' : 'perfil'}> Professor </span>
           </div>
-
-          <form className="acesso" onSubmit={(event) => handleAuthenticate(event)}>
-            <div className="lista-acesso">
-              <span onClick={setAluno} role="presentation" className={user === 'student' ? 'perfil selected' : 'perfil'}> Aluno </span>
-              <span onClick={setProfessor} role="presentation" className={user === 'teacher' ? 'perfil selected' : 'perfil'}> Professor </span>
-            </div>
-            <div className="login-loginInputMatricula">
-              <MdEmail />
-              <input
-                onChange={(e) => setLogin(e.target.value)}
-                value={login}
-                placeholder="Matricula"
-              />
-            </div>
-            <div className="login-loginInputPassword">
-              <MdLock />
-              <input
-                onChange={(e) => setPassword(e.target.value)}
-                value={password}
-                placeholder="Senha"
-                type={show ? 'text' : 'password'}
-              />
-              <div className="login-Eye">
-                {show ? (
-                  <HiEye
-                    className="cursor-pointer"
-                    size={20}
-                    onClick={handleClick}
-                  />
-                ) : (
-                  <HiEyeOff
-                    className="cursor-pointer"
-                    size={20}
-                    onClick={handleClick}
-                  />
-                )}
-              </div>
-            </div>
-            <button className="buttonLogin" type="submit">
-              Entrar
-            </button>
-          </form>
-          <ToastContainer />
-        </div>
-      ) : (
-        <div className="login">
-          <div className="loginR">
-            <h1>Login</h1>
-            <form className="acesso" onSubmit={(event) => handleAuthenticate(event)}>
-              <div className="lista-acesso">
-                <span onClick={setAluno} role="presentation" className={user === 'student' ? 'perfil selected' : 'perfil'}> Aluno </span>
-                <span onClick={setProfessor} role="presentation" className={user === 'teacher' ? 'perfil selected' : 'perfil'}> Professor </span>
-              </div>
-              <div className="login-loginInputMatricula">
-                <MdEmail />
-                <input
-                  onChange={(e) => setLogin(e.target.value)}
-                  value={login}
-                  placeholder="Matricula"
+          <div className="login-loginInputMatricula">
+            <MdEmail />
+            <input
+              onChange={(e) => setLogin(e.target.value)}
+              value={login}
+              placeholder="Matricula"
+            />
+          </div>
+          <div className="login-loginInputPassword">
+            <MdLock />
+            <input
+              onChange={(e) => setPassword(e.target.value)}
+              value={password}
+              placeholder="Senha"
+              type={show ? 'text' : 'password'}
+            />
+            <div className="login-Eye">
+              {show ? (
+                <HiEye
+                  className="cursor-pointer"
+                  size={20}
+                  onClick={handleClick}
                 />
-              </div>
-              <div className="login-loginInputPassword">
-                <MdLock />
-                <input
-                  onChange={(e) => setPassword(e.target.value)}
-                  value={password}
-                  placeholder="Senha"
-                  type={show ? 'text' : 'password'}
+              ) : (
+                <HiEyeOff
+                  className="cursor-pointer"
+                  size={20}
+                  onClick={handleClick}
                 />
-                <div className="login-Eye">
-                  {show ? (
-                    <HiEye
-                      className="cursor-pointer"
-                      size={20}
-                      onClick={handleClick}
-                    />
-                  ) : (
-                    <HiEyeOff
-                      className="cursor-pointer"
-                      size={20}
-                      onClick={handleClick}
-                    />
-                  )}
-                </div>
-              </div>
-              <button className="buttonLogin" type="submit">
-                Entrar
-              </button>
-            </form>
+              )}
+            </div>
           </div>
-          <div className="logo">
-            <img src={LogoMain} alt="logo" />
-          </div>
-          <ToastContainer />
-        </div>
-      )}
-    </>
-
+          <button className="buttonLogin" type="submit">
+            Entrar
+          </button>
+        </form>
+      </div>
+      <ToastContainer />
+    </div>
   );
 }

@@ -3,80 +3,39 @@ import Template from '../../components/Template';
 import './styles.css';
 
 export default function ScheduleActivity() {
-  const { innerWidth: width } = window;
-
   return (
-    <>
-      {width <= 950 ? (
-        <Template title="Professor">
-          <div className="containerScheduleActivity">
-            <div className="contentScheduleActivity">
+    <Template title="Professor">
+      <div className="containerScheduleActivity">
+        <div className="content-shedule">
+          <form className="form-schedule">
+            <h1 className="title-shedule">Agendar atividades</h1>
 
-              <h1> Agendar atividades </h1>
+            <div className="containerAgendar">
 
-              <div className="containerInputScheduleActivity">
+              <input type="text" name="titulo" placeholder="Título" />
 
-                <input autoComplete="off" pattern="[A-Za-z]{3}" type="text" name="titulo" id="titulo" placeholder="Título" />
+              <input type="date" name="Data" className="date-input" placeholder="Data" />
 
-                <input type="date" name="data" id="data" placeholder="Data" />
+              <datalist id="classes">
+                <option value="Informática">Informática</option>
+                <option value="Secretariado">Secretariado</option>
+                <option value="Alimentos">Alimentos</option>
+                <option value="Química">Química</option>
+              </datalist>
 
-                <datalist id="classes">
-                  <option value="Informática">Informática</option>
-                  <option value="Secretariado">Secretáriado</option>
-                  <option value="Alimentos">Alimentos</option>
-                  <option value="Química">Química</option>
-                </datalist>
+              <input list="classes" type="text" name="turma" placeholder="Turma" />
 
-                <input list="classes" autoComplete="off" pattern="[A-Za-z]{3}" type="text" name="turma" id="turma" placeholder="Turma" />
+              <input type="number" name="pontuacao" placeholder="Pontuação" />
 
-                <input autoComplete="off" type="pontuação" name="pontuação" id="pontuação" placeholder="Pontuação" />
+              <input type="text" name="tipo" placeholder="Tipo de avaliação" />
 
-                <input autoComplete="off" pattern="[A-Za-z]{3}" type="text" name="type" id="type" placeholder="Tipo de Avaliação" />
+              <input type="text" name="descricao" className="descricao" placeholder="Descrição" />
 
-                <input autoComplete="off" pattern="[A-Za-z]{3}" type="text" name="descricao" id="descricao" placeholder="Descrição" />
-
-              </div>
-
-              <button className="buttonScheduleActivityMobile" type="button">Agendar</button>
             </div>
-          </div>
-        </Template>
-      ) : (
-        <Template title="Professor">
-          <div className="content-shedule">
-            <form>
-              <div className="fundo">
-
-                <h1 className="title-shedule">Agendar atividades</h1>
-
-                <div className="containerAgendar">
-
-                  <input type="text" name="titulo" placeholder="Título" />
-
-                  <input type="date" name="Data" className="date-input" placeholder="Data" />
-
-                  <datalist id="classes">
-                    <option value="Informática">Informática</option>
-                    <option value="Secretariado">Secretariado</option>
-                    <option value="Alimentos">Alimentos</option>
-                    <option value="Química">Química</option>
-                  </datalist>
-
-                  <input list="classes" type="text" name="turma" placeholder="Turma" />
-
-                  <input type="number" name="pontuacao" placeholder="Pontuação" />
-
-                  <input type="text" name="tipo" placeholder="Tipo de avaliação" />
-
-                  <input type="text" name="descricao" className="descricao" placeholder="Descrição" />
-
-                </div>
-                <button className="buttonScheduleActivity" type="button">Agendar</button>
-              </div>
-            </form>
-          </div>
-        </Template>
-      ) }
-    </>
+            <button className="buttonScheduleActivity" type="button">Agendar</button>
+          </form>
+        </div>
+      </div>
+    </Template>
   );
 }

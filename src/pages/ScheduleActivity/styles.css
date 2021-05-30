@@ -5,7 +5,7 @@
   height: 100%;
 }
 
-.fundo{
+.form-schedule{
   background-color: #F1F1F1; 
   width: 90rem; 
   height: 30rem; 
@@ -42,7 +42,7 @@ input[type="date"] {
 }
 
 
-  .fundo input{
+.form-schedule input{
     text-align: center;
     margin: 1rem auto 0 auto;
     border: 0px;
@@ -51,9 +51,9 @@ input[type="date"] {
     height: 4rem;
     font-size: 1.8rem;
     color: #247D7E;
-  }
+}
 
-  .fundo input::placeholder{
+.form-schedule input::placeholder{
     color: #247D7E;
 
   }
@@ -83,7 +83,7 @@ input[type="date"] {
     height: 100%;
   }
 
-  .contentScheduleActivity{
+  .content-shedule{
     width: 90%;
     height: 80%;
     height: 42rem;
@@ -99,12 +99,12 @@ input[type="date"] {
     border-radius: 5px;
   }
 
-  .contentScheduleActivity h1{
+  .content-shedule h1{
     margin: 1.5rem 0 0 0;
     color: var(--background-button-primary);
   }
 
-  .containerInputScheduleActivity{
+  .form-schedule{
     display: flex;
     flex-direction: column;
     width: 80%;
@@ -112,7 +112,7 @@ input[type="date"] {
     gap: 1rem;
   }
 
-  .contentScheduleActivity input{
+  .content-shedule input{
     height: 3.8rem;
     border-radius: 5px;
     border: 0;
@@ -122,11 +122,11 @@ input[type="date"] {
     color: var(--color-text-card)
   }
 
-  .contentScheduleActivity input::placeholder{
+  .content-shedule input::placeholder{
     color: var(--color-text-card)
   }
 
-  .buttonScheduleActivityMobile{
+  .buttonScheduleActivity{
     width: 80%;
     height: 4rem;
     border-radius: 5px;
@@ -138,7 +138,7 @@ input[type="date"] {
     transition: background-color .2s;
   }
 
-  .buttonScheduleActivityMobile:hover{
+  .buttonScheduleActivity:hover{
     background-color: var(--background-button-secondary);
   }
 
