@@ -34,7 +34,7 @@ button {
   --color-text-card : #247D7E;
   --color-text-header: #fff;
   --color-text-footer: #ffffff80;
-  --color-text-visited-header: #c2c2c2;
+  --color-text-visited-header: #000000b0;
 }
 
 .cursor-pointer {
