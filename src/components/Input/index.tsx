@@ -1,12 +1,24 @@
-import React from 'react';
-import './styles.css';
+import React, { InputHTMLAttributes, useEffect, useRef } from 'react';
+import { useField } from '@unform/core';
 
-interface IProps{
-  placeholder?: string
-}
+export default function Input({ name, ...rest }: InputHTMLAttributes<HTMLInputElement>) {
+  const inputRef = useRef(null);
+  const {
+    fieldName, defaultValue, registerField,
+  } = useField(name as string);
 
-export default function Input({ placeholder }: IProps) {
-  return (
-    <input type="text" name="input" placeholder={placeholder} className="input" />
-  );
+  useEffect(() => {
+    registerField({
+      name: fieldName,
+      ref: inputRef,
+      getValue: (ref) => ref.current.value,
+      setValue: (ref, value) => {
+        ref.current.value = value;
+      },
+      clearValue: (ref) => {
+        ref.current.value = '';
+      },
+    });
+  }, [fieldName, registerField]);
+  return <input ref={inputRef} defaultValue={defaultValue} {...rest} className="input" />;
 }

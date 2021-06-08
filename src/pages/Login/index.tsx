@@ -8,46 +8,48 @@ import { MdEmail, MdLock } from 'react-icons/md';
 import { HiEye, HiEyeOff } from 'react-icons/hi';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Form } from '@unform/web';
+import Input from '../../components/Input';
+
+interface DataForm {
+  login: string,
+  password: string;
+}
 
 export default function Login() {
   const history = useHistory();
   const [show, setShow] = useState(false);
   const [user, setUser] = useState('student');
-  const [login, setLogin] = useState('');
-  const [password, setPassword] = useState('');
 
   function handleClick(e: { preventDefault: () => void; }) {
     e.preventDefault();
     setShow(!show);
   }
 
-  function handleAuthenticate(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
+  // eslint-disable-next-line consistent-return
+  function handleAuthenticate(data: DataForm) {
+    // eslint-disable-next-line no-console
+    const { login, password } = data;
+
     if (user === 'student') {
       if (login === '123' && password === 'aluno123') {
-        history.push('/activities');
-      } else {
-        toast.error('Matricula ou senha inválidos');
+        return history.push('/activities');
       }
+      return toast.error('Matricula ou senha inválidos');
     }
     if (user === 'teacher') {
       if (login === 'professor' && password === 'professor123') {
-        history.push('/shedule-activity');
-      } else {
-        toast.error('Login ou senha inválidos');
+        return history.push('/shedule-activity');
       }
+      return toast.error('Login ou senha inválidos');
     }
   }
 
   function setProfessor() {
-    setLogin('');
-    setPassword('');
     setUser('teacher');
   }
 
   function setAluno() {
-    setLogin('');
-    setPassword('');
     setUser('student');
   }
 
@@ -58,25 +60,22 @@ export default function Login() {
       </div>
       <div className="loginR">
         <h1>Login</h1>
-        <form className="acesso" onSubmit={(event) => handleAuthenticate(event)}>
+        <Form className="acesso" onSubmit={handleAuthenticate}>
           <div className="lista-acesso">
             <span onClick={setAluno} role="presentation" className={user === 'student' ? 'perfil selected' : 'perfil'}> Aluno </span>
             <span onClick={setProfessor} role="presentation" className={user === 'teacher' ? 'perfil selected' : 'perfil'}> Professor </span>
           </div>
           <div className="login-loginInputMatricula">
             <MdEmail />
-            <input
-              onChange={(e) => setLogin(e.target.value)}
-              value={login}
-              placeholder="Matricula"
+            <Input
+              name="login"
+              type="text"
             />
           </div>
           <div className="login-loginInputPassword">
             <MdLock />
-            <input
-              onChange={(e) => setPassword(e.target.value)}
-              value={password}
-              placeholder="Senha"
+            <Input
+              name="password"
               type={show ? 'text' : 'password'}
             />
             <div className="login-Eye">
@@ -98,7 +97,7 @@ export default function Login() {
           <button className="buttonLogin" type="submit">
             Entrar
           </button>
-        </form>
+        </Form>
       </div>
       <ToastContainer />
     </div>

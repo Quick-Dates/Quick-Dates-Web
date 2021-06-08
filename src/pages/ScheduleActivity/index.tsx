@@ -1,20 +1,34 @@
+import { Form } from '@unform/web';
 import React from 'react';
+import Input from '../../components/Input';
 import Template from '../../components/Template';
 import './styles.css';
 
+interface DataForm {
+  title: string;
+  date: string;
+  class: string;
+  score: number;
+  type: string;
+  description: string;
+}
+
 export default function ScheduleActivity() {
+  function handleSubmit(data: DataForm) {
+    console.table(data);
+  }
   return (
     <Template title="Professor">
       <div className="containerScheduleActivity">
         <div className="content-shedule">
-          <form className="form-schedule">
+          <Form className="form-schedule" onSubmit={handleSubmit}>
             <h1 className="title-shedule">Agendar atividades</h1>
 
             <div className="containerAgendar">
 
-              <input type="text" name="titulo" placeholder="Título" />
+              <Input type="text" name="title" placeholder="Título" />
 
-              <input type="date" name="Data" className="date-input" placeholder="Data" />
+              <Input type="date" name="date" className="date-input" placeholder="Data" />
 
               <datalist id="classes">
                 <option value="Informática">Informática</option>
@@ -23,17 +37,17 @@ export default function ScheduleActivity() {
                 <option value="Química">Química</option>
               </datalist>
 
-              <input list="classes" type="text" name="turma" placeholder="Turma" />
+              <Input list="classes" type="text" name="class" placeholder="Turma" />
 
-              <input type="number" name="pontuacao" placeholder="Pontuação" />
+              <Input type="number" name="score" placeholder="Pontuação" />
 
-              <input type="text" name="tipo" placeholder="Tipo de avaliação" />
+              <Input type="text" name="type" placeholder="Tipo de avaliação" />
 
-              <input type="text" name="descricao" className="descricao" placeholder="Descrição" />
+              <Input type="text" name="description" className="descricao" placeholder="Descrição" />
 
             </div>
-            <button className="buttonScheduleActivity" type="button">Agendar</button>
-          </form>
+            <button className="buttonScheduleActivity" type="submit">Agendar</button>
+          </Form>
         </div>
       </div>
     </Template>
