@@ -18,7 +18,7 @@ export default function ScheduleActivity() {
     console.table(data);
   }
   return (
-    <Template title="Professor">
+    <Template title="Agendar Atividade" titleTab="Professor">
       <div className="containerScheduleActivity">
         <div className="content-shedule">
           <Form className="form-schedule" onSubmit={handleSubmit}>

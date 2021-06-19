@@ -14,6 +14,33 @@
   grid-area: content;
   min-height: 100vh;
 }
+.content-page .back-container {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+.content-page .back-container .label{
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: var( --color-text-card);
+  font-weight: bold;
+}
+.content-page .back-container .icon-back{
+  cursor: pointer;
+}
+
+
+.content-page .title {
+  font-size: 4rem;
+  margin-left: 3rem;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: var(--background-button-secondary);
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
 
 @keyframes transicao {
   from {
@@ -25,6 +52,7 @@
     transform: translateY(0px);
   }
 }
+
 
 
 @media(max-width: 570px) {

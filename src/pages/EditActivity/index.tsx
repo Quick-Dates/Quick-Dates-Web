@@ -7,7 +7,7 @@ export default function EditActivity() {
   const { innerWidth: width } = window;
 
   return (
-    <Template title="Professor">
+    <Template titleTab="Professor" title="Atividades marcadas">
       <div className="containerEditActivity">
         <div className="contentEditActivity">
 

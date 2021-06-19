@@ -32,7 +32,7 @@ export default function ActivitiesList(): JSX.Element {
   const { isVisible } = useContext(DataEventsContext);
 
   return (
-    <Template isStudent title="Calendar">
+    <Template isStudent title="Atividades marcadas" titleTab="Calendar">
       <div className="contentActivies">
         <BigCalendar />
         {isVisible && <Modal />}

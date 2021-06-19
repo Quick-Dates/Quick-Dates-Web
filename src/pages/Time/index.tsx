@@ -5,7 +5,7 @@ import './styles.css';
 
 export default function Time() {
   return (
-    <Template isStudent title="Horário">
+    <Template isStudent title="Horário" titleTab="Horários">
       <ClassSchedule />
     </Template>
   );

@@ -5,7 +5,7 @@ import './styles.css';
 
 export default function ActivityDeatails() {
   return (
-    <Template title="Detahes da Atividade">
+    <Template titleTab="Detahes da Atividade" title="Detahes da Atividade">
       <div className="containerActivityDetails">
         <div className="contentActivityDetails">
           <h1 className="titleActivityDeatails">RESUMO DE REDES DE COMPUTADORES</h1>
