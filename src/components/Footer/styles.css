@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   background-color: var(--background-footer);
   color: var(--color-text-footer);
   padding: 20px;
@@ -9,4 +10,26 @@
   font-size: 1.5rem;
   width: 100%;
   grid-area: footer;
+}
+
+.footer .container-social-media {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 20rem;
+}
+
+@media(max-width: 570px) {
+  .footer .copyright {
+    order: 1;
+  }
+  .footer .container-social-media {
+    order: 2;
+  }
+  .footer .email {
+    order: 3;
+    margin-top: 0.5rem;
+    text-align: center;
+    width: 100%;
+  }
 }

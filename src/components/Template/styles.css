@@ -25,3 +25,10 @@
     transform: translateY(0px);
   }
 }
+
+
+@media(max-width: 570px) {
+  .template {
+    grid-template-rows: 80px 2fr 120px;
+  }
+}
