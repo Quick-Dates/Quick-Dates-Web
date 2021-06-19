@@ -8,4 +8,5 @@
   bottom: 0;
   font-size: 1.5rem;
   width: 100%;
+  grid-area: footer;
 }

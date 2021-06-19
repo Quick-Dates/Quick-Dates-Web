@@ -32,9 +32,7 @@ export default function BigCalendar(): JSX.Element {
   return (
     <Calendar
       onSelectEvent={(event) => modal(true)}
-      events={[
-        DataEventsActivies.eventsData[0],
-      ]}
+      events={DataEventsActivies.eventsData}
       localizer={localizer}
       startAccessor="start"
       endAccessor="end"

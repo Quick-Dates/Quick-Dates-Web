@@ -1,21 +1,18 @@
 .template {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100vh;
-  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 80px 2fr 80px;
+  grid-template-areas: 
+  "header"
+  "content"
+  "footer"
+  ;
 }
 
 .content-page {
   animation: transicao 0.5s linear;
-  width: 100%;
-  height: 100%;
-}
-
-@media(max-width: 425px){
-  .template{
-    display: flex;
-  }
+  grid-area: content;
+  min-height: 100vh;
 }
 
 @keyframes transicao {

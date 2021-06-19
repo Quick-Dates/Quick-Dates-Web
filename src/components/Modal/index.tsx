@@ -1,6 +1,11 @@
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable react/button-has-type */
 import React, { useContext, useState } from 'react';
+import closeIcon from '../../assets/close.svg';
+import notebookIcon from '../../assets/notebook-blue.svg';
+import calendarIcon from '../../assets/calendar-blue.svg';
+import evaOptionsIcon from '../../assets/eva-options.svg';
 
 // data
 import { DataEventsActivies } from '../../Context/DataActivies';
@@ -13,64 +18,50 @@ import { DataEventsContext } from '../../Context/DataEvents';
 export default function Modal() {
   const { modal } = useContext(DataEventsContext);
 
-  const [text, setText] = useState(' ');
-  const [color, setColor] = useState('gray');
-  const [radius, setRadius] = useState('.5');
-  const [count, setCount] = useState(1);
+  const [color, setColor] = useState('#69F6B2');
+  const [situation, setSituation] = useState('Concluir');
 
-  function check() {
-    // setText('V');
-    // setColor('darkgreen');
-    // setRadius('1');
-
-    setCount(count + 1);
-
-    if (count % 2 === 0) {
-      setText('V');
-      setColor('darkgreen');
-      setRadius('1');
-    } else {
-      setText(' ');
-      setColor('gray');
-      setRadius('.5');
-    }
+  function handleChangeStatus() {
+    const situationText = situation === 'Concluir' ? 'Desconcluir' : 'Concluir';
+    const colorText = situationText === 'Concluir' ? '#69F6B2' : '#1DC3C4';
+    setSituation(situationText);
+    setColor(colorText);
   }
 
   return (
     <div className="overlay">
       <div className="modal">
+        <img src={closeIcon} alt="fechar" className="close-icon" onClick={() => modal(false)} />
         <h1>{DataEventsActivies.eventsData[0].title}</h1>
 
         <p>{DataEventsActivies.eventsData[0].details}</p>
 
         <section>
-          <div>
-            <span>Pontuação: {DataEventsActivies.eventsData[0].maxValue}</span>
+          <div className="content-modal">
+            <span className="info">
+              <img src={notebookIcon} alt="notebook" className="icon" />
+              Pontuação:
+              <span className="value"> {DataEventsActivies.eventsData[0].maxValue} </span>
+            </span>
 
-            <span>Data de entrega: {DataEventsActivies.eventsData[0].deliver}</span>
+            <span className="info">
+              <img src={calendarIcon} alt="calendario" className="icon" />
+              Data de entrega:
+              <span className="value">
+                {DataEventsActivies.eventsData[0].deliver}
+              </span>
+            </span>
 
-            <span>Tipo de Atividade: {DataEventsActivies.eventsData[0].typeEvaluation}</span>
+            <span className="info">
+              <img src={evaOptionsIcon} alt="eva options" className="icon" />
+              Tipo de Atividade:
+              <span className="value">
+                {DataEventsActivies.eventsData[0].typeEvaluation}
+              </span>
+            </span>
 
-            <button
-              onClick={check}
-              style={{
-                marginTop: '1rem',
-                width: '2rem',
-                height: '2rem',
-                color: '#fff',
-                border: 0,
-                borderRadius: `${radius}rem`,
-                backgroundColor: `${color}`,
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}
-            >
-              {text}
-            </button>
           </div>
-          <button className="buttonExit" onClick={(event) => modal(false)}>Fechar</button>
-
+          <button className="buttonAction" style={{ background: color }} onClick={() => handleChangeStatus()}>{situation}</button>
         </section>
       </div>
     </div>
