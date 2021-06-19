@@ -6,6 +6,7 @@ import NotFound404 from '../pages/NotFound404';
 import Time from '../pages/Time';
 import ScheduleActivity from '../pages/ScheduleActivity';
 import EditActivity from '../pages/EditActivity';
+import Ranking from '../pages/Ranking';
 
 import ActitvityDetails from '../pages/ActivityDetails';
 
@@ -18,6 +19,7 @@ export default function Routes() {
       <Route path="/activity-details" component={ActitvityDetails} />
       <Route path="/shedule-activity" component={ScheduleActivity} />-
       <Route path="/edit-activity" component={EditActivity} />
+      <Route path="/ranking" component={Ranking} />
       <Route path="*" component={NotFound404} />
     </Switch>
   );
