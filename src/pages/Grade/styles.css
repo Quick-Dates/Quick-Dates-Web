@@ -1,0 +1,45 @@
+.app-grades {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.container-grades {
+  width: 80%;
+  padding: 2rem;
+  background-color: var(--background-card-progress);
+  color: var(--background-button-secondary);
+  display: flex;
+  align-items: center;
+}
+
+.container-grades table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.container-grades table thead {
+  font-size: 2.4rem;
+  border-bottom: 1px solid var(--background-button-primary);
+  margin-bottom: 0.5rem;
+}
+
+.container-grades table tbody {
+  font-size: 2.2rem;
+}
+
+.container-grades table thead .large-column {
+  width: 15%;
+  text-align: start;
+}
+.container-grades table thead .medium-colum {
+  width: 5%;
+}
+.container-grades table tbody tr td {
+  text-align: center;
+  padding-top: 0.5rem;
+}
+
+.container-grades table .align-left {
+  text-align: left;
+}

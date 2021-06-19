@@ -7,7 +7,7 @@ import Time from '../pages/Time';
 import ScheduleActivity from '../pages/ScheduleActivity';
 import EditActivity from '../pages/EditActivity';
 import Ranking from '../pages/Ranking';
-
+import Grade from '../pages/Grade';
 import ActitvityDetails from '../pages/ActivityDetails';
 
 export default function Routes() {
@@ -16,6 +16,7 @@ export default function Routes() {
       <Route path="/" exact component={Login} />
       <Route path="/activities" component={ActivitiesList} />
       <Route path="/time" component={Time} />
+      <Route path="/grades" component={Grade} />
       <Route path="/activity-details" component={ActitvityDetails} />
       <Route path="/shedule-activity" component={ScheduleActivity} />-
       <Route path="/edit-activity" component={EditActivity} />

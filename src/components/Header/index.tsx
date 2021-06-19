@@ -73,8 +73,9 @@ export default function Header({ isStudent }: IProps) {
             ? (
               <nav className="menu">
                 <Link to="/activities" className={pathName === '/activities' ? 'visited' : ''}> Calendário  </Link>
+                <Link to="/grades" className={pathName === '/grades' ? 'visited' : ''}> Notas  </Link>
+                <Link to="/ranking" className={pathName === '/ranking' ? 'visited' : ''}> Ranking  </Link>
                 <Link to="/time" className={pathName === '/time' ? 'visited' : ''}> Horário  </Link>
-                <Link to="/ranking" className={pathName === '/time' ? 'visited' : ''}> Ranking  </Link>
                 <Link to="/"> Sair  </Link>
               </nav>
             )
