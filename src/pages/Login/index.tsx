@@ -1,3 +1,6 @@
+/* eslint-disable no-bitwise */
+/* eslint-disable no-return-assign */
+/* eslint-disable react/button-has-type */
 /* eslint-disable react/jsx-filename-extension */
 /* eslint-disable jsx-a11y/img-redundant-alt */
 /* eslint-disable react/style-prop-object */
@@ -15,6 +18,7 @@ import LogoMain from "../../assets/logo-main.svg";
 import NewLogo from "../../assets/logo-new-login.svg";
 import LogoGray from "../../assets/logo-gray.svg";
 import Bro from "../../assets/bro.svg";
+import Logo from "../../assets/logo-unit.svg";
 import Winners from "../../assets/winners.svg";
 import Calendar from "../../assets/calendar.svg";
 import Twitter from "../../assets/twitter.svg";
@@ -35,7 +39,19 @@ import Input from "../../components/Input";
 import Container from "../../components/Container/Container";
 
 import Data from "./FakeData.json";
+import Modal from "react-modal";
 import Carousel from "react-elastic-carousel";
+import {
+  ContainerModal,
+  ContainerOptions,
+  OptionTeacher,
+  OptionStudent,
+  ContainerInpurt,
+  InputModal,
+  Button,
+  Image,
+  Text,
+} from "./styles.js";
 
 interface DataForm {
   login: string;
@@ -73,10 +89,34 @@ export default function Login() {
 
   function setProfessor() {
     setUser("teacher");
+    console.log(user);
   }
 
   function setAluno() {
     setUser("student");
+    console.log(user);
+  }
+
+  const customStyles = {
+    content: {
+      top: "50%",
+      left: "50%",
+      right: "auto",
+      bottom: "auto",
+      marginRight: "-50%",
+      transform: "translate(-50%, -50%)",
+      width: "25%",
+      height: "60%",
+    },
+  };
+  const [modalIsOpen, setIsOpen] = React.useState(false);
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  function closeModal() {
+    setIsOpen(false);
   }
 
   return (
@@ -99,7 +139,7 @@ export default function Login() {
             <p className="option">Funcionalidades</p>
           </a>
           <a href="#" className="linkbutton">
-            <button className="buttonHeader" type="button">
+            <button onClick={openModal} className="buttonHeader" type="button">
               Entrar
             </button>
           </a>
@@ -228,14 +268,7 @@ export default function Login() {
           Opiniões
         </h2>
         <div className="content4">
-          <Carousel
-            style={{
-              width: "50%",
-              height: "80%",
-            }}
-            showArrows={false}
-            enableAutoPlay
-          >
+          <Carousel isRTL={false} showArrows={false} enableAutoPlay>
             {Data.map((item) => (
               <div className="opinioes">
                 <p className="opiniao">“{item.opiniao}.”</p>
@@ -249,20 +282,6 @@ export default function Login() {
               </div>
             ))}
           </Carousel>
-          {/* <div className="opinioes">
-            <p className="opiniao">
-              “O sistema é muito bom, com certeza irá empactar positivamente na
-              vida acadêmica dentro do instituto.”
-            </p>
-
-            <div className="pessoa">
-              <span className="nome">Marcela Lima</span>
-              <span className="curso">
-                Aluna do curso técnico em Informática
-              </span>
-            </div>
-          </div> */}
-
           <img src={Universidade} alt="Image" />
         </div>
       </div>
@@ -312,6 +331,73 @@ export default function Login() {
           </span>
         </div>
       </footer>
+
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        style={customStyles}
+        contentLabel="Example Modal"
+      >
+        <ContainerModal>
+          <Image src={Logo} alt="" />
+          <Text>
+            O Quick Dates te ajuda a agilizar o processo de desenvolvimento de
+            sua atividades
+          </Text>
+          <ContainerOptions>
+            <OptionStudent
+              onClick={setAluno}
+              user={user}
+              role="presentation"
+              // className={user === "student" ? "perfil selected" : "perfil"}
+            >
+              {" "}
+              Aluno{" "}
+            </OptionStudent>
+
+            <OptionTeacher
+              onClick={setProfessor}
+              user={user}
+              role="presentation"
+              // className={user === "teacher" ? "perfil selected" : "perfil"}
+            >
+              {" "}
+              Professor{" "}
+            </OptionTeacher>
+          </ContainerOptions>
+
+          <ContainerInpurt>
+            <MdEmail fontSize={25} />
+            <InputModal placeholder="Usuário" name="login" type="text" />
+          </ContainerInpurt>
+
+          <ContainerInpurt>
+            <MdLock fontSize={25} />
+            <InputModal
+              placeholder="Senha"
+              name="password"
+              type={show ? "text" : "password"}
+            />
+            <div className="login-Eye">
+              {show ? (
+                <HiEye
+                  className="cursor-pointer"
+                  size={25}
+                  onClick={handleClick}
+                />
+              ) : (
+                <HiEyeOff
+                  className="cursor-pointer"
+                  size={25}
+                  onClick={handleClick}
+                />
+              )}
+            </div>
+          </ContainerInpurt>
+
+          <Button type="submit">Entrar</Button>
+        </ContainerModal>
+      </Modal>
 
       {/* <div className="logo">
         <img src={LogoMain} alt="logo" />
