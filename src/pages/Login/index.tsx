@@ -249,7 +249,7 @@ export default function Login() {
 
             <div className="redesSociais">
               <a href="https://www.instagram.com/quick.dates/?hl=pt-br">
-                <img src={Instagram} alt="instagram" />
+                <img src={Instagram} alt="instagram" style={{ color: '#1dc3c4' }} />
               </a>
               <a href="https://www.linkedin.com/company/quick-dates/">
                 <img src={Linkedin} alt="linkedin" />
@@ -286,7 +286,7 @@ export default function Login() {
         </div>
       </div>
 
-      <footer>
+      <footer className="footer-login">
         <div className="top">
           <img src={LogoGray} alt="Logo Footer" />
           <div className="subTop">
