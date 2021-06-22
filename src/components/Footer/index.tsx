@@ -1,6 +1,6 @@
 import React from 'react';
-import LinkedinIcon from '../../assets/Linkedin.svg';
-import TwitterIcon from '../../assets/Twitter.svg';
+import LinkedinIcon from '../../assets/linkedin-login.svg';
+import TwitterIcon from '../../assets/twitter-login.svg';
 import InstagramIcon from '../../assets/instagram.svg';
 import './styles.css';
 
