@@ -1,4 +1,180 @@
-.content-shedule {
+.schedule {
+  width: 100%;
+  height: 100%;
+  padding: 0px 8rem 0px 8rem;
+  font-display: flex;
+  flex-direction: column;
+  /* justify-content: space-around; */
+}
+
+.contentSchedule1 {
+  background: #f7f7f7;
+  border-radius: 8px;
+  width: 100%;
+  height: 60rem;
+  padding: 5rem 10rem 5rem 10rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.contentSchedule1Left {
+  width: 50%;
+}
+
+.textSchedule {
+  width: 390px;
+
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: justify;
+
+  color: #247d7e;
+}
+
+.titleContentSchedule1 {
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 30px;
+  /* identical to box height */
+
+  text-align: justify;
+  letter-spacing: 0.05em;
+
+  color: #1dc3c4;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.contentSchedule2 {
+  background: #f7f7f7;
+  border-radius: 8px;
+  width: 100%;
+  height: 70rem;
+  padding: 5rem 10rem 5rem 10rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+}
+
+.titleContentSchedule2 {
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 30px;
+  /* identical to box height */
+
+  text-align: justify;
+  letter-spacing: 0.05em;
+
+  color: #1dc3c4;
+  margin-bottom: 2rem;
+}
+
+.contentSchedule2Left {
+  width: 50%;
+}
+
+.contentSchedule2Right {
+  width: 50%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.form-schedule {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.contentSchedule2Right input {
+  width: 70%;
+  height: 4rem;
+  padding: 1rem 2rem 1rem 2rem;
+  margin-bottom: 2rem;
+  border: none;
+  background: #ffffff;
+  border-radius: 8px;
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 26px;
+  text-align: center;
+  /* identical to box height */
+
+  display: flex;
+  align-items: flex-end;
+  letter-spacing: 0.1em;
+  text-transform: capitalize;
+
+  color: #247d7e;
+}
+
+.contentSchedule2Right input::placeholder {
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 26px;
+  text-align: center;
+  /* identical to box height */
+
+  display: flex;
+  align-items: flex-end;
+  letter-spacing: 0.1em;
+  text-transform: capitalize;
+
+  color: #247d7e;
+}
+
+.buttonScheduleActivity {
+  width: 70%;
+  height: 3rem;
+  background: #247d7e;
+  border-radius: 8px;
+  padding: 2rem 1rem 2rem 1rem;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Nunito Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  /* identical to box height */
+  text-transform: capitalize;
+
+  color: #ffffff;
+}
+
+.buttonScheduleActivity:hover {
+  background-color: var(--background-button-primary-hover);
+  border: 1px solid #000;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  transition: all 1s;
+}
+
+.Image {
+  margin-top: 3rem;
+}
+/* .content-shedule {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,9 +197,6 @@
 
 .title-shedule{
     color: #247D7E;
-    /* margin-left: 5rem;  */
-    /* margin-bottom: 1rem; */
-  /* margin: auto; */
 
 } 
 .containerAgendar{
@@ -62,9 +235,7 @@ input[type="date"] {
   color: white;
   text-align: center;
   border: none;
-  /* margin: 4rem auto 5rem auto; */
   margin-top: 4rem;
-  /* margin-left: 5rem; */
   border-radius: 5px;
   background-color: #247D7E;
   width: 85%; 
@@ -143,4 +314,4 @@ input[type="date"] {
   }
 
 }
-
+ */
