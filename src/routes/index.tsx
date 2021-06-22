@@ -9,6 +9,7 @@ import EditActivity from '../pages/EditActivity';
 import Ranking from '../pages/Ranking';
 import Grade from '../pages/Grade';
 import ActitvityDetails from '../pages/ActivityDetails';
+/* eslint-disable quotes */
 
 export default function Routes() {
   return (

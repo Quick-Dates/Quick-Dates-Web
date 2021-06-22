@@ -1,0 +1,41 @@
+.containerComponent {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.containerComponent h3 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.3rem;
+  line-height: 20px;
+  /* identical to box height, or 87% */
+
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.05em;
+
+  color: #1dc3c4;
+  margin-top: 2rem;
+}
+
+.containerComponent p {
+  width: 40rem;
+
+  font-family: Roboto;
+  font-weight: 100;
+  font-size: 1.8rem;
+  line-height: 20px;
+  /* or 111% */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #247d7e;
+  margin-top: 3rem;
+}
