@@ -11,10 +11,9 @@
 /* eslint-disable react/self-closing-comp */
 /* eslint-disable max-len */
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import React, { FormEvent, useState } from "react";
-import { Link, useHistory } from "react-router-dom";
+import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import "./styles.css";
-import LogoMain from "../../assets/logo-main.svg";
 import NewLogo from "../../assets/logo-new-login.svg";
 import LogoGray from "../../assets/logo-gray.svg";
 import Bro from "../../assets/bro.svg";
@@ -23,7 +22,7 @@ import Winners from "../../assets/winners.svg";
 import Calendar from "../../assets/calendar.svg";
 import Twitter from "../../assets/twitter.svg";
 import Linkedin from "../../assets/linkedin.svg";
-import Instagram from "../../assets/instagram.svg";
+import Instagram from "../../assets/instagram-login.svg";
 import TwitterGray from "../../assets/twitter-gray.svg";
 import LinkedinGray from "../../assets/linkedin-gray.svg";
 import InstagramGray from "../../assets/instagram-gray.svg";
@@ -249,7 +248,7 @@ export default function Login() {
 
             <div className="redesSociais">
               <a href="https://www.instagram.com/quick.dates/?hl=pt-br">
-                <img src={Instagram} alt="instagram" style={{ color: '#1dc3c4' }} />
+                <img src={Instagram} alt="instagram" />
               </a>
               <a href="https://www.linkedin.com/company/quick-dates/">
                 <img src={Linkedin} alt="linkedin" />
