@@ -39,7 +39,6 @@
   color: var(--background-button-secondary);
   letter-spacing: 2px;
   font-weight: bold;
-  text-transform: uppercase;
   max-width: 100%;
 }
 

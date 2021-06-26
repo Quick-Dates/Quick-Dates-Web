@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import BigCalendar from '../../components/BigCalendar/index';
 import ProgressBar from '../../components/ProgressBar/index';
 import NotebookIcon from '../../assets/notebook.svg';
@@ -7,10 +7,6 @@ import LearningImg from '../../assets/learning.png';
 import NotebookIconError from '../../assets/notebook-error.svg';
 import Template from '../../components/Template';
 import './styles.css';
-
-// animations
-import Lottie from 'react-lottie';
-import animation from '../../assets/calendar-animation.json';
 
 import { DataEventsContext } from '../../Context/DataEvents';
 import Modal from '../../components/Modal';
@@ -32,7 +28,7 @@ export default function ActivitiesList(): JSX.Element {
   const { isVisible } = useContext(DataEventsContext);
 
   return (
-    <Template isStudent title="Atividades marcadas" titleTab="Calendar">
+    <Template isStudent title="Atividades Marcadas" titleTab="Calendar">
       <div className="contentActivies">
         <BigCalendar />
         {isVisible && <Modal />}
