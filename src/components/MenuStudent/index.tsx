@@ -1,9 +1,10 @@
 /* eslint-disable max-len */
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import help from '../../assets/ajuda-mobile-icon.svg';
-import calendar from '../../assets/calendario-mobile-icon.svg';
-import exit from '../../assets/exit.svg';
+import CalendarIcon from '../../assets/calendario-mobile-icon.svg';
+import RankingIcon from '../../assets/ranking-icon.svg';
+import SchoolIcon from '../../assets/school.svg';
+import ExitIcon from '../../assets/exit.svg';
 
 import './styles.css';
 
@@ -16,13 +17,12 @@ export default function MenuStudent() {
 
         <div>
           <section>
-            <Link to="/activities" className={pathName === '/activities' ? 'visited' : ''}><img src={calendar} alt="" /></Link>
-            <p>Atividades</p>
+            <Link to="/activities" className={pathName === '/activities' ? 'visited' : ''}><img src={CalendarIcon} alt="" /></Link>
+            <p>Avaliações</p>
           </section>
-
           <section>
-            <Link to="/help/student" className={pathName === '../../pages/help/student' || pathName === '/help/teacher' ? 'visited' : ''}><img src={help} alt="" /></Link>
-            <p>Ajuda</p>
+            <Link to="/activities" className={pathName === '/ranking' ? 'visited' : ''}><img src={RankingIcon} alt="" /></Link>
+            <p>Ranking</p>
           </section>
 
         </div>
@@ -30,7 +30,11 @@ export default function MenuStudent() {
         <div>
 
           <section>
-            <Link to="/"><img src={exit} alt="" /></Link>
+            <Link to="/grades" className={pathName === '/grades' ? 'visited' : ''}><img src={SchoolIcon} alt="" /></Link>
+            <p>Notas</p>
+          </section>
+          <section>
+            <Link to="/"><img src={ExitIcon} alt="" /></Link>
             <p>Sair</p>
           </section>
         </div>
