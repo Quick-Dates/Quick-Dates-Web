@@ -1,131 +1,106 @@
-.containerSocialMedia {
-    display: flex;
+.containerRanking {
+  max-width: 100%;
+  margin: 0.5rem 2rem;
+}
+
+.containerRanking .card-info-general {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.containerRanking .card-info-general{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: var(--background-card-progress);
+  padding: 4rem 2rem; 
+  border-radius: 5px;
+  margin-bottom: 1.9rem;
+}
+
+.containerRanking .card-info-general .title-card{
+  font-size: 2.2rem;
+  color: var(--background-button-primary-hover);
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.containerRanking .card-info-general .description-card{
+  font-size: 1.8rem;
+  color: var( --color-text-card);
+  text-align: justify;
+  max-width: 42rem;
+}
+
+.containerRanking .role-position {
+  background-color: var(--background-card-progress);
+  margin-bottom: 0.7rem;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.containerRanking .role-position .info-general .position{
+  font-size: 4rem;
+  color: var(--background-button-primary);
+  font-weight: bold;
+}
+.containerRanking .role-position .info-general{
+  width: 40%;
+  display: flex;
+  align-items: center;
+}
+.containerRanking .role-position .info-general .icon{
+  width: 4.4rem;
+  margin-right: 0.5rem;
+  margin-left: 0.2rem;
+}
+.containerRanking .role-position .info-general .student-name{
+  font-weight: bold;
+  font-size: 2.8rem;
+  color: var(--background-button-primary);;
+}
+.containerRanking .role-position .course, .containerRanking .role-position .score{
+  font-size: 2.5rem;
+  width: 30%;
+  color: var(--background-button-primary);
+}
+
+.containerRanking .role-position .score .score-value-green {
+  color: var(--color-text-done);
+  font-weight: bold;
+}
+
+.containerRanking .role-position .score .score-value-yellow {
+  color: var(--color-text-yellow);
+  font-weight: bold;
+}
+
+@media(max-width: 768px) {
+  .containerRanking .role-position {
     justify-content: center;
-    align-items: center;
-    height: calc(100vh - 20rem);
-}
-
-.socialMedia {
+  }
+  
+  .containerRanking .role-position .info-general{
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    background-color: var(--background-card-secundary);
-    width: 100rem;
-    height: 30rem;
-    margin-top: 2rem;
-    margin-left: auto;
-    margin-right: auto;
-}
+  }
 
-.linksSocialMedia {
-    text-decoration: none;
-    color: var(--color-text-card);
-}
-
-.socialMediaIcon {
-    margin-left: 5rem;
-    margin-right: 5rem;
-}
-
-.nameSocialMedia {
-    text-align: center;
-}
-
-.textee {
-    font-size: 25px;
-    color: rgb(99, 235, 99);
-    text-shadow: 1px 1px 2px black;
-    text-align: center;
-}
-
-.centrali {
-    width: 600px;
-    margin: 200px 400px 200px 400px;
-    background-color: rgb(230, 11, 230);
-    border: 2px solid black;
-    border-radius: 5px;
-}
-
-@media(max-width: 950px) {
-    .socialMedia {
-        width: 80%;
-        height: 45rem;
-        display: flex;
-        margin: 2rem auto;
-        flex-direction: column;
-        gap: 1rem;
-    }
-    .linksSocialMedia p {
-        font-size: 1.8rem;
-        font-weight: bold;
-    }
-    .socialMediaIcon {
-        width: 10rem;
-    }
-}
-
-@media(max-width: 600px) {
-    .socialMediaIcon {
-        width: 10rem;
-    }
-    .linksSocialMedia p {
-        font-size: 1.5rem;
-        font-weight: bold;
-    }
-}
-
-@media(max-width: 465px) {
-    .socialMedia {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 80%;
-        height: 90%;
-        gap: 3rem;
-        border-radius: 0.5rem;
-        margin-top: 3rem;
-    }
-    .linksSocialMedia p {
-        font-size: 1.5rem;
-        font-weight: bold;
-    }
-    .socialMediaIcon {
-        width: 8rem;
-    }
-}
-
-@media(max-width: 411px) {
-    .linksSocialMedia p {
-        font-size: 1.5rem;
-        font-weight: bold;
-    }
-    .socialMediaIcon {
-        width: 8rem;
-    }
-}
-
-@media(max-width: 375px) {
-    .socialMedia {
-        width: 70%;
-    }
-    .linksSocialMedia p {
-        font-size: 1.5rem;
-        font-weight: bold;
-    }
-    .socialMediaIcon {
-        width: 8rem;
-    }
-}
-
-@media(max-width: 320px) {
-    .socialMediaIcon {
-        width: 7rem;
-    }
-}
-
-@media(max-width: 28px) {
-    .socialMediaIcon {
-        width: 9rem;
-    }
+  .containerRanking .role-position .info-general .position{
+    font-size: 3.2rem;
+    color: var(--background-button-primary);
+    font-weight: bold;
+  }
+  .containerRanking .role-position .info-general .icon{
+    width: 4rem;
+    margin-right: 0.5rem;
+    margin-left: 0.2rem;
+  }
+  .containerRanking .role-position .info-general .student-name{
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: var(--background-button-primary);;
+  }
 }
