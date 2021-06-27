@@ -20,15 +20,12 @@ button {
 :root {
   font-size: 62.5%;
   --background-primary: #fff;
-  --background-header: #1DC3C4;
+  --background-content: #fff;
+  --color-light-blue: #1DC3C4;
+  --color-dark-blue: #247D7E;
   --background-footer: #132222;
-  --background-card: #F1F1F1;
-  --background-card-progress: #F7F7F7;
+  --background-card: #0a0808;
   --background-card-secundary: #eee;
-  --background-card-time: #e5e5e5;
-  --background-button-primary: #247D7E;
-  --background-button-primary-hover: #1DC3C4;
-  --background-button-secondary: #1DC3C4;
   --background-button-tertiary: #FF533D;
   --background-button-calendar: #f3f5f7;
   --background-button-calendar-selected: #e7ecee;
@@ -38,7 +35,6 @@ button {
   --color-text-button: #fff;
   --color-text-button-calendar: #649bf3;
   --color-button-border: #a7a6a6ff;
-  --color-text-card : #247D7E;
   --color-text-header: #fff;
   --color-text-footer: #ffffff80;
   --color-text-visited-header: #000000b0;

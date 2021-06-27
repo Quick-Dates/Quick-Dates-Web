@@ -21,18 +21,18 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  background-color: var(--background-card-progress);
+  background-color: var(--background-card);
   padding: 4rem 2rem; 
   border-radius: 5px;
   margin-bottom: 1.9rem;
 }
 .containerEditActivity .contentEditActivity .card-info .text .title-card{
   font-size: 2.2rem;
-  color: var(--background-button-primary-hover);
+  color: var(--color-light-blue);
 }
 .containerEditActivity .contentEditActivity .card-info .text .description-card{
   font-size: 1.8rem;
-  color: var( --color-text-card);
+  color: var(  --color-dark-blue);
   text-align: justify;
   max-width: 42rem;
 }
@@ -60,9 +60,9 @@
   display: flex;
   align-items: center;
   font-size: 1.8rem;
-  background-color: var(--background-card-secundary);
+  background-color: var(--background-card);
   border-radius: 5px;
-  color: var(--color-text-card);
+  color: var( --color-dark-blue);
   font-weight: bold;
  }
  .containerList .linkPara{
@@ -72,9 +72,9 @@
   display: flex;
   align-items: center;
   font-size: 1.8rem;
-  background-color: var(--background-card-secundary);
+  background-color: var(--background-card);
   border-radius: 5px;
-  color: var(--color-text-card);
+  color: var( --color-dark-blue);
   font-weight: bold;
   text-decoration: none;
 }
@@ -93,7 +93,7 @@
 .containerDiv .containerEdit .titleEdit{
   font-size: 2rem;
   margin-bottom: 2rem;
-  color: var(--color-text-card);
+  color: var( --color-dark-blue);
   text-align: center;
 }
 
@@ -102,7 +102,7 @@
   font-size: 1.8rem;
   text-align: justify;
   margin-bottom: 0.5rem;
-  color: var(--color-text-card);
+  color: var( --color-dark-blue);
 }
 
 .containerDiv .containerEdit .spanButton{
@@ -122,7 +122,7 @@
 
 .containerDiv .containerEdit .spanButton .containerInformations span.info{
   font-size: 1.8rem;
-  color: var(--color-text-card);
+  color: var( --color-dark-blue);
   line-height: 2.5rem;
   display: flex;
   align-items: center;
@@ -156,7 +156,7 @@
 }
 
 .containerDiv .containerEdit .spanButton .containerButtons .edit{
-  background-color: var(--background-button-secondary);
+  background-color: var(--color-light-blue);
 }
 
 .containerDiv .containerEdit .spanButton .containerButtons .delete{
@@ -206,7 +206,7 @@
     font-size: 1.7rem;
   background-color: var(--background-card-secundary);
   border-radius: 5px;
-  color: var(--color-text-card);
+  color: var( --color-dark-blue);
   font-weight: bold;
   }
 }

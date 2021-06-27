@@ -12,8 +12,8 @@
 
 .horario {
   font-size: 12pt;
-  background-color: var(--background-card-time);
-  color: var(--color-text-card);
+  background-color: var(--background-card);
+  color: var( --color-dark-blue);
   padding: 1rem;
   width: 15rem;
   height: 3.8rem;
@@ -34,8 +34,8 @@
 
 .dia {
   font-size: 12pt;
-  background-color: var(--background-card-time);
-  color: var(--color-text-card);
+  background-color: var(--background-card);
+  color: var( --color-dark-blue);
   padding: 1rem;
   width: 20%;
   text-align: center;
@@ -57,7 +57,7 @@
 .materia{
   border: 0.1rem solid #000;
   font-size: 12pt;
-  color: var(--color-text-card);
+  color: var( --color-dark-blue);
   padding: 1.5rem;
   width: 20%;
   text-align: center;

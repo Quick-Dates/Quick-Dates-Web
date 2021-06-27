@@ -18,7 +18,7 @@
 }
 
 .containerActivityDetails .contentActivityDetails .titleActivityDeatails{
-  color: var(--color-text-card);
+  color: var( --color-dark-blue);
   font-size: 2rem;
   font-weight: bold;
   text-align: center;
@@ -27,7 +27,7 @@
 .containerActivityDetails .contentActivityDetails p{
   width: 90%;
 
-  color: var(--color-text-card);
+  color: var( --color-dark-blue);
   font-size: 1.8rem;
   text-align: justify;
   margin-top: 2rem;
@@ -52,7 +52,7 @@
 
 .containerActivityDetails .contentActivityDetails .informations span.info{
   font-size: 1.8rem;
-  color: var(--color-text-card);
+  color: var( --color-dark-blue);
   line-height: 2.5rem;
   display: flex;
   align-items: center;
@@ -86,7 +86,7 @@
 }
 
 .containerActivityDetails .contentActivityDetails .buttonsContainer .buttonEdit{
-  background-color: var(--background-button-secondary);
+  background-color: var(--color-light-blue);
 }
 
 .containerActivityDetails .contentActivityDetails .buttonsContainer .buttonDelete{

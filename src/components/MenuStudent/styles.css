@@ -38,7 +38,7 @@
   
   font-size: 1.3rem;
   font-weight: 700;
-  color: var(--color-text-card);
+  color: var( --color-dark-blue);
 }
 
 @keyframes transi{

@@ -8,7 +8,7 @@
 span.rbc-toolbar-label{/*Label*/
   font-size: 2.5rem;
   font-weight: 700;
-  color: var(--color-text-card);
+  color: var( --color-dark-blue);
   display: flex;
   justify-content: flex-end;
   text-transform: capitalize;
@@ -38,6 +38,7 @@ span.rbc-toolbar-label{/*Label*/
 .rbc-header{/*Header days*/
   /* background-color: var(--color-text-visited-header); */
   color: var(--color-label-calendar);
+  background-color: var(--background-button-calendar);
   border: 1px solid var(--color-border-calendar);
   height: 30px;
   display: flex;
@@ -51,7 +52,7 @@ span[role="columnheader"]{/*Days*/
 
 a[role="cell"]{/*Day number*/
   font-size: 1.6rem;
-  color: var(--background-footer);
+  color: var(--color-label-calendar);
 }
 
 div.rbc-date-cell{
@@ -63,6 +64,14 @@ div.rbc-date-cell{
 .rbc-day-bg{/*Container days*/
   border-left: 1px solid var(--color-border-calendar);
   border-right: 1px solid var(--color-border-calendar);
+}
+
+.rbc-day-bg.rbc-off-range-bg{/*Container days outher month*/
+  background-color: var(--background-card);
+}
+
+.rbc-day-bg.rbc-today{/*Container days outher month*/
+  background-color: var(--background-card-secundary);
 }
 
 .rbc-btn-group:last-child button:nth-child(4){/*botoes*/

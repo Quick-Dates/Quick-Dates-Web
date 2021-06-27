@@ -14,18 +14,18 @@
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  background-color: var(--background-card-progress);
+  background-color: var(--background-card);
   margin-top: 3rem;
   margin-bottom: 9rem;
 }
 .contentActivies .progress-container .card-progress .title {
-  color: var(--background-header);
+  color: var(--color-light-blue);
   font-size: 2.4rem;
   font-weight: bold;
   letter-spacing: 1.5px;
 }
 .contentActivies .progress-container .card-progress .description {
-  color: var(--color-text-card);
+  color: var( --color-dark-blue);
   font-size: 1.8rem;
   text-align: justify;
   max-width: 33rem;
@@ -41,7 +41,7 @@
   align-items: center;
   margin-top: 1rem;
   font-size: 1.8rem;
-  color: var(--color-text-card);
+  color: var( --color-dark-blue);
 }
 .contentActivies .progress-container .card-progress .card-info-progress .label-progress img  {
   margin-right: 1rem;

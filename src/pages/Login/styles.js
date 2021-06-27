@@ -83,7 +83,7 @@ export const InputModal = styled.input`
 `;
 export const Button = styled.button`
   width: ${width}%;
-  background-color: var(--background-button-primary);
+  background-color: var( --color-dark-blue);
   color: var(--color-text-button);
   font-weight: 700;
   height: 50px;
@@ -95,7 +95,7 @@ export const Button = styled.button`
   outline-width: 0;
 
   &:hover {
-    background-color: var(--background-button-primary-hover);
+    background-color: var(--color-light-blue);
     border: 1px solid #000;
     border-radius: 10px;
     cursor: pointer;

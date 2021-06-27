@@ -151,7 +151,7 @@ a:visited {
 .login-loginInputMatricula {
   display: flex;
   align-items: center;
-  color: var(--color-text-card);
+  color: var( --color-dark-blue);
   border: 2px solid #1dc3c4;
   border-radius: 3px;
   padding: 3px;
@@ -186,7 +186,7 @@ a:visited {
 .login-loginInputPassword {
   display: flex;
   align-items: center;
-  color: var(--color-text-card);
+  color: var( --color-dark-blue);
   border: 2px solid #1dc3c4;
   border-radius: 3px;
   padding: 3px;
@@ -220,7 +220,7 @@ a:visited {
 
 .buttonLogin {
   width: 65%;
-  background-color: var(--background-button-primary);
+  background-color: var( --color-dark-blue);
   color: var(--color-text-button);
   font-weight: 800;
   height: 50px;
@@ -233,7 +233,7 @@ a:visited {
 }
 
 .buttonLogin:hover {
-  background-color: var(--background-button-primary-hover);
+  background-color: var(--color-light-blue);
   border: 1px solid #000;
   border-radius: 10px;
   cursor: pointer;

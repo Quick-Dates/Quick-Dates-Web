@@ -45,7 +45,7 @@
 
 .modal h1{
   font-size: 2rem;
-  color: var(--color-text-card);
+  color: var( --color-dark-blue);
   text-align: center;
   width: 80%;
   margin-top: 2rem;
@@ -53,7 +53,7 @@
 
 .modal p{
   font-size: 1.9rem;
-  color: var(--color-text-card);
+  color: var( --color-dark-blue);
   margin-top: 3.5rem;
   margin-bottom: 2rem;
   letter-spacing: 1.4px;
@@ -79,7 +79,7 @@
 
 .modal span.info{
   font-size: 1.8rem;
-  color: var(--color-text-card);
+  color: var( --color-dark-blue);
   line-height: 2.5rem;
   display: flex;
   align-items: center;

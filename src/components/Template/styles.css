@@ -13,19 +13,26 @@
   animation: transicao 0.5s linear;
   grid-area: content;
   min-height: 100vh;
+  background-color: var(--background-content);
 }
-.template .content-page .back-container {
+.template .content-page .sub-header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   margin-top: 0.5rem;
+  margin-right: 1.5rem;
 }
-.template .content-page .back-container .label{
+.template .content-page .sub-header .back-container {
+  display: flex;
+  align-items: center;
+}
+.template .content-page .sub-header .back-container .label{
   font-size: 2.5rem;
   cursor: pointer;
-  color: var( --color-text-card);
+  color: var(  --color-dark-blue);
   font-weight: bold;
 }
-.template .content-page .back-container .icon-back{
+.template .content-page .sub-header .back-container .icon-back{
   cursor: pointer;
 }
 
@@ -36,7 +43,7 @@
   margin-top: 0.5rem;
   margin-bottom: 2rem;
   text-align: center;
-  color: var(--background-button-secondary);
+  color: var(--color-light-blue);
   letter-spacing: 2px;
   font-weight: bold;
   max-width: 100%;
@@ -63,7 +70,7 @@
     font-size: 2.5rem;
     letter-spacing: 1.5px;
   }
-  .template .content-page .back-container .label{
+  .template .content-page .sub-header .back-container .label{
     font-size: 1.5rem;
   }
 }

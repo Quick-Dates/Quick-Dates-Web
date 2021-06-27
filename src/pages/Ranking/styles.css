@@ -13,7 +13,7 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  background-color: var(--background-card-progress);
+  background-color: var(--background-card);
   padding: 4rem 2rem; 
   border-radius: 5px;
   margin-bottom: 1.9rem;
@@ -21,20 +21,20 @@
 
 .containerRanking .card-info-general .title-card{
   font-size: 2.2rem;
-  color: var(--background-button-primary-hover);
+  color: var(--color-light-blue);
   text-align: center;
   margin-bottom: 0.5rem;
 }
 
 .containerRanking .card-info-general .description-card{
   font-size: 1.8rem;
-  color: var( --color-text-card);
+  color: var(  --color-dark-blue);
   text-align: justify;
   max-width: 42rem;
 }
 
 .containerRanking .role-position {
-  background-color: var(--background-card-progress);
+  background-color: var(--background-card);
   margin-bottom: 0.7rem;
   padding: 1rem 1.5rem;
   display: flex;
@@ -43,7 +43,7 @@
 
 .containerRanking .role-position .info-general .position{
   font-size: 4rem;
-  color: var(--background-button-primary);
+  color: var( --color-dark-blue);
   font-weight: bold;
 }
 .containerRanking .role-position .info-general{
@@ -59,12 +59,12 @@
 .containerRanking .role-position .info-general .student-name{
   font-weight: bold;
   font-size: 2.8rem;
-  color: var(--background-button-primary);;
+  color: var( --color-dark-blue);;
 }
 .containerRanking .role-position .course, .containerRanking .role-position .score{
   font-size: 2.5rem;
   width: 30%;
-  color: var(--background-button-primary);
+  color: var( --color-dark-blue);
 }
 
 .containerRanking .role-position .score .score-value-green {
@@ -90,7 +90,7 @@
 
   .containerRanking .role-position .info-general .position{
     font-size: 3.2rem;
-    color: var(--background-button-primary);
+    color: var( --color-dark-blue);
     font-weight: bold;
   }
   .containerRanking .role-position .info-general .icon{
@@ -101,6 +101,6 @@
   .containerRanking .role-position .info-general .student-name{
     font-weight: bold;
     font-size: 2.5rem;
-    color: var(--background-button-primary);;
+    color: var( --color-dark-blue);;
   }
 }

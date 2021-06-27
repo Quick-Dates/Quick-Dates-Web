@@ -4,6 +4,7 @@ import React, { ReactNode } from 'react';
 import backIcon from '../../assets/back.svg';
 import Header from '../Header';
 import Footer from '../Footer';
+import { SwitchTheme } from '../SwitchTheme';
 import './styles.css';
 
 import Helmet from 'react-helmet';
@@ -31,9 +32,12 @@ export default function Template({
       </Helmet>
       <Header isStudent={isStudent} />
       <div className="content-page">
-        <div className="back-container">
-          <img src={backIcon} alt="voltar" className="icon-back" onClick={() => handleBackRouter()} />
-          <span className="label" onClick={() => handleBackRouter()}> Voltar </span>
+        <div className="sub-header">
+          <div className="back-container">
+            <img src={backIcon} alt="voltar" className="icon-back" onClick={() => handleBackRouter()} />
+            <span className="label" onClick={() => handleBackRouter()}> Voltar </span>
+          </div>
+          <SwitchTheme />
         </div>
         <h1 className="title">{ title }</h1>
         {children}
