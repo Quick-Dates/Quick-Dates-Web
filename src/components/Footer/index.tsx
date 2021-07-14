@@ -7,7 +7,7 @@ import './styles.css';
 export default function Footer() {
   return (
     <footer className="footer">
-      <p className="copyright">&copy; Quick Dates 2020</p>
+      <p className="copyright">&copy; Quick Dates 2021</p>
       <p className="email">main.quickdates@gmail.com</p>
       <div className="container-social-media">
         <a href="https://www.linkedin.com/in/quick-dates-880850208" target="_blank">

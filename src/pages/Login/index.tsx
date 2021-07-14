@@ -22,7 +22,7 @@ import Winners from "../../assets/winners.svg";
 import Calendar from "../../assets/calendar.svg";
 import Twitter from "../../assets/twitter.svg";
 import Linkedin from "../../assets/linkedin.svg";
-import Instagram from "../../assets/instagram-login.svg";
+import Instagram from "../../assets/instagram.svg";
 import TwitterGray from "../../assets/twitter-gray.svg";
 import LinkedinGray from "../../assets/linkedin-gray.svg";
 import InstagramGray from "../../assets/instagram-gray.svg";
@@ -176,7 +176,7 @@ export default function Login() {
             </div>
             <div className="login-loginInputMatricula">
               <MdEmail />
-              <Input placeholder="Usuário" name="login" type="text" />
+              <Input placeholder={user === 'student' ? 'Matrícula' : 'Siap'} name="login" type="text" />
             </div>
             <div className="login-loginInputPassword">
               <MdLock />
@@ -248,7 +248,7 @@ export default function Login() {
 
             <div className="redesSociais">
               <a href="https://www.instagram.com/quick.dates/?hl=pt-br">
-                <img src={Instagram} alt="instagram" />
+                <img src={Instagram} alt="instagram" className="instagram" />
               </a>
               <a href="https://www.linkedin.com/company/quick-dates/">
                 <img src={Linkedin} alt="linkedin" />

@@ -59,6 +59,20 @@ export default function ScheduleActivity() {
           <div className="contentSchedule2Right">
             <Form className="form-schedule" onSubmit={handleSubmit}>
               <Input
+                list="classes"
+                type="text"
+                name="class"
+                placeholder="Turma"
+              />
+
+              <Input
+                list="tipoAtividade"
+                type="text"
+                name="type"
+                placeholder="Tipo de avaliação"
+              />
+
+              <Input
                 type="text"
                 name="titulo"
                 className="textInput"
@@ -101,13 +115,6 @@ export default function ScheduleActivity() {
                 <option value="4° Bimestre">4° Bimestre</option>
               </datalist>
 
-              <Input
-                list="classes"
-                type="text"
-                name="class"
-                placeholder="Turma"
-              />
-
               <datalist id="classes">
                 <option value="Informática">Informática</option>
                 <option value="Secretariado">Secretariado</option>
@@ -121,13 +128,6 @@ export default function ScheduleActivity() {
                 step="0.1"
                 name="score"
                 placeholder="Pontuação"
-              />
-
-              <Input
-                list="tipoAtividade"
-                type="text"
-                name="type"
-                placeholder="Tipo de avaliação"
               />
 
               <datalist id="tipoAtividade">
@@ -152,52 +152,6 @@ export default function ScheduleActivity() {
         </div>
       </div>
 
-      {/* <div className="containerScheduleActivity">
-        <div className="content-shedule">
-          <Form className="form-schedule" onSubmit={handleSubmit}>
-            <h1 className="title-shedule">Agendar atividades</h1>
-
-            <div className="containerAgendar">
-              <Input type="text" name="title" placeholder="Título" />
-
-              <Input
-                type="date"
-                name="date"
-                className="date-input"
-                placeholder="Data"
-              />
-
-              <datalist id="classes">
-                <option value="Informática">Informática</option>
-                <option value="Secretariado">Secretariado</option>
-                <option value="Alimentos">Alimentos</option>
-                <option value="Química">Química</option>
-              </datalist>
-
-              <Input
-                list="classes"
-                type="text"
-                name="class"
-                placeholder="Turma"
-              />
-
-              <Input type="number" name="score" placeholder="Pontuação" />
-
-              <Input type="text" name="type" placeholder="Tipo de avaliação" />
-
-              <Input
-                type="text"
-                name="description"
-                className="descricao"
-                placeholder="Descrição"
-              />
-            </div>
-            <button className="buttonScheduleActivity" type="submit">
-              Agendar
-            </button>
-          </Form>
-        </div>
-      </div> */}
     </Template>
   );
 }

@@ -25,7 +25,6 @@
 }
 
 .containerLinks {
-  /* background-color: red; */
   width: 68rem;
   display: flex;
   justify-content: space-between;
@@ -39,10 +38,9 @@ a:visited {
 }
 
 .option {
-  font-family: Roboto;
   font-style: normal;
   font-weight: 300;
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   line-height: 100%;
 
   text-align: justify;
@@ -55,7 +53,6 @@ a:visited {
   border: 0;
   padding: 1rem 3rem 1rem 3rem;
 
-  font-family: Roboto;
   font-style: normal;
   font-weight: bold;
   font-size: 1.8rem;
@@ -347,6 +344,9 @@ a:visited {
 
 .redesSociais img {
   width: 4.2rem;
+}
+.redesSociais img.instagram {
+  width: 5.5rem;
 }
 
 .content3 .meeting {
