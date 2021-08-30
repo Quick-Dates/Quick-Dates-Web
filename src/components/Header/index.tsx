@@ -4,6 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 import LogoHeader from '../../assets/logo-header.svg';
 import LogoHeaderMobile from '../../assets/logo-mobile.svg';
 import LogoMenu from '../../assets/menu-mobile.svg';
+import { useContextAuth } from '../../Context/AuthContext';
 import MenuStudent from '../MenuStudent';
 import MenuTeacher from '../MenuTeacher';
 import './styles.css';
@@ -14,6 +15,7 @@ interface IProps{
 
 export default function Header({ isStudent }: IProps) {
   const pathName = useLocation().pathname;
+  const authContext = useContextAuth();
   const { innerWidth: width } = window;
 
   const [isVisible, setIsVisble] = useState('none');
@@ -26,6 +28,9 @@ export default function Header({ isStudent }: IProps) {
     } else {
       setIsVisble('flex');
     }
+  }
+  function handleClickSignout() {
+    authContext.signOut();
   }
 
   return (
@@ -76,7 +81,7 @@ export default function Header({ isStudent }: IProps) {
                 <Link to="/grades" className={pathName === '/grades' ? 'visited' : ''}> Notas  </Link>
                 <Link to="/ranking" className={pathName === '/ranking' ? 'visited' : ''}> Ranking  </Link>
                 <Link to="/time" className={pathName === '/time' ? 'visited' : ''}> Horário  </Link>
-                <Link to="/"> Sair  </Link>
+                <Link onClick={handleClickSignout} to="/"> Sair  </Link>
               </nav>
             )
             : (

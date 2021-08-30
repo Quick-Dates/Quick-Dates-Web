@@ -51,14 +51,19 @@ import {
   Image,
   Text,
 } from "./styles.js";
+import AuthService from "../../services/authService";
+import { useContextAuth } from "../../Context/AuthContext";
 
 interface DataForm {
-  login: string;
+  username: string;
   password: string;
 }
 
 export default function Login() {
   const history = useHistory();
+  const authContext = useContextAuth();
+  const authService = new AuthService();
+
   const [show, setShow] = useState(false);
   const [user, setUser] = useState("student");
 
@@ -70,30 +75,25 @@ export default function Login() {
   // eslint-disable-next-line consistent-return
   function handleAuthenticate(data: DataForm) {
     // eslint-disable-next-line no-console
-    const { login, password } = data;
+    const { username, password } = data;
 
-    if (user === "student") {
-      if (login === "123" && password === "aluno123") {
-        return history.push("/activities");
-      }
-      return toast.error("Matricula ou senha inválidos");
-    }
-    if (user === "teacher") {
-      if (login === "professor" && password === "professor123") {
-        return history.push("/shedule-activity");
-      }
-      return toast.error("Login ou senha inválidos");
-    }
+    authContext.signIn({ username, password }, user === "student" ? "students" : "teachers")
+      .then((response) => {
+        if (response.success) {
+          history.push(user === "student" ? "/activities" : "/shedule-activity");
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   }
 
   function setProfessor() {
     setUser("teacher");
-    console.log(user);
   }
 
   function setAluno() {
     setUser("student");
-    console.log(user);
   }
 
   const customStyles = {
@@ -176,7 +176,7 @@ export default function Login() {
             </div>
             <div className="login-loginInputMatricula">
               <MdEmail />
-              <Input placeholder={user === 'student' ? 'Matrícula' : 'Siap'} name="login" type="text" />
+              <Input placeholder={user === 'student' ? 'Matrícula' : 'Siap'} name="username" type="text" />
             </div>
             <div className="login-loginInputPassword">
               <MdLock />
@@ -398,50 +398,6 @@ export default function Login() {
         </ContainerModal>
       </Modal>
 
-      {/* <div className="logo">
-        <img src={LogoMain} alt="logo" />
-      </div>
-      <div className="loginR">
-        <h1>Login</h1>
-        <Form className="acesso" onSubmit={handleAuthenticate}>
-          <div className="lista-acesso">
-            <span onClick={setAluno} role="presentation" className={user === 'student' ? 'perfil selected' : 'perfil'}> Aluno </span>
-            <span onClick={setProfessor} role="presentation" className={user === 'teacher' ? 'perfil selected' : 'perfil'}> Professor </span>
-          </div>
-          <div className="login-loginInputMatricula">
-            <MdEmail />
-            <Input
-              name="login"
-              type="text"
-            />
-          </div>
-          <div className="login-loginInputPassword">
-            <MdLock />
-            <Input
-              name="password"
-              type={show ? 'text' : 'password'}
-            />
-            <div className="login-Eye">
-              {show ? (
-                <HiEye
-                  className="cursor-pointer"
-                  size={20}
-                  onClick={handleClick}
-                />
-              ) : (
-                <HiEyeOff
-                  className="cursor-pointer"
-                  size={20}
-                  onClick={handleClick}
-                />
-              )}
-            </div>
-          </div>
-          <button className="buttonLogin" type="submit">
-            Entrar
-          </button>
-        </Form>
-      </div> */}
       <ToastContainer />
     </div>
   );
