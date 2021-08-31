@@ -10,9 +10,34 @@ import Ranking from '../pages/Ranking';
 import Grade from '../pages/Grade';
 import ActitvityDetails from '../pages/ActivityDetails';
 import Route from './Route';
+import { useContextLoading } from '../Context/LoadingContext';
+import api from '../services/api';
 /* eslint-disable quotes */
 
 export default function Routes() {
+  const loadingContext = useContextLoading();
+  api.interceptors.request.use(
+    (config) => {
+      loadingContext.handleSetIsLoading(true);
+      return config;
+    },
+    (error) => {
+      console.log('error', error);
+      return Promise.reject(error);
+    },
+  );
+
+  api.interceptors.response.use(
+    (config) => {
+      loadingContext.handleSetIsLoading(false);
+      return config;
+    },
+    (error) => {
+      console.error(error);
+      loadingContext.handleSetIsLoading(false);
+      return Promise.reject(error);
+    },
+  );
   return (
     <Switch>
       <Route path="/signin" exact component={Login} />

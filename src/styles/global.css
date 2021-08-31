@@ -45,3 +45,15 @@ button {
 .cursor-pointer {
   cursor: pointer;
 }
+
+.contentAnimation{
+  position: absolute;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+}

@@ -2,11 +2,14 @@
 import React from 'react';
 
 import { AuthProvider } from './AuthContext';
+import { LoadingProvider } from './LoadingContext';
 
 const AppProvider: React.FC = ({ children }) => (
-  <AuthProvider>
-    {children}
-  </AuthProvider>
+  <LoadingProvider>
+    <AuthProvider>
+      {children}
+    </AuthProvider>
+  </LoadingProvider>
 );
 
 export default AppProvider;
