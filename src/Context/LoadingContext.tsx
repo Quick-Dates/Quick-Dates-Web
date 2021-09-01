@@ -12,7 +12,6 @@ interface LoadingContextData {
 
 const LoadingContext = createContext<LoadingContextData>({} as LoadingContextData);
 
-// eslint-disable-next-line react/prop-types
 export const LoadingProvider: React.FC = ({ children }) => {
   const [isLoding, setIsLoding] = useState<boolean>(false);
 

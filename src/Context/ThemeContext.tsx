@@ -1,5 +1,3 @@
-/* eslint-disable eqeqeq */
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, {
   createContext, useState, useEffect, ReactNode,
 } from 'react';

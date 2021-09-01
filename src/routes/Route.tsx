@@ -1,5 +1,3 @@
-/* eslint-disable no-nested-ternary */
-/* eslint-disable react/prop-types */
 import React from 'react';
 import {
   RouteProps as ReactDOMRouteProps,

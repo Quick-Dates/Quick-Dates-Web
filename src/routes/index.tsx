@@ -12,7 +12,6 @@ import ActitvityDetails from '../pages/ActivityDetails';
 import Route from './Route';
 import { useContextLoading } from '../Context/LoadingContext';
 import api from '../services/api';
-/* eslint-disable quotes */
 
 export default function Routes() {
   const loadingContext = useContextLoading();

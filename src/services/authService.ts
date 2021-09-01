@@ -1,5 +1,3 @@
-/* eslint-disable class-methods-use-this */
-/* eslint-disable consistent-return */
 import api from './api';
 import jwtDecode from 'jwt-decode';
 import { toast } from 'react-toastify';

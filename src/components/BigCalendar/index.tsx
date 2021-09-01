@@ -1,6 +1,3 @@
-/* eslint-disable no-shadow */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable no-return-assign */
 import moment from 'moment';
 import React, { useContext } from 'react';
 import { Calendar, momentLocalizer } from 'react-big-calendar';
@@ -14,24 +11,13 @@ import { DataEventsActivies } from '../../Context/DataActivies';
 // css
 import './index.css';
 
-interface Object {
-  title: string;
-  start: Date;
-  end: Date;
-  details: string;
-  minValue: number;
-  maxValue: number;
-  typeEvaluation: string;
-  class: string;
-}
-
 export default function BigCalendar(): JSX.Element {
   const localizer = momentLocalizer(moment);
   const { modal } = useContext(DataEventsContext);
 
   return (
     <Calendar
-      onSelectEvent={(event) => modal(true)}
+      onSelectEvent={() => modal(true)}
       events={DataEventsActivies.eventsData}
       localizer={localizer}
       startAccessor="start"

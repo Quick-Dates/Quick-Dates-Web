@@ -1,4 +1,3 @@
-/* eslint-disable react/react-in-jsx-scope */
 import Switch from 'react-switch';
 import { shade } from 'polished';
 

@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 import React from 'react';
 import Template from '../../components/Template';
 import notebookIcon from '../../assets/notebook-blue.svg';

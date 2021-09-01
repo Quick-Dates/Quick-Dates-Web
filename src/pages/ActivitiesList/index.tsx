@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useContext } from 'react';
 import BigCalendar from '../../components/BigCalendar/index';
 import ProgressBar from '../../components/ProgressBar/index';
@@ -13,17 +12,6 @@ import Modal from '../../components/Modal';
 
 export default function ActivitiesList(): JSX.Element {
   const { innerWidth: width } = window;
-
-  let breadth = 0;
-  let height = 0;
-
-  if (width <= 425) {
-    breadth = 300;
-    height = 300;
-  } else {
-    breadth = 400;
-    height = 400;
-  }
 
   const { isVisible } = useContext(DataEventsContext);
 

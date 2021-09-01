@@ -1,4 +1,3 @@
-/* eslint-disable no-unneeded-ternary */
 import React from 'react';
 import Template from '../../components/Template';
 import CrownGold from '../../assets/crown-gold.svg';

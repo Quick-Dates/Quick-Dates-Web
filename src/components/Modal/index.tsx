@@ -1,6 +1,3 @@
-/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable react/button-has-type */
 import React, { useContext, useState } from 'react';
 import closeIcon from '../../assets/close.svg';
 import notebookIcon from '../../assets/notebook-blue.svg';

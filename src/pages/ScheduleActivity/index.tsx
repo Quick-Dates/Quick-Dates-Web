@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable quotes */
 import { Form } from "@unform/web";
 import React from "react";
 import Input from "../../components/Input";

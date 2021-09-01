@@ -1,8 +1,3 @@
-/* eslint-disable @typescript-eslint/ban-types */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable react/no-unused-prop-types */
-
 import React, { useState } from 'react';
 
 export const DataEventsActivies = {
@@ -31,22 +26,7 @@ interface Modal {
 
 export const DataEventsContext = React.createContext({} as Modal);
 
-interface Object {
-  title: string;
-  start: Date;
-  end: Date;
-  details: string;
-  minValue: number;
-  maxValue: number;
-  typeEvaluation: string;
-  class: string;
-}
-
-export default function DataEventsProvider(props: DataEvents) {
-  const atividade = [{
-    title: 'Prova Matemática',
-  }];
-
+export default function DataEventsProvider({ children }: DataEvents) {
   const [isVisible, setIsVisible] = useState(false);
 
   function modal(x: boolean) {
@@ -55,7 +35,7 @@ export default function DataEventsProvider(props: DataEvents) {
 
   return (
     <DataEventsContext.Provider value={{ isVisible, modal }}>
-      {props.children}
+      {children}
     </DataEventsContext.Provider>
   );
 }

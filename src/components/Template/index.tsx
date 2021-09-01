@@ -1,5 +1,3 @@
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import React, { ReactNode } from 'react';
 import backIcon from '../../assets/back.svg';
 import Header from '../Header';

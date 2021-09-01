@@ -1,16 +1,3 @@
-/* eslint-disable no-bitwise */
-/* eslint-disable no-return-assign */
-/* eslint-disable react/button-has-type */
-/* eslint-disable react/jsx-filename-extension */
-/* eslint-disable jsx-a11y/img-redundant-alt */
-/* eslint-disable react/style-prop-object */
-/* eslint-disable react/jsx-indent */
-/* eslint-disable jsx-quotes */
-/* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable quotes */
-/* eslint-disable react/self-closing-comp */
-/* eslint-disable max-len */
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import "./styles.css";
@@ -31,7 +18,7 @@ import Universidade from "../../assets/universidade.svg";
 
 import { MdEmail, MdLock } from "react-icons/md";
 import { HiEye, HiEyeOff } from "react-icons/hi";
-import { toast, ToastContainer } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Form } from "@unform/web";
 import Input from "../../components/Input";
@@ -51,7 +38,6 @@ import {
   Image,
   Text,
 } from "./styles.js";
-import AuthService from "../../services/authService";
 import { useContextAuth } from "../../Context/AuthContext";
 
 interface DataForm {
@@ -62,7 +48,6 @@ interface DataForm {
 export default function Login() {
   const history = useHistory();
   const authContext = useContextAuth();
-  const authService = new AuthService();
 
   const [show, setShow] = useState(false);
   const [user, setUser] = useState("student");
@@ -72,9 +57,7 @@ export default function Login() {
     setShow(!show);
   }
 
-  // eslint-disable-next-line consistent-return
   function handleAuthenticate(data: DataForm) {
-    // eslint-disable-next-line no-console
     const { username, password } = data;
 
     authContext.signIn({ username, password }, user === "student" ? "students" : "teachers")
