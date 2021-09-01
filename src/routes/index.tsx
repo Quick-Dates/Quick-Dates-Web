@@ -19,10 +19,11 @@ export default function Routes() {
   api.interceptors.request.use(
     (config) => {
       loadingContext.handleSetIsLoading(true);
+      console.log(config);
       return config;
     },
     (error) => {
-      console.log('error', error);
+      console.error(error);
       return Promise.reject(error);
     },
   );
@@ -33,7 +34,6 @@ export default function Routes() {
       return config;
     },
     (error) => {
-      console.error(error);
       loadingContext.handleSetIsLoading(false);
       return Promise.reject(error);
     },

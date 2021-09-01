@@ -47,7 +47,7 @@ button {
 }
 
 .contentAnimation{
-  position: absolute;
+  position: fixed;
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -56,4 +56,5 @@ button {
   top: 0;
   width: 100vw;
   height: 100vh;
+  background-color: rgba(0, 0, 0, 0.116);
 }
