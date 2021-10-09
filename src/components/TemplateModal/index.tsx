@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { ToastContainer } from 'react-toastify';
 import closeIcon from '../../assets/close.svg';
 
 import './styles.css';
@@ -16,6 +17,7 @@ export default function TemplateModal({ children, showCloseModal = true, close =
           </div>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 }
