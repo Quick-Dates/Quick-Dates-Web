@@ -491,3 +491,107 @@ a:visited {
   justify-content: space-between;
 }
 
+@media(max-width: 1050px) {
+  .containerLinks{
+    display: none;
+  }
+  .footer-login .top .subTop {
+    display: none;
+  }
+  .footer-login .bottom {
+    flex-direction: column;
+  }
+  .footer-login .bottom .subBottom {
+    flex-direction: column;
+  }
+  .footer-login .bottom .subBottom .optionsText{
+    margin: 1rem 0;
+  }
+  .footer-login .bottom .subBottom .optionsText.privacidade{
+    display: none;
+  }
+  .footer-login .bottom .subBottom .sociaisGray{
+    margin: 1rem 0;
+    width: 50%;
+  }
+}
+
+@media(max-width: 950px) {
+  .container2 .contentLogin{
+    flex-direction: column;
+    align-items: center;
+  }
+  .container3 .titleContainer3{
+    justify-content: center;
+  }
+  .container3 .content3{
+    flex-direction: column;
+    align-items: center;
+  }
+  .container3 .content3 .text{
+    margin-bottom: 3rem;
+    width: 100%;
+  }
+  .container3 .content3 .text .redesSociais{
+    display: none;
+  }
+  
+  .container4 .content4{
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media(max-width: 900px) {
+  .container1 {
+    justify-content: center;
+    padding: 0;
+  }
+  .container1 .titleLogin {
+      font-size: 4rem;
+      line-height: 100%;
+      width: 100%;
+      text-align: center;
+      margin-top: 5rem;
+  }
+  .container1 .descricaoLogin {
+      margin: 2rem 0;
+  }
+  .container1 .acesso .lista-acesso  {
+     width: 100%;
+  }
+  .container1 .acesso .login-loginInputMatricula  {
+     width: 100%;
+  }
+  .container1 .acesso .login-loginInputPassword  {
+     width: 100%;
+  }
+  .container1 .acesso .buttonLogin  {
+     width: 100%;
+  }
+  .bro{
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .container1 .descricaoLogin {
+    display: none;
+  }
+
+  .container1 .titleLogin {
+    font-size: 3rem;
+  }
+  .container3 .content3 .meeting {
+    width: 20rem;
+  }
+  .content4 img {
+    width: 20rem;
+  }
+  .footer-login {
+    padding: 2rem 3rem 0 3rem;
+  }
+  .footer-login .optionFooter{
+    font-size: 1rem;
+  }
+}

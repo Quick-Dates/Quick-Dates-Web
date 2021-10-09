@@ -131,11 +131,11 @@ export default function Login() {
       <div className="container1">
         <div className="form">
           <h1 className="titleLogin" id="Login">
-            Ganhe tempo visualizando suas atividades de forma organizada
+            Gerencie suas atividades
           </h1>
           <p className="descricaoLogin">
             O Quick Dates te ajuda a agilizar o processo de desenvolvimento de
-            sua atividades
+            sua atividades acadêmicas.
           </p>
 
           <Form className="acesso" onSubmit={handleAuthenticate}>
@@ -292,7 +292,7 @@ export default function Login() {
             <a href="#" className="optionsText">
               <p className="option optionFooter">Termo de uso</p>
             </a>
-            <a href="#" className="optionsText">
+            <a href="#" className="optionsText privacidade">
               <p className="option optionFooter">Politica de privacidade</p>
             </a>
 
