@@ -578,9 +578,15 @@ a:visited {
   .container1 .descricaoLogin {
     display: none;
   }
+  .container1 .form {
+    width: 80%;
+  }
 
   .container1 .titleLogin {
     font-size: 3rem;
+  }
+  .container3, .container4 {
+    padding: 1rem 5rem;
   }
   .container3 .content3 .meeting {
     width: 20rem;
@@ -589,7 +595,7 @@ a:visited {
     width: 20rem;
   }
   .footer-login {
-    padding: 2rem 3rem 0 3rem;
+    padding: 2rem 3rem 0.5rem 3rem;
   }
   .footer-login .optionFooter{
     font-size: 1rem;
