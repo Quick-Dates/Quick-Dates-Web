@@ -9,6 +9,8 @@ interface IUser {
   id: string,
   name: string,
   profile: ProfileEnum,
+  email: string,
+  course: string,
   tokenSuap: string,
 }
 

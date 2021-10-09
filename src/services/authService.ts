@@ -11,7 +11,7 @@ class AuthService {
     try {
       const response = await api.post(`/${profile}/signin`, data);
       return response.data;
-    } catch (error) {
+    } catch (error: any) {
       toast.error(error.response ? error.response.data.message : 'Erro ao fazer login');
     }
   }

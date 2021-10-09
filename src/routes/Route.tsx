@@ -21,7 +21,7 @@ function Route({
   return (
     <ReactDOMRoute
       {...rest}
-      render={({ location }) => (isPrivate === !!user ? (
+      render={({ location }) => (isPrivate === !!user && location.pathname !== '/' ? (
         <Component />
       ) : (
         <Redirect

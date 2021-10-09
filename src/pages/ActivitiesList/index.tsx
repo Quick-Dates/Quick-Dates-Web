@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import BigCalendar from '../../components/BigCalendar/index';
 import ProgressBar from '../../components/ProgressBar/index';
 import NotebookIcon from '../../assets/notebook.svg';
@@ -9,14 +9,33 @@ import './styles.css';
 
 import { DataEventsContext } from '../../Context/DataEvents';
 import Modal from '../../components/Modal';
+import api from '../../services/api';
+import { useContextAuth } from '../../Context/AuthContext';
+import ModalaAddStudentToTeam from '../../components/ModalAddStudentToTeam';
 
 export default function ActivitiesList(): JSX.Element {
+  const authContext = useContextAuth();
   const { innerWidth: width } = window;
+  const [showModalAddTeam, setShowModalAddTeam] = useState(false);
 
   const { isVisible } = useContext(DataEventsContext);
 
+  useEffect(() => {
+    api.get(`/students/${authContext.user.id}`)
+      .then((response) => {
+        console.log(response.data);
+      })
+      .catch((error) => {
+        console.log(error.response.data.message);
+        if (error.response && error.response.data.message === 'Turma não encontrada') {
+          setShowModalAddTeam(true);
+        }
+      });
+  }, []);
   return (
     <Template isStudent title="Atividades Marcadas" titleTab="Calendar">
+      {showModalAddTeam
+      && <ModalaAddStudentToTeam />}
       <div className="contentActivies">
         <BigCalendar />
         {isVisible && <Modal />}

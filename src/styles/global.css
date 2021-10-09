@@ -34,12 +34,13 @@ button {
   --color-text-late: #F53C30;
   --color-text-button: #fff;
   --color-text-button-calendar: #649bf3;
-  --color-button-border: #a7a6a6ff;
+  --color-button-border: #cccccc;
   --color-text-header: #fff;
   --color-text-footer: #ffffff80;
   --color-text-visited-header: #000000b0;
   --color-border-calendar: #dadce0;
   --color-label-calendar: #414242;
+  --color-title: #2e3651;
 }
 
 .cursor-pointer {

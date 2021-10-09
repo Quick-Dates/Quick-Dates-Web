@@ -18,7 +18,6 @@ export default function Routes() {
   api.interceptors.request.use(
     (config) => {
       loadingContext.handleSetIsLoading(true);
-      console.log(config);
       return config;
     },
     (error) => {
@@ -47,7 +46,7 @@ export default function Routes() {
       <Route path="/shedule-activity" component={ScheduleActivity} isPrivate />-
       <Route path="/edit-activity" component={EditActivity} isPrivate />
       <Route path="/ranking" component={Ranking} isPrivate />
-      <Route path="*" component={NotFound404} isPrivate />
+      <Route path="*" isPrivate component={NotFound404} />
     </Switch>
   );
 }
