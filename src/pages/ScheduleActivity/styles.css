@@ -56,7 +56,7 @@
   background: var(--background-card);
   border-radius: 8px;
   width: 100%;
-  height: 70rem;
+  min-height: 70rem;
   padding: 5rem 10rem 5rem 10rem;
   display: flex;
   flex-direction: row;
@@ -125,25 +125,8 @@
   color: #247d7e;
 }
 
-.contentSchedule2Right input::placeholder {
-  font-family: Nunito Sans;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 15px;
-  line-height: 26px;
-  text-align: center;
-  /* identical to box height */
-
-  display: flex;
-  align-items: flex-end;
-  letter-spacing: 0.1em;
-  text-transform: capitalize;
-
-  color: #247d7e;
-}
-
 .buttonScheduleActivity {
-  width: 70%;
+  width: 80%;
   height: 3rem;
   background: #247d7e;
   border-radius: 8px;

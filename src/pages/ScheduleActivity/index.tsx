@@ -1,46 +1,61 @@
 import { Form } from "@unform/web";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Input from "../../components/Input";
 import Template from "../../components/Template";
 import "./styles.css";
 import Teacher from "../../assets/teacher.svg";
 import Today from "../../assets/schedule.svg";
-
-interface DataForm {
-  title: string;
-  date: string;
-  class: string;
-  score: number;
-  type: string;
-  description: string;
-}
+import api from "../../services/api";
+import { ICourse } from "../../interfaces/ICourse";
+import { ITeam } from "../../interfaces/ITeam";
+import { toast, ToastContainer } from "react-toastify";
+import { ITask } from "../../interfaces/ITask";
 
 export default function ScheduleActivity() {
-  function handleSubmit(data: DataForm) {
-    console.table(data);
+  const [optionsCourses, setOptionsCourses] = useState([{ label: '', value: undefined }]);
+  const [optionsTeams, setOptionsTeams] = useState([{ label: '', value: undefined }]);
+
+  useEffect(() => {
+    api.get("/teams/courses")
+      .then((response) => {
+        setOptionsCourses(response.data
+          .map((course: ICourse) => {
+            const label = course.name.charAt(0).toUpperCase() + course.name.substr(1).toLowerCase();
+            return { label, value: course.id };
+          }));
+      }).catch((error) => {
+        const message = error.response?.data?.message || "Erro ao buscar cursos";
+        toast.error(message);
+      });
+  }, []);
+
+  function handleChangeCourse(event: React.ChangeEvent<HTMLInputElement>) {
+    const courseLabel = event.target.value;
+    const course = optionsCourses.find((course) => course.label === courseLabel);
+    if (course) {
+      api.get(`/teams/${course.value}`)
+        .then((response) => {
+          setOptionsTeams(response.data
+            .map((team: ITeam) => ({ label: team.name, value: team.id })));
+        }).catch((error) => {
+          const message = error.response?.data?.message || "Erro ao buscar turmas";
+          toast.error(message);
+        });
+    }
+  }
+
+  function handleSubmit(data: ITask) {
+    const team = optionsTeams.find((team) => team.label === data.team);
+    api.post(`/tasks/team/${team?.value}`, data).then(() => {
+      toast.success("Tarefa cadastrada com sucesso!");
+    }).catch((error) => {
+      const message = error.response?.data?.message || "Erro ao cadastrar tarefa";
+      toast.error(message);
+    });
   }
   return (
     <Template title="Agendar Atividade" titleTab="Professor">
       <div className="schedule">
-        <div className="contentSchedule1">
-          <div className="contentSchedule1Left">
-            <p className="textSchedule">
-              Aqui você pode agendar atividades para seus alunos, assim ambos
-              tem um melhor controle sobre o tempo.
-            </p>
-
-            <h3 className="titleContentSchedule1">
-              Como marcar uma atividade?
-            </h3>
-
-            <p className="textSchedule">
-              Aqui você pode agendar atividades para seus alunos, assim ambos
-              tem um melhor controle sobre o tempo.
-            </p>
-          </div>
-          <img src={Teacher} alt="" />
-        </div>
-
         <div className="contentSchedule2">
           <div className="contentSchedule2Left">
             <h3 className="titleContentSchedule2">
@@ -57,89 +72,98 @@ export default function ScheduleActivity() {
           <div className="contentSchedule2Right">
             <Form className="form-schedule" onSubmit={handleSubmit}>
               <Input
-                list="classes"
+                list="courses"
                 type="text"
-                name="class"
-                placeholder="Turma"
+                name="team"
+                aria-label="Curso"
+                required
+                onChange={handleChangeCourse}
               />
 
+              <datalist id="courses">
+                {optionsCourses.map((option, index) => (
+                  <option key={index} data-value={option.value}> {option.label} </option>
+                ))}
+              </datalist>
+
               <Input
-                list="tipoAtividade"
+                list="teams"
                 type="text"
-                name="type"
-                placeholder="Tipo de avaliação"
+                required
+                name="team"
+                aria-label="Turma"
               />
+
+              <datalist id="teams">
+                {optionsTeams.map((option, index) => (
+                  <option key={index} data-value={option.value}> {option.label} </option>
+                ))}
+              </datalist>
 
               <Input
                 type="text"
-                name="titulo"
+                name="title"
+                required
                 className="textInput"
-                placeholder="Titulo"
+                aria-label="Titulo"
+              />
+
+              <Input
+                type="text"
+                name="description"
+                required
+                className="descricao"
+                aria-label="Descrição"
+              />
+
+              <Input
+                type="text"
+                name="subject"
+                required
+                className="descricao"
+                aria-label="Disciplina"
               />
 
               <Input
                 type="date"
-                name="date"
+                name="startDate"
+                required
                 className="date-input"
-                placeholder="Data"
+                aria-label="Data Inicio"
+              />
+
+              <Input
+                type="date"
+                name="finalDate"
+                className="date-input"
+                aria-label="Data Final"
+                required
               />
 
               <Input
                 type="time"
-                name="time-first"
+                name="startTime"
                 className="timeInput"
-                placeholder="Hora de inicio"
+                aria-label="Hora de inicio"
+                required
               />
 
               <Input
                 type="time"
-                name="time-last"
+                name="finalTime"
                 className="timeInput"
-                placeholder="Hora de término"
+                aria-label="Hora de término"
+                required
               />
 
-              <Input
-                list="bimestres"
-                type="text"
-                name="bimestre"
-                className="bimestreInput"
-                placeholder="Bimestre"
-              />
-
-              <datalist id="bimestres">
-                <option value="1° Bimestre">1° Bimestre</option>
-                <option value="2° Bimestre">2° Bimestre</option>
-                <option value="3° Bimestre">3° Bimestre</option>
-                <option value="4° Bimestre">4° Bimestre</option>
-              </datalist>
-
-              <datalist id="classes">
-                <option value="Informática">Informática</option>
-                <option value="Secretariado">Secretariado</option>
-                <option value="Alimentos">Alimentos</option>
-                <option value="Química">Química</option>
-              </datalist>
               <Input
                 type="number"
                 min="1.0"
                 max="10.0"
                 step="0.1"
-                name="score"
-                placeholder="Pontuação"
-              />
-
-              <datalist id="tipoAtividade">
-                <option value="Prova">Prova</option>
-                <option value="Lista de exercicio">Lista de exercicio</option>
-                <option value="Relatório">Relatório</option>
-                <option value="Seminário">Seminário</option>
-              </datalist>
-
-              <Input
-                type="text"
-                name="description"
-                className="descricao"
-                placeholder="Descrição"
+                name="maximumScore"
+                aria-label="Pontuação"
+                required
               />
 
               <button className="buttonScheduleActivity" type="submit">
@@ -148,8 +172,21 @@ export default function ScheduleActivity() {
             </Form>
           </div>
         </div>
-      </div>
+        <div className="contentSchedule1">
+          <div className="contentSchedule1Left">
+            <h3 className="titleContentSchedule1">
+              Como marcar uma atividade?
+            </h3>
 
+            <p className="textSchedule">
+              Aqui você pode agendar atividades para seus alunos, assim ambos
+              tem um melhor controle sobre o tempo.
+            </p>
+          </div>
+          <img src={Teacher} alt="" />
+        </div>
+      </div>
+      <ToastContainer />
     </Template>
   );
 }
