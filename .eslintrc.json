@@ -69,7 +69,10 @@
       "no-nested-ternary": "off",
       "consistent-return":"off",
       "class-methods-use-this":"off",
-      "@typescript-eslint/no-explicit-any": "off"
+      "@typescript-eslint/no-explicit-any": "off",
+      "react/no-array-index-key": "off",
+      "no-plusplus": "off",
+      "for-direction": "off"
     },
     "settings": {
       "import/resolver": {

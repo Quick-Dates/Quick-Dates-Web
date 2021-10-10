@@ -1,9 +1,4 @@
-/* eslint-disable react/no-array-index-key */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable no-plusplus */
-/* eslint-disable for-direction */
 import React, { useEffect, useState } from 'react';
-import { toast, ToastContainer } from 'react-toastify';
 import { useContextAuth } from '../../Context/AuthContext';
 import api from '../../services/api';
 import TemplateModal from '../TemplateModal';

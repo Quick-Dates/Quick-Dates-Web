@@ -6,9 +6,15 @@ import SchoolIcon from '../../assets/school.svg';
 import ExitIcon from '../../assets/exit.svg';
 
 import './styles.css';
+import { useContextAuth } from '../../Context/AuthContext';
 
 export default function MenuStudent() {
   const pathName = useLocation().pathname;
+  const { signOut } = useContextAuth();
+
+  function handleClickSignout() {
+    signOut();
+  }
 
   return (
     <div className="container">
@@ -33,7 +39,7 @@ export default function MenuStudent() {
             <p>Notas</p>
           </section>
           <section>
-            <Link to="/"><img src={ExitIcon} alt="" /></Link>
+            <Link to="/signin" onClick={handleClickSignout}><img src={ExitIcon} alt="" /></Link>
             <p>Sair</p>
           </section>
         </div>

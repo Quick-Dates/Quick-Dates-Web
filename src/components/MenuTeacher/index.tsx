@@ -5,9 +5,15 @@ import Exit from '../../assets/exit.svg';
 import List from '../../assets/atividades-marcadas-icon.svg';
 
 import './styles.css';
+import { useContextAuth } from '../../Context/AuthContext';
 
 export default function MenuStudent() {
   const pathName = useLocation().pathname;
+  const { signOut } = useContextAuth();
+
+  function handleClickSignout() {
+    signOut();
+  }
 
   return (
     <div className="containerMenuTeacher">
@@ -26,7 +32,7 @@ export default function MenuStudent() {
 
         <div>
           <section>
-            <Link to="/"><img src={Exit} alt="" /></Link>
+            <Link to="/signin" onClick={handleClickSignout}><img src={Exit} alt="" /></Link>
             <p>Sair</p>
           </section>
         </div>

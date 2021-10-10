@@ -25,6 +25,7 @@ export default function Header({ isStudent }: IProps) {
     if (count % 2 === 0) {
       setIsVisble('none');
     } else {
+      console.log(width);
       setIsVisble('flex');
     }
   }
