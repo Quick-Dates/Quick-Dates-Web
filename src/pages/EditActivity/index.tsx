@@ -1,14 +1,31 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+/* eslint-disable max-len */
+import React, { useEffect, useState } from 'react';
 import Template from '../../components/Template';
 import PanaImg from '../../assets/pana.svg';
-import notebookIcon from '../../assets/notebook-blue.svg';
-import calendarIcon from '../../assets/calendar-blue.svg';
-import evaOptionsIcon from '../../assets/eva-options.svg';
+
 import './styles.css';
+import api from '../../services/api';
+import { toast, ToastContainer } from 'react-toastify';
+import { ITask } from '../../interfaces/ITask';
+import TaskItem from '../../components/TaskItem';
 
 export default function EditActivity() {
   const { innerWidth: width } = window;
+  const [tasks, setTasks] = useState([{}] as ITask[]);
+
+  useEffect(() => {
+    api.get("/tasks/teacher")
+      .then((response) => {
+        setTasks(response.data as ITask[]);
+      }).catch((error) => {
+        const message = error.response?.data?.message || "Erro ao buscar tarefas";
+        toast.error(message);
+      });
+  }, []);
+
+  function removeTask(id: number) {
+    setTasks(tasks.filter((task) => task.id !== id));
+  }
 
   return (
     <Template titleTab="Professor" title="Atividades Marcadas">
@@ -23,70 +40,17 @@ export default function EditActivity() {
             </div>
             <img src={PanaImg} alt="pana" />
           </div>
-          {width <= 950 ? (
+          <div className="containerDiv">
             <div className="containerList">
-              <Link to="/activity-details" className="linkPara"> 2° Informática - prova -  03/10 </Link>
-              <Link to="/activity-details" className="linkPara"> 2° Informática - prova -  03/10 </Link>
-              <Link to="/activity-details" className="linkPara"> 2° Informática - prova -  03/10 </Link>
-              <Link to="/activity-details" className="linkPara"> 2° Informática - prova -  03/10 </Link>
-              <Link to="/activity-details" className="linkPara"> 2° Informática - prova -  03/10 </Link>
-              <Link to="/activity-details" className="linkPara"> 3° Informática - Exercício -  03/10 </Link>
-
+              {tasks.map((task) => (
+                <TaskItem task={task} removeTask={removeTask} />
+              ))}
             </div>
-          ) : (
-            <div className="containerDiv">
-              <div className="containerList">
-                <div>3° Informática - Exericíos </div>
-                <div>3° Informática - Exericíos </div>
-                <div>3° Informática - Exericíos </div>
-                <div>3° Informática - Exericíos </div>
-                <div>3° Informática - Exericíos </div>
-                <div>3° Informática - Exericíos </div>
-              </div>
 
-              <div className="containerEdit">
-
-                <h1 className="titleEdit">Atividade de Matemática</h1>
-
-                <p>
-                  Realizar todas as atividades propostas na lista de exercícios de PA e PG.
-                </p>
-
-                <div className="spanButton">
-                  <section className="containerInformations">
-                    <span className="info">
-                      <img src={notebookIcon} alt="notebook" className="icon" />
-                      Pontuação máxima:
-                      <span className="value"> 8 </span>
-                    </span>
-
-                    <span className="info">
-                      <img src={calendarIcon} alt="calendario" className="icon" />
-                      Data de entrega:
-                      <span className="value">
-                        04/10
-                      </span>
-                    </span>
-                    <span className="info">
-                      <img src={evaOptionsIcon} alt="eva options" className="icon" />
-                      Tipo de Atividade:
-                      <span className="value">
-                        Resumo
-                      </span>
-                    </span>
-                  </section>
-
-                  <div className="containerButtons">
-                    <button className="edit" type="button">Editar</button>
-                    <button className="delete" type="button">Excluir</button>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          )}
+          </div>
         </div>
       </div>
+      <ToastContainer />
     </Template>
   );
 }

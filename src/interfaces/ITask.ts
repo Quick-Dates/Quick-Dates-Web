@@ -1,5 +1,8 @@
+import { ITeam } from "./ITeam";
+
 export interface ITask {
-  team: string;
+  id: number;
+  team: ITeam;
   title: string;
   description: string;
   subject: string;

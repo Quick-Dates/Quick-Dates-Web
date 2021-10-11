@@ -45,7 +45,7 @@ export default function ScheduleActivity() {
   }
 
   function handleSubmit(data: ITask) {
-    const team = optionsTeams.find((team) => team.label === data.team);
+    const team = optionsTeams.find((team) => team.label === data.team as any);
     api.post(`/tasks/team/${team?.value}`, data).then(() => {
       toast.success("Tarefa cadastrada com sucesso!");
     }).catch((error) => {
