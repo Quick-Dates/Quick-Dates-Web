@@ -93,7 +93,7 @@ export default function ScheduleActivity() {
         <div className="contentSchedule2">
           <div className="contentSchedule2Left">
             <h3 className="titleContentSchedule2">
-              Preencha os campos ao lado
+              Preencha os campos
             </h3>
 
             <p className="textSchedule">
@@ -217,7 +217,7 @@ export default function ScheduleActivity() {
               tem um melhor controle sobre o tempo.
             </p>
           </div>
-          <img src={Teacher} alt="" />
+          <img src={Teacher} alt="" className="teacherImage" />
         </div>
       </div>
       <ToastContainer />

@@ -25,7 +25,7 @@
 }
 
 .textSchedule {
-  width: 390px;
+  max-width: 39rem;
 
   font-family: Nunito Sans;
   font-style: normal;
@@ -164,7 +164,44 @@
    flex-direction: column;
    align-items: center;
  }
+ .contentSchedule2, .contentSchedule1 {
+   padding: 5rem 0;
+ }
  .contentSchedule1 .contentSchedule1Left {
    margin-bottom: 3rem;
  }
+}
+
+@media(max-width: 760px) {
+  .contentSchedule2 .Image, .contentSchedule1 .teacherImage {
+    display: none;
+  }
+  .contentSchedule2 .contentSchedule2Left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+  }
+
+  .contentSchedule2 .textSchedule {
+    max-width: 80%;
+  }
+
+  .contentSchedule2Right {
+    width: 100%;
+  }
+  .contentSchedule2Right .form-schedule {
+    align-items: center;
+  }
+
+  .contentSchedule1 {
+    height: auto;
+  }
+  .contentSchedule1 .contentSchedule1Left {
+    width: 80%;
+  }
+  .contentSchedule1 .contentSchedule1Left .titleContentSchedule1 {
+    text-align: center;
+  }
 }
