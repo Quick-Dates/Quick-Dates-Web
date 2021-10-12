@@ -17,6 +17,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
+  margin-bottom: 5rem;
 }
 
 .contentSchedule1Left {
@@ -156,4 +157,14 @@
 
 .Image {
   margin-top: 3rem;
+}
+
+@media(max-width: 900px) {
+ .contentSchedule2, .contentSchedule1 {
+   flex-direction: column;
+   align-items: center;
+ }
+ .contentSchedule1 .contentSchedule1Left {
+   margin-bottom: 3rem;
+ }
 }
