@@ -72,7 +72,8 @@
       "@typescript-eslint/no-explicit-any": "off",
       "react/no-array-index-key": "off",
       "no-plusplus": "off",
-      "for-direction": "off"
+      "for-direction": "off",
+      "react/jsx-no-bind": "off"
     },
     "settings": {
       "import/resolver": {

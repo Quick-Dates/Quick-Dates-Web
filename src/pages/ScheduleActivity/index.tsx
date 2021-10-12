@@ -70,6 +70,7 @@ export default function ScheduleActivity() {
 
   function handleSubmit(data: ITask) {
     const team = optionsTeams.find((team) => team.label === data.team as any);
+    data.maximumScore = Number(data.maximumScore);
     if (id) {
       api.put(`/tasks/${id}`, data).then(() => {
         toast.success("Tarefa editada com sucesso!");

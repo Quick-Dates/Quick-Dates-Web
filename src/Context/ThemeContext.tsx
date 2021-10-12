@@ -14,20 +14,19 @@ const ThemeProvider = ({ children }: IProps) => {
 
   useEffect(() => {
     if (
-      localStorage.getItem('theme') === 'dark'
+      localStorage.getItem('theme') === 'light'
       || (!('theme' in localStorage)
-        && window.matchMedia('(prefers-color-scheme: dark)').matches)
+        && window.matchMedia('(prefers-color-scheme: light)').matches)
     ) {
-      setTheme('dark');
-      changeTheme('dark');
-    } else {
       setTheme('light');
       changeTheme('light');
+    } else {
+      setTheme('dark');
+      changeTheme('dark');
     }
   }, []);
 
   function toggleThemeMode() {
-    console.log(localStorage.getItem('theme'));
     if (
       !localStorage.getItem('theme')
       || localStorage.getItem('theme') === 'light'

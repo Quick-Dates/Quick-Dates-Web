@@ -5,6 +5,7 @@ import { toast } from 'react-toastify';
 interface IDataSignin {
   username: string;
   password: string;
+  token?: string;
 }
 class AuthService {
   async signin(data: IDataSignin, profile: 'students' | 'teachers') {
