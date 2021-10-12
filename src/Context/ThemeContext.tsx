@@ -13,16 +13,17 @@ const ThemeProvider = ({ children }: IProps) => {
   const [theme, setTheme] = useState('light');
 
   useEffect(() => {
-    if (
-      localStorage.getItem('theme') === 'light'
-      || (!('theme' in localStorage)
-        && window.matchMedia('(prefers-color-scheme: light)').matches)
-    ) {
+    if ((!('theme' in localStorage))) {
       setTheme('light');
       changeTheme('light');
-    } else {
+    } else if (
+      localStorage.getItem('theme') === 'dark'
+          && window.matchMedia('(prefers-color-scheme: dark)').matches) {
       setTheme('dark');
       changeTheme('dark');
+    } else {
+      setTheme('light');
+      changeTheme('light');
     }
   }, []);
 
