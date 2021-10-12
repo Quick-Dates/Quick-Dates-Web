@@ -38,7 +38,7 @@ export default function EditActivity() {
                 as mesmas e as possibilidades de editar ou excluir uma atividade, conforme desejar.
               </p>
             </div>
-            <img src={PanaImg} alt="pana" />
+            <img src={PanaImg} alt="pana" className="panaImg" />
           </div>
           <div className="containerDiv">
             <div className="containerList">

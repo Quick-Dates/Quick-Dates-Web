@@ -115,3 +115,29 @@
 .task-item .containerExpandTask .spanButton .containerButtons .delete{
   background-color: var(--background-button-tertiary);
 }
+
+@media (max-width: 1230px) {
+  .task-item {
+    width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .task-item .containerExpandTask .spanButton .containerInformations span.info{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .task-item .containerExpandTask .spanButton .containerInformations span.info .icon {
+    width: 3rem;
+  }
+  .task-item .containerExpandTask .spanButton .containerButtons{
+    flex-direction: column;
+  }
+  .task-item .containerExpandTask .spanButton .containerButtons button{
+   width: 100%;
+  }
+}
+@media (max-width: 320px) {
+  .task-item .containerExpandTask .spanButton .containerInformations span.info{
+    font-size: 1.3rem;
+  }
+}

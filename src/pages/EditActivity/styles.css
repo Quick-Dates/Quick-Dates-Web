@@ -29,6 +29,7 @@
 .containerEditActivity .contentEditActivity .card-info .text .title-card{
   font-size: 2.2rem;
   color: var(--color-light-blue);
+  margin-bottom: 2rem;
 }
 .containerEditActivity .contentEditActivity .card-info .text .description-card{
   font-size: 1.8rem;
@@ -61,7 +62,7 @@
     align-items: center;
     height: 90%;
   }
-  
+
   .containerEditActivity .contentEditActivity .card-info{
     flex-direction: column;
     justify-content: center;
@@ -71,6 +72,7 @@
   }
   .containerEditActivity .contentEditActivity .card-info .text{
     width: 90%;
+    margin-bottom: 3rem;
   }
   .containerEditActivity .contentEditActivity .card-info .text .description-card{
     max-width: 40rem;
@@ -98,6 +100,12 @@
   border-radius: 5px;
   color: var( --color-dark-blue);
   font-weight: bold;
+  }
+}
+
+@media(max-width: 600px){
+  .panaImg {
+    width: 50vw;
   }
 }
 

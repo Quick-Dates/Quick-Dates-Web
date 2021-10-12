@@ -177,7 +177,7 @@
     padding: 0 2rem;
   }
   .contentSchedule2 .Image, .contentSchedule1 .teacherImage {
-    display: none;
+    width: 50vw;
 
   }
   .contentSchedule2 .contentSchedule2Left {
