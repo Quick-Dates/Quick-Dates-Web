@@ -8,6 +8,7 @@ import './styles.css';
 import { ITask } from '../../interfaces/ITask';
 import api from '../../services/api';
 import { toast } from 'react-toastify';
+import { useHistory } from 'react-router-dom';
 
 interface IProps {
   task: ITask;
@@ -16,6 +17,7 @@ interface IProps {
 export default function TaskItem({ task, removeTask }: IProps) {
   const yearNow = new Date().getFullYear();
   const [expand, setExpand] = useState(false);
+  const route = useHistory();
 
   function formatDate(date: string) {
     const dateArray = date.split('-');
@@ -35,6 +37,11 @@ export default function TaskItem({ task, removeTask }: IProps) {
         toast.error(message);
       });
   }
+
+  function handleNavigateToEdit() {
+    route.push(`/shedule-activity`, { id: task.id });
+  }
+
   return (
     <div className={expand ? 'task-item expand' : 'task-item'}>
       <div className="principal">
@@ -78,7 +85,7 @@ export default function TaskItem({ task, removeTask }: IProps) {
             </span>
           </section>
           <div className="containerButtons">
-            <button className="edit" type="button">Editar</button>
+            <button className="edit" type="button" onClick={handleNavigateToEdit}>Editar</button>
             <button className="delete" type="button" onClick={handleDeleteTask}>Excluir</button>
           </div>
         </div>

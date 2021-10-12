@@ -1,5 +1,5 @@
 import { Form } from "@unform/web";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Input from "../../components/Input";
 import Template from "../../components/Template";
 import "./styles.css";
@@ -10,11 +10,19 @@ import { ICourse } from "../../interfaces/ICourse";
 import { ITeam } from "../../interfaces/ITeam";
 import { toast, ToastContainer } from "react-toastify";
 import { ITask } from "../../interfaces/ITask";
+import { useLocation } from "react-router-dom";
 
 export default function ScheduleActivity() {
+  const location = useLocation() as any;
+  const id = location?.state?.id;
+  const [task, setTask] = useState({} as ITask);
   const [optionsCourses, setOptionsCourses] = useState([{ label: '', value: undefined }]);
   const [optionsTeams, setOptionsTeams] = useState([{ label: '', value: undefined }]);
 
+  const formRef = useRef(null) as any;
+  function functionThatSetsData(data: any) {
+    formRef.current.setData(data);
+  }
   useEffect(() => {
     api.get("/teams/courses")
       .then((response) => {
@@ -27,6 +35,22 @@ export default function ScheduleActivity() {
         const message = error.response?.data?.message || "Erro ao buscar cursos";
         toast.error(message);
       });
+    if (id) {
+      api.get(`/tasks/${id}/teacher`).then((response) => {
+        setTask(response.data);
+        const data = {
+          ...response.data,
+          course: response.data.team.course.name
+            .charAt(0).toUpperCase() + response.data.team.course.name.substr(1).toLowerCase(),
+          team: response.data.team.name,
+        };
+        setOptionsTeams([{ label: response.data.team.name, value: response.data.team.id }]);
+        functionThatSetsData(data);
+      }).catch((error) => {
+        const message = error.response?.data?.message || "Erro ao buscar tarefa";
+        toast.error(message);
+      });
+    }
   }, []);
 
   function handleChangeCourse(event: React.ChangeEvent<HTMLInputElement>) {
@@ -46,12 +70,21 @@ export default function ScheduleActivity() {
 
   function handleSubmit(data: ITask) {
     const team = optionsTeams.find((team) => team.label === data.team as any);
-    api.post(`/tasks/team/${team?.value}`, data).then(() => {
-      toast.success("Tarefa cadastrada com sucesso!");
-    }).catch((error) => {
-      const message = error.response?.data?.message || "Erro ao cadastrar tarefa";
-      toast.error(message);
-    });
+    if (id) {
+      api.put(`/tasks/${id}`, data).then(() => {
+        toast.success("Tarefa editada com sucesso!");
+      }).catch((error) => {
+        const message = error.response?.data?.message || "Erro ao editar tarefa";
+        toast.error(message);
+      });
+    } else {
+      api.post(`/tasks/team/${team?.value}`, data).then(() => {
+        toast.success("Tarefa cadastrada com sucesso!");
+      }).catch((error) => {
+        const message = error.response?.data?.message || "Erro ao cadastrar tarefa";
+        toast.error(message);
+      });
+    }
   }
   return (
     <Template title="Agendar Atividade" titleTab="Professor">
@@ -70,11 +103,11 @@ export default function ScheduleActivity() {
             <img src={Today} alt="Today" className="Image" />
           </div>
           <div className="contentSchedule2Right">
-            <Form className="form-schedule" onSubmit={handleSubmit}>
+            <Form ref={formRef} className="form-schedule" onSubmit={handleSubmit}>
               <Input
                 list="courses"
                 type="text"
-                name="team"
+                name="course"
                 aria-label="Curso"
                 required
                 onChange={handleChangeCourse}
