@@ -173,8 +173,12 @@
 }
 
 @media(max-width: 760px) {
+  .schedule {
+    padding: 0 2rem;
+  }
   .contentSchedule2 .Image, .contentSchedule1 .teacherImage {
     display: none;
+
   }
   .contentSchedule2 .contentSchedule2Left {
     width: 100%;
