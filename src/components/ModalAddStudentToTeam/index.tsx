@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import { toast } from 'react-toastify';
 import { useContextAuth } from '../../Context/AuthContext';
 import api from '../../services/api';
 import TemplateModal from '../TemplateModal';
 
-export default function ModalaAddStudentToTeam() {
+export default function ModalaAddStudentToTeam({ setShowModalAddTeam }: any) {
   const [yearOptions, setYearOptions] = useState([{ value: 0, label: '' }]);
   const [yearSelected, setYearSelected] = useState(undefined);
-  const [closeModal, setCloseModal] = useState(false);
   const { user } = useContextAuth();
 
   const loadOptionsYearCreation = () => {
@@ -28,10 +28,11 @@ export default function ModalaAddStudentToTeam() {
     const yearCreation = +`${yearSelected}`;
     api.put(`/teams/student/${user.id}`, { courseName, level, yearCreation })
       .then((response) => {
-        setCloseModal(true);
+        setShowModalAddTeam(false);
       })
       .catch((error) => {
-        console.log(error);
+        const message = error.response?.data?.message || "Erro ao salvar";
+        toast.error(message);
       });
   };
 
@@ -40,7 +41,7 @@ export default function ModalaAddStudentToTeam() {
   };
 
   return (
-    <TemplateModal showCloseModal={false} close={closeModal}>
+    <TemplateModal showCloseIconModal={false} setShowModal={setShowModalAddTeam}>
       <h1 className="titleModal">Em qual ano letivo você está atualmente?</h1>
       <select className="dropdownModal" name="years" id="years" placeholder="Selecione"
         onChange={(event) => handleChangeYear(event)} required

@@ -7,19 +7,24 @@ import NotebookIconError from '../../assets/notebook-error.svg';
 import Template from '../../components/Template';
 import './styles.css';
 
-import Modal from '../../components/Modal';
 import ModalaAddStudentToTeam from '../../components/ModalAddStudentToTeam';
 
 export default function ActivitiesList(): JSX.Element {
   const { innerWidth: width } = window;
-  const [showModalAddTeam, setShowModalAddTeam] = useState(false);
+  const [reloadCalendar, setReloadCalendar] = useState(false);
+  const [showModalAddTeam, setShowModal] = useState(false);
+  function setShowModalAddTeam(value: boolean): void {
+    setReloadCalendar(true);
+    setShowModal(value);
+    setReloadCalendar(false);
+  }
   return (
     <Template isStudent title="Atividades Marcadas" titleTab="Calendar">
       {showModalAddTeam
-      && <ModalaAddStudentToTeam />}
+      && <ModalaAddStudentToTeam setShowModalAddTeam={setShowModalAddTeam} />}
       <div className="contentActivies">
-        <BigCalendar setShowModalAddTeam={setShowModalAddTeam} />
-        {false && <Modal />}
+        {!reloadCalendar && (<BigCalendar setShowModalAddTeam={setShowModalAddTeam} />)}
+
         <div className="progress-container">
           <div className="card-progress">
             <h1 className="title">Progresso da Semana</h1>
