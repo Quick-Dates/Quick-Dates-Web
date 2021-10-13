@@ -20,24 +20,12 @@ export default function ActivitiesList(): JSX.Element {
 
   const { isVisible } = useContext(DataEventsContext);
 
-  useEffect(() => {
-    api.get(`/students/${authContext.user.id}`)
-      .then((response) => {
-        console.log(response.data);
-      })
-      .catch((error) => {
-        console.log(error.response.data.message);
-        if (error.response && error.response.data.message === 'Turma não encontrada') {
-          setShowModalAddTeam(true);
-        }
-      });
-  }, []);
   return (
     <Template isStudent title="Atividades Marcadas" titleTab="Calendar">
       {showModalAddTeam
       && <ModalaAddStudentToTeam />}
       <div className="contentActivies">
-        <BigCalendar />
+        <BigCalendar setShowModalAddTeam={setShowModalAddTeam} />
         {isVisible && <Modal />}
         <div className="progress-container">
           <div className="card-progress">

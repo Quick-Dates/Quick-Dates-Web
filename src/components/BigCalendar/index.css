@@ -79,8 +79,22 @@ div.rbc-date-cell{
 }
 
 div.rbc-timeslot-group{
-  height: 60px;
+  height: 6rem;
 }
+/* more in day  */
+.rbc-show-more {
+  background-color: #3174ad;
+  color: #ccc9c9;
+}
+
+/* columns time */
+.rbc-time-slot .rbc-label {
+  color: var(--color-label-calendar);
+} 
+.rbc-time-slot {
+  display: flex;
+  align-items: center;
+} 
 
 @media (max-width: 700px) {
   .rbc-toolbar{
