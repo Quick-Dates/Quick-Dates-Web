@@ -4,14 +4,13 @@ import closeIcon from '../../assets/close.svg';
 
 import './styles.css';
 
-export default function TemplateModal({ children, showCloseModal = true, close = false }: any) {
-  const [hideModal, setHideModal] = useState(false);
+export default function TemplateModal({ children, showCloseIconModal = true, setShowModal }: any) {
   return (
-    <div className={hideModal || close ? 'hide' : 'overlay'}>
+    <div className="overlay">
       <div className="contentAnimation">
         <div className="modal-container">
-          {showCloseModal
-        && <img src={closeIcon} alt="fechar" className="close-icon" onClick={() => setHideModal(true)} />}
+          {showCloseIconModal
+        && <img src={closeIcon} alt="fechar" className="close-icon" onClick={() => setShowModal(false)} />}
           <div className="content">
             {children}
           </div>

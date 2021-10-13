@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import closeIcon from '../../assets/close.svg';
 import notebookIcon from '../../assets/notebook-blue.svg';
 import calendarIcon from '../../assets/calendar-blue.svg';
@@ -9,58 +9,92 @@ import { DataEventsActivies } from '../../Context/DataActivies';
 
 // styles
 import './styles.css';
+import api from '../../services/api';
+import { toast } from 'react-toastify';
+import { ITask } from '../../interfaces/ITask';
+import { SituationTaskEnum } from '../../enum/situationTaskEnum';
+import TemplateModal from '../TemplateModal';
 
-import { DataEventsContext } from '../../Context/DataEvents';
+export default function Modal({ id, setShowModal }: any) {
+  const [situation, setSituation] = useState('...');
+  const [task, setTask] = useState({} as ITask);
 
-export default function Modal() {
-  const { modal } = useContext(DataEventsContext);
-
-  const [color, setColor] = useState('#69F6B2');
-  const [situation, setSituation] = useState('Concluir');
-
-  function handleChangeStatus() {
+  async function handleChangeStatus() {
     const situationText = situation === 'Concluir' ? 'Desconcluir' : 'Concluir';
-    const colorText = situationText === 'Concluir' ? '#69F6B2' : '#1DC3C4';
     setSituation(situationText);
-    setColor(colorText);
+    api.patch(`/tasks/${task.id}/situation`, { completed: situationText === 'Desconcluir' })
+      .then((response) => {
+        console.log(response.data);
+      }).catch((error) => {
+        const message = error?.response?.data?.message || 'Erro ao alterar o estado da atividade';
+        toast.error(message);
+      });
+  }
+
+  useEffect(() => {
+    api.get(`/tasks/${id}/student`)
+      .then((response) => {
+        setTask(response.data);
+        setSituation(response.data.situation !== SituationTaskEnum.Concluida ? 'Concluir' : 'Desconcluir');
+      })
+      .catch((error) => {
+        const message = error?.response?.data?.message || 'Erro ao buscar atividade';
+        toast.error(message);
+      });
+  }, []);
+
+  function formatDate(date: string) {
+    if (date) {
+      const dateArray = date.split('-');
+      const year = dateArray[0];
+      const month = dateArray[1];
+      const day = dateArray[2];
+      return `${day}/${month}/${year}`;
+    }
   }
 
   return (
-    <div className="overlay">
-      <div className="modal">
-        <img src={closeIcon} alt="fechar" className="close-icon" onClick={() => modal(false)} />
-        <h1>{DataEventsActivies.eventsData[0].title}</h1>
+    <TemplateModal setShowModal={setShowModal}>
+      <div className="task-item-modal">
 
-        <p>{DataEventsActivies.eventsData[0].details}</p>
-
-        <section>
-          <div className="content-modal">
+        <h1 className="text-principal">{task.title}</h1>
+        <p className="description">
+          {task.description}
+        </p>
+        <div className="spanButton">
+          <section className="containerInformations">
             <span className="info">
               <img src={notebookIcon} alt="notebook" className="icon" />
-              Pontuação:
-              <span className="value"> {DataEventsActivies.eventsData[0].maxValue} </span>
+              Pontuação máxima:
+              <span className="value"> {task.maximumScore} </span>
             </span>
-
+            <span className="info">
+              <img src={calendarIcon} alt="calendario" className="icon" />
+              Data inicial:
+              <span className="value">
+                {formatDate(task.startDate)}
+              </span>
+            </span>
             <span className="info">
               <img src={calendarIcon} alt="calendario" className="icon" />
               Data de entrega:
               <span className="value">
-                {DataEventsActivies.eventsData[0].deliver}
+                {formatDate(task.finalDate)}
               </span>
             </span>
-
             <span className="info">
               <img src={evaOptionsIcon} alt="eva options" className="icon" />
-              Tipo de Atividade:
+              Disciplina:
               <span className="value">
-                {DataEventsActivies.eventsData[0].typeEvaluation}
+                {task.subject}
               </span>
             </span>
-
+          </section>
+          <div className="containerButtons">
+            <button className={situation === 'Concluir' ? 'buttonAction completed' : 'buttonAction'} onClick={() => handleChangeStatus()}>{situation}</button>
           </div>
-          <button className="buttonAction" style={{ background: color }} onClick={() => handleChangeStatus()}>{situation}</button>
-        </section>
+        </div>
       </div>
-    </div>
+    </TemplateModal>
   );
 }

@@ -13,7 +13,7 @@
 
 }
 
-.modal{
+.task-item-modal{
   position: relative;
   z-index: 19;
 
@@ -21,63 +21,50 @@
   flex-direction: column ;
   align-items: center;
 
-  width: 40rem;
-  height: 50rem;
+  width: 80%;
+  height: 100%;
 
-  background-color: var(--background-primary);
   border-radius: 5px;
   box-shadow: 0px 0px 18px -13px #000000;
 
-  padding: 2rem 0 0 0;
+  padding: 3rem 0;
 
   position: relative;
   margin: auto;
 
-  animation: animationModal .5s linear ;
 }
 
-.modal .close-icon {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  cursor: pointer;
-}
-
-.modal h1{
-  font-size: 2rem;
+.task-item-modal .text-principal{
+  font-size: 3rem;
+  font-weight: bold;
   color: var( --color-dark-blue);
-  text-align: center;
-  width: 80%;
-  margin-top: 2rem;
 }
 
-.modal p{
-  font-size: 1.9rem;
-  color: var( --color-dark-blue);
-  margin-top: 3.5rem;
-  margin-bottom: 2rem;
-  letter-spacing: 1.4px;
-  
-  width: 80%;
+.task-item-modal p{
+  width: 90%;
+  font-size: 1.8rem;
   text-align: justify;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: var( --color-dark-blue);
 }
 
-.modal section{
-  width: 80%;
-  height: 80%;
+.task-item-modal .spanButton{
+  height: 100%;
+  width: 90%;
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
+}
+
+.task-item-modal .spanButton .containerInformations{
+  display: flex;
+  flex-direction: column;
   align-items: flex-start;
 }
 
-.modal .content-modal{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.modal span.info{
+.task-item-modal .spanButton .containerInformations span.info{
   font-size: 1.8rem;
   color: var( --color-dark-blue);
   line-height: 2.5rem;
@@ -86,65 +73,62 @@
   margin-bottom: 0.8rem;
 }
 
-.modal span.info .icon {
+.task-item-modal .spanButton .containerInformations span.info .icon {
   margin-right: 0.5rem;
 }
 
-.modal span.info .value {
+.task-item-modal .spanButton .containerInformations span.info .value {
   font-weight: bold;
   margin-left: 0.5rem;
 }
 
-.modal .buttonAction{
-  margin-top: 0.5rem;
-
+.task-item-modal .spanButton .containerButtons{
   width: 100%;
-  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+}
 
-  background-color: var(--background-button-tertiary);
-
+.task-item-modal .spanButton .containerButtons button{
+  width: 100%;
+  height: 4.3rem;
+  font-size: 2rem;
+  border-radius: 5px;
   color: var(--color-text-button);
-  font-size: 1.8rem;
-  text-align: center;
+  border: none;
+  margin-top: 2rem;
 
-  border: 0;
 }
 
-@keyframes animationModal{
-  from{
-    transform: translateY(1000px);
-    opacity: 0;
-
-  }
-
-  to{
-    transform: translateY(0);
-    opacity: 1;
-  }
+.task-item-modal .spanButton .containerButtons .buttonAction{
+  background-color: var(--color-text-late);
+}
+.task-item-modal .spanButton .containerButtons .buttonAction.completed{
+  background-color: var(--color-text-done);
 }
 
-@media(max-width: 950px){
-  .modal{
-    width: 90%;
-  }
-
-  .modal span{
-    font-size: 1.7rem;
+@media (max-width: 1230px) {
+  .task-item-modal {
+    width: 100%;
   }
 }
-
-@media(max-width: 320px){
-
-  .modal p{
-    font-size: 1.8rem;
-  }
-
-  .modal div{
-    width: 85%;
-  }
-
-  .modal span{
+@media (max-width: 600px) {
+  .task-item-modal .spanButton .containerInformations span.info{
     font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .task-item-modal .spanButton .containerInformations span.info .icon {
+    width: 3rem;
+  }
+  .task-item-modal .spanButton .containerButtons{
+    flex-direction: column;
+  }
+  .task-item-modal .spanButton .containerButtons button{
+   width: 100%;
+  }
+}
+@media (max-width: 320px) {
+  .task-item-modal .spanButton .containerInformations span.info{
+    font-size: 1.3rem;
   }
 }
 

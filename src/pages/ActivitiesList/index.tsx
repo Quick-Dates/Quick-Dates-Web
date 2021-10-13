@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import BigCalendar from '../../components/BigCalendar/index';
 import ProgressBar from '../../components/ProgressBar/index';
 import NotebookIcon from '../../assets/notebook.svg';
@@ -7,26 +7,19 @@ import NotebookIconError from '../../assets/notebook-error.svg';
 import Template from '../../components/Template';
 import './styles.css';
 
-import { DataEventsContext } from '../../Context/DataEvents';
 import Modal from '../../components/Modal';
-import api from '../../services/api';
-import { useContextAuth } from '../../Context/AuthContext';
 import ModalaAddStudentToTeam from '../../components/ModalAddStudentToTeam';
 
 export default function ActivitiesList(): JSX.Element {
-  const authContext = useContextAuth();
   const { innerWidth: width } = window;
   const [showModalAddTeam, setShowModalAddTeam] = useState(false);
-
-  const { isVisible } = useContext(DataEventsContext);
-
   return (
     <Template isStudent title="Atividades Marcadas" titleTab="Calendar">
       {showModalAddTeam
       && <ModalaAddStudentToTeam />}
       <div className="contentActivies">
         <BigCalendar setShowModalAddTeam={setShowModalAddTeam} />
-        {isVisible && <Modal />}
+        {false && <Modal />}
         <div className="progress-container">
           <div className="card-progress">
             <h1 className="title">Progresso da Semana</h1>

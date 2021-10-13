@@ -4,10 +4,6 @@ import { Calendar, momentLocalizer, Event } from 'react-big-calendar';
 import 'moment/locale/pt-br';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 
-// data
-import { DataEventsContext } from '../../Context/DataEvents';
-import { DataEventsActivies } from '../../Context/DataActivies';
-
 // css
 import './index.css';
 import api from '../../services/api';
@@ -15,13 +11,15 @@ import { ITask } from '../../interfaces/ITask';
 import { useContextAuth } from '../../Context/AuthContext';
 import { useHistory } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
+import Modal from '../Modal';
 
 export default function BigCalendar({ setShowModalAddTeam }: any): JSX.Element {
   const localizer = momentLocalizer(moment);
   const [events, setEvents] = useState([{} as Event]);
   const { signOut } = useContextAuth();
   const route = useHistory();
-  const { modal } = useContext(DataEventsContext);
+  const [modalDetail, setModalDetail] = useState(false);
+  const [idEventSelected, setIdEventSelected] = useState(false);
 
   useEffect(() => {
     api.get(`/tasks/student`)
@@ -48,11 +46,15 @@ export default function BigCalendar({ setShowModalAddTeam }: any): JSX.Element {
   }, []);
 
   function handleSelectEvent(event: Event) {
-    console.log(event);
+    const id = event.resource;
+    setIdEventSelected(id);
+    setModalDetail(true);
   }
 
   return (
     <>
+      {modalDetail
+      && (<Modal id={idEventSelected} setShowModal={setModalDetail} />)}
       <Calendar
         onSelectEvent={handleSelectEvent}
         events={events}
