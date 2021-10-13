@@ -1,6 +1,7 @@
 import api from './api';
 import jwtDecode from 'jwt-decode';
 import { toast } from 'react-toastify';
+import { IUser } from '../Context/AuthContext';
 
 interface IDataSignin {
   username: string;
@@ -17,8 +18,8 @@ class AuthService {
     }
   }
 
-  getUserToken(token: string) {
-    return jwtDecode(token);
+  getUserToken(token: string): IUser | undefined {
+    return token ? jwtDecode(token) : undefined;
   }
 }
 

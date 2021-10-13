@@ -5,7 +5,7 @@ import { ProfileEnum } from '../enum/profileEnum';
 import api from '../services/api';
 import AuthService from '../services/authService';
 
-interface IUser {
+export interface IUser {
   id: string,
   name: string,
   profile: ProfileEnum,
@@ -34,11 +34,12 @@ const AuthContext = createContext<AuthContextData>({} as AuthContextData);
 
 export const AuthProvider: React.FC = ({ children }) => {
   const [data, setData] = useState<AuthState>(() => {
+    const authService = new AuthService();
     const token = localStorage.getItem('@QuickDates: ACESS_TOKEN');
-    const user = localStorage.getItem('@QuickDates: USER');
+    const user = authService.getUserToken(token as string);
     if (token && user) {
       api.defaults.headers.authorization = `Bearer ${token}`;
-      return { token, user: JSON.parse(user) };
+      return { token, user };
     }
     return {} as AuthState;
   });
@@ -51,7 +52,6 @@ export const AuthProvider: React.FC = ({ children }) => {
 
     if (token && user) {
       localStorage.setItem('@QuickDates: ACESS_TOKEN', token);
-      localStorage.setItem('@QuickDates: USER', JSON.stringify(user));
 
       api.defaults.headers.authorization = `Bearer ${token}`;
 
@@ -63,7 +63,6 @@ export const AuthProvider: React.FC = ({ children }) => {
 
   const signOut = useCallback(() => {
     localStorage.removeItem('@QuickDates: ACESS_TOKEN');
-    localStorage.removeItem('@QuickDates: USER');
 
     setData({} as AuthState);
   }, []);
