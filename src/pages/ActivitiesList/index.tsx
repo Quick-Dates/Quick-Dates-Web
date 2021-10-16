@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import BigCalendar from '../../components/BigCalendar/index';
 import ProgressBar from '../../components/ProgressBar/index';
 import NotebookIcon from '../../assets/notebook.svg';
@@ -8,9 +8,13 @@ import Template from '../../components/Template';
 import './styles.css';
 
 import ModalaAddStudentToTeam from '../../components/ModalAddStudentToTeam';
+import api from '../../services/api';
+import { toast } from 'react-toastify';
+import { IStatisticsTask } from '../../interfaces/IStatisticsTask';
 
 export default function ActivitiesList(): JSX.Element {
   const { innerWidth: width } = window;
+  const [statisticTask, setStatisticTask] = useState({} as IStatisticsTask);
   const [reloadCalendar, setReloadCalendar] = useState(false);
   const [showModalAddTeam, setShowModal] = useState(false);
   function setShowModalAddTeam(value: boolean): void {
@@ -18,6 +22,14 @@ export default function ActivitiesList(): JSX.Element {
     setShowModal(value);
     setReloadCalendar(false);
   }
+  useEffect(() => {
+    api.get('/tasks/statistics-week').then((response) => {
+      setStatisticTask(response.data as IStatisticsTask);
+    }).catch((error) => {
+      const message = error.response?.data?.message || 'Erro ao carregar as estatísticas';
+      toast.error(message);
+    });
+  }, []);
   return (
     <Template isStudent title="Atividades Marcadas" titleTab="Calendar">
       {showModalAddTeam
@@ -34,14 +46,22 @@ export default function ActivitiesList(): JSX.Element {
             <div className="card-info-progress">
               <span className="label-progress">
                 <img src={NotebookIcon} alt="notebook" />
-                Atividades concluidas: <span className="value-progress-done"> 2</span>
+                Atividades Totais: <span className="value-progress-done"> {statisticTask.length}</span>
+              </span>
+              <span className="label-progress">
+                <img src={NotebookIcon} alt="notebook" />
+                Atividades concluidas: <span className="value-progress-done"> {statisticTask.completed}</span>
               </span>
               <span className="label-progress">
                 <img src={NotebookIconError} alt="notebook error" />
-                Atividades não conluidas: <span className="value-progress-late"> 1</span>
+                Atividades não conluidas: <span className="value-progress-late"> {statisticTask.inProgress}</span>
+              </span>
+              <span className="label-progress">
+                <img src={NotebookIconError} alt="notebook error" />
+                Atividades atrasadas: <span className="value-progress-late"> {statisticTask.late}</span>
               </span>
             </div>
-            <ProgressBar progress="66.7" />
+            <ProgressBar progress={statisticTask.successPercentage?.toFixed(2)} />
           </div>
           {width > 768 && <img src={LearningImg} alt="aprender" />}
         </div>
