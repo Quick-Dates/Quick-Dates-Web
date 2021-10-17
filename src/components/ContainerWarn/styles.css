@@ -1,0 +1,9 @@
+.containerWarn {
+  background-color: var(--background-warn);
+  padding: 2rem;
+  border-radius: 5px;
+}
+
+.containerWarn .title-warn {
+  color: var(--color-title);
+}
