@@ -12,6 +12,7 @@ import { useContextAuth } from '../../Context/AuthContext';
 import { useHistory } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import Modal from '../Modal';
+import formatDate from '../../utils/formatDate';
 
 export default function BigCalendar({ setShowModalAddTeam }: any): JSX.Element {
   const localizer = momentLocalizer(moment);
@@ -27,8 +28,8 @@ export default function BigCalendar({ setShowModalAddTeam }: any): JSX.Element {
         const tasks = response.data as ITask[];
         setEvents(tasks.map((task: ITask) => ({
           title: task.title,
-          start: new Date(`${moment(task.finalDate).format('YYYY-MM-DD')} ${task.finalTime}`),
-          end: new Date(`${moment(task.finalDate).format('YYYY-MM-DD')} ${task.finalTime}`),
+          start: new Date(`${formatDate(task.finalDate, 'YYYY-MM-DD')} ${task.finalTime}`),
+          end: new Date(`${formatDate(task.finalDate, 'YYYY-MM-DD')} ${task.finalTime}`),
           resource: task.id,
         })));
       })

@@ -11,6 +11,7 @@ import { ITeam } from "../../interfaces/ITeam";
 import { toast, ToastContainer } from "react-toastify";
 import { ITask } from "../../interfaces/ITask";
 import { useLocation } from "react-router-dom";
+import formatDate from "../../utils/formatDate";
 
 export default function ScheduleActivity() {
   const location = useLocation() as any;
@@ -37,13 +38,15 @@ export default function ScheduleActivity() {
       });
     if (id) {
       api.get(`/tasks/${id}/teacher`).then((response) => {
-        setTask(response.data);
+        setTask(response.data as ITask);
         const data = {
           ...response.data,
           course: response.data.team.course.name
             .charAt(0).toUpperCase() + response.data.team.course.name.substr(1).toLowerCase(),
           team: response.data.team.name,
-        };
+          startDate: formatDate(response.data.startDate, 'YYYY-MM-DD'),
+          finalDate: formatDate(response.data.finalDate, 'YYYY-MM-DD'),
+        } as ITask;
         setOptionsTeams([{ label: response.data.team.name, value: response.data.team.id }]);
         functionThatSetsData(data);
       }).catch((error) => {
