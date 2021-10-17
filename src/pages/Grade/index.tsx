@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { toast } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
 import ContainerWarn from '../../components/ContainerWarn';
 import Template from '../../components/Template';
 import { IGrade } from '../../interfaces/IGrade';
@@ -56,6 +56,7 @@ export default function Grade() {
           )}
 
       </div>
+      <ToastContainer />
     </Template>
   );
 }

@@ -1,6 +1,10 @@
 .containerRanking {
   max-width: 100%;
-  margin: 0.5rem 2rem;
+  margin: 2rem;
+}
+.containerRanking .containerWarn {
+  max-width: 50%;
+  margin: 0 auto;
 }
 
 .containerRanking .card-info-general {
@@ -80,6 +84,11 @@
 @media(max-width: 768px) {
   .containerRanking .role-position {
     justify-content: center;
+  }
+
+  .containerRanking .containerWarn {
+    max-width: 80%;
+    margin: 0 auto;
   }
   
   .containerRanking .role-position .info-general{
