@@ -4,16 +4,13 @@ import notebookIcon from '../../assets/notebook-blue.svg';
 import calendarIcon from '../../assets/calendar-blue.svg';
 import evaOptionsIcon from '../../assets/eva-options.svg';
 
-// data
-import { DataEventsActivies } from '../../Context/DataActivies';
-
-// styles
 import './styles.css';
 import api from '../../services/api';
 import { toast } from 'react-toastify';
 import { ITask } from '../../interfaces/ITask';
 import { SituationTaskEnum } from '../../enum/situationTaskEnum';
 import TemplateModal from '../TemplateModal';
+import formatDate from '../../utils/formatDate';
 
 export default function Modal({ id, setShowModal }: any) {
   const [situation, setSituation] = useState('...');
@@ -42,16 +39,6 @@ export default function Modal({ id, setShowModal }: any) {
         toast.error(message);
       });
   }, []);
-
-  function formatDate(date: string) {
-    if (date) {
-      const dateArray = date.split('-');
-      const year = dateArray[0];
-      const month = dateArray[1];
-      const day = dateArray[2];
-      return `${day}/${month}/${year}`;
-    }
-  }
 
   return (
     <TemplateModal setShowModal={setShowModal}>

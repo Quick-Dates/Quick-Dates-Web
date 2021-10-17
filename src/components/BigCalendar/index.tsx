@@ -27,12 +27,13 @@ export default function BigCalendar({ setShowModalAddTeam }: any): JSX.Element {
         const tasks = response.data as ITask[];
         setEvents(tasks.map((task: ITask) => ({
           title: task.title,
-          start: new Date(`${task.finalDate} ${task.finalTime}`),
-          end: new Date(`${task.finalDate} ${task.finalTime}`),
+          start: new Date(`${moment(task.finalDate).format('YYYY-MM-DD')} ${task.finalTime}`),
+          end: new Date(`${moment(task.finalDate).format('YYYY-MM-DD')} ${task.finalTime}`),
           resource: task.id,
         })));
       })
       .catch((error) => {
+        console.log(error);
         const message = error?.response?.data?.message || 'Erro ao buscar atividades';
         if (message === 'Turma não encontrada') {
           return setShowModalAddTeam(true);

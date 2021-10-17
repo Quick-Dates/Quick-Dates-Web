@@ -9,6 +9,7 @@ import { ITask } from '../../interfaces/ITask';
 import api from '../../services/api';
 import { toast } from 'react-toastify';
 import { useHistory } from 'react-router-dom';
+import formatDate from '../../utils/formatDate';
 
 interface IProps {
   task: ITask;
@@ -18,14 +19,6 @@ export default function TaskItem({ task, removeTask }: IProps) {
   const yearNow = new Date().getFullYear();
   const [expand, setExpand] = useState(false);
   const route = useHistory();
-
-  function formatDate(date: string) {
-    const dateArray = date.split('-');
-    const year = dateArray[0];
-    const month = dateArray[1];
-    const day = dateArray[2];
-    return `${day}/${month}/${year}`;
-  }
 
   async function handleDeleteTask() {
     api.delete(`/tasks/${task.id}`)

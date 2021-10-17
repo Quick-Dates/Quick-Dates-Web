@@ -6,8 +6,8 @@ export interface ITask {
   title: string;
   description: string;
   subject: string;
-  startDate: string;
-  finalDate: string;
+  startDate: Date;
+  finalDate: Date;
   startTime: string;
   finalTime: string;
   maximumScore: number;
