@@ -26,7 +26,7 @@ export default function MenuStudent() {
             <p>Avaliações</p>
           </section>
           <section>
-            <Link to="/activities" className={pathName === '/ranking' ? 'visited' : ''}><img src={RankingIcon} alt="" /></Link>
+            <Link to="/ranking" className={pathName === '/ranking' ? 'visited' : ''}><img src={RankingIcon} alt="" /></Link>
             <p>Ranking</p>
           </section>
 
