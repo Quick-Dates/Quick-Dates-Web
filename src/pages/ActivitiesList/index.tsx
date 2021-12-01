@@ -51,15 +51,15 @@ export default function ActivitiesList(): JSX.Element {
             <div className="card-info-progress">
               <span className="label-progress">
                 <img src={NotebookIcon} alt="notebook" />
-                Atividades Totais: <span className="value-progress-done"> {statisticTask.length}</span>
+                Atividades totais: <span className="value-progress-done"> {statisticTask.length}</span>
               </span>
               <span className="label-progress">
                 <img src={NotebookIcon} alt="notebook" />
-                Atividades concluidas: <span className="value-progress-done"> {statisticTask.completed}</span>
+                Atividades concluídas: <span className="value-progress-done"> {statisticTask.completed}</span>
               </span>
               <span className="label-progress">
                 <img src={NotebookIconError} alt="notebook error" />
-                Atividades não conluidas: <span className="value-progress-late"> {statisticTask.inProgress}</span>
+                Atividades não concluídas: <span className="value-progress-late"> {statisticTask.inProgress}</span>
               </span>
             </div>
             <ProgressBar progress={statisticTask.successPercentage?.toFixed(2)} />
