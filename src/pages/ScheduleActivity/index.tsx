@@ -12,9 +12,11 @@ import { toast, ToastContainer } from "react-toastify";
 import { ITask } from "../../interfaces/ITask";
 import { useLocation } from "react-router-dom";
 import formatDate from "../../utils/formatDate";
+import { useContextAuth } from "../../Context/AuthContext";
 
 export default function ScheduleActivity() {
   const location = useLocation() as any;
+  const { signOut } = useContextAuth();
   const id = location?.state?.id;
   const [task, setTask] = useState({} as ITask);
   const [optionsCourses, setOptionsCourses] = useState([{ label: '', value: undefined }]);
@@ -35,6 +37,9 @@ export default function ScheduleActivity() {
       }).catch((error) => {
         const message = error.response?.data?.message || "Erro ao buscar cursos";
         toast.error(message);
+        if (error.response.status === 401) {
+          signOut();
+        }
       });
     if (id) {
       api.get(`/tasks/${id}/teacher`).then((response) => {

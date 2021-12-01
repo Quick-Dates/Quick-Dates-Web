@@ -11,9 +11,11 @@ import ModalaAddStudentToTeam from '../../components/ModalAddStudentToTeam';
 import api from '../../services/api';
 import { toast } from 'react-toastify';
 import { IStatisticsTask } from '../../interfaces/IStatisticsTask';
+import { useContextAuth } from '../../Context/AuthContext';
 
 export default function ActivitiesList(): JSX.Element {
   const { innerWidth: width } = window;
+  const { signOut } = useContextAuth();
   const [statisticTask, setStatisticTask] = useState({} as IStatisticsTask);
   const [reloadCalendar, setReloadCalendar] = useState(false);
   const [showModalAddTeam, setShowModal] = useState(false);
@@ -28,6 +30,9 @@ export default function ActivitiesList(): JSX.Element {
     }).catch((error) => {
       const message = error.response?.data?.message || 'Erro ao carregar as estatísticas';
       toast.error(message);
+      if (error.response.status === 401) {
+        signOut();
+      }
     });
   }, []);
   return (
@@ -55,10 +60,6 @@ export default function ActivitiesList(): JSX.Element {
               <span className="label-progress">
                 <img src={NotebookIconError} alt="notebook error" />
                 Atividades não conluidas: <span className="value-progress-late"> {statisticTask.inProgress}</span>
-              </span>
-              <span className="label-progress">
-                <img src={NotebookIconError} alt="notebook error" />
-                Atividades atrasadas: <span className="value-progress-late"> {statisticTask.late}</span>
               </span>
             </div>
             <ProgressBar progress={statisticTask.successPercentage?.toFixed(2)} />
